@@ -293,7 +293,7 @@ def run_pipeline(profile_text, thinking_callback=None, scorer_callback=None, sta
 
     # Step 0: Pre-filter grants by state (mechanical, fast)
     filtered_grants = filter_grants_for_profile(GRANTS, profile_text)
-    update_status(f"Pre-filtered to {len(filtered_grants)} grants in your area...")
+    update_status(f"Searching {len(GRANTS)} grants — {len(filtered_grants)} match your area...")
 
     # Step 1: Scout searches and recommends
     scout_output = run_scout(profile_text, grants=filtered_grants, thinking_callback=thinking_callback)
