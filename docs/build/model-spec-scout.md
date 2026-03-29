@@ -34,7 +34,7 @@ The user profile or Scorer's score with rationale. Plus the grant database (prov
    - Capacity fit (application complexity matches their experience level)
    - Timeline fit (deadline gives them enough time based on their mode)
    - Relationship fit (funder style matches their capacity — simple online app vs. mandatory meetings vs. LOI process)
-6. Select the top 1-2 grants, and select at least one grant, even if it breaks soft checks, don't pass hard checks.  
+6. Select your top recommendations based on the user's capacity — not a fixed number. A solo first-timer who can handle 1-2 applications gets 1-2 top picks. An experienced grant writer with a team might get 3. Read the profile: team size, budget, experience, and mode tell you how many they can act on. Always recommend at least one, even if it breaks soft checks (never hard checks). If you have additional strong fits beyond what the user can act on, put them in `near_misses` — the user can pull more if they want, but you don't push.
 
 ---
 

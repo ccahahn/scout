@@ -61,7 +61,7 @@ Run every recommendation through this checklist. Checks are divided into **hard 
 - [ ] Is the rationale specific to this user, or could it apply to any nonprofit? (flag if generic, but don't reject a genuinely good match over language alone)
 
 #### Overwhelm check
-- [ ] Are there 3 or fewer recommendations? (rank if more than 3 and only provide top 3)
+- [ ] Does the number of top recommendations match the user's capacity? A solo first-timer should see 1-2. An experienced grant writer might see 3. If Scout sent more than the user can act on, move the extras to `near_misses` and keep only the strongest in `grants`.
 - [ ] Does each recommendation include full rationale (why this one, why now, what's involved)
 
 #### Confidence check

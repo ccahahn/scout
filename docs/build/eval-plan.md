@@ -15,7 +15,7 @@ These are failures the agent must never commit. Each maps to a real user pain po
 - [ ] Agent makes client feel they lost the ability to talk to a human (they love Instrumentl's customer support and would feel a loss if they think the human has been replaced)
 
 #### Overwhelm recreators
-- [ ] Agent surfaces more than 5 opportunities in a single interaction without user asking for more
+- [ ] Agent pushes more top recommendations than the user's capacity warrants — a solo first-timer should see 1-2, an experienced grant writer might see 3. The number of top picks should match what the user can realistically act on, based on team size, budget, and experience. Additional strong-fit grants belong in the bench ("worth keeping an eye on"), not the top picks.
 - [ ] Agent delivers a list without rationale — just names and deadlines, no "why this matters to you"
 - [ ] Agent pings/nudges when user has indicated they're in a quiet phase
 
@@ -32,7 +32,7 @@ These are failures the agent must never commit. Each maps to a real user pain po
 - [ ] **Agent uses jargon the client didn't use first.** If the client didn't say "LOI," the agent doesn't say "LOI." If the client said "grant letter," the agent says "grant letter." Mirroring language is how trust works.
 - [ ] **Agent gives a recommendation without showing its reasoning.** "You should apply for the Johnson Foundation grant" — why? The consultant always says why. "Because they funded two orgs like yours last year, their check size matches what you need, and the deadline gives you enough time." No black boxes.
 - [ ] **Agent treats all criteria as equal weight.** The client said "ideally local, definitely no federal, and we prefer under $50K." "Definitely no federal" is a hard constraint. "Ideally local" is a preference. "Prefer under $50K" is flexible. The agent must distinguish between dealbreakers and nice-to-haves — and if unsure, ask: "when you say ideally local, would you consider a regional funder if everything else was perfect?"
-- [ ] **Agent doesn't know when to stop.** The consultant says "I think these 2 are your best bet right now" and stops. The agent wants to be helpful and keeps going — "also here's a third, and a fourth, and by the way have you considered..." That's overwhelm in a friendly voice.
+- [ ] **Agent doesn't know when to stop.** The consultant reads the client's capacity and gives them only what they can act on: 1-2 for a solo first-timer, maybe 3 for someone experienced. If there are more strong fits, they go to the bench ("worth keeping an eye on") — the user pulls more if they want, the agent doesn't push. Dumping 4-5 top picks on a solo operator is overwhelm in a friendly voice.
 
 **[Cecilia to add]**: more eval criteria as we build
 
@@ -47,7 +47,7 @@ These are failures the agent must never commit. Each maps to a real user pain po
 | **Hit Rate@3** | Of the grants surfaced, did at least 1 make the user say "yes"? |
 | **Precision@3** | Of the grants surfaced, how many were genuinely relevant? |
 | **Trap Avoidance** | Agent never recommends a grant that violates a stated dealbreaker or geographic mismatch. |
-| **Overwhelm Index** | User never sees >5 items, never gets an unexplained list. Binary pass/fail. |
+| **Overwhelm Index** | Top recommendations match user's capacity (solo first-timer: 1-2, experienced: up to 3). Additional fits go to the bench, not the top picks. No unexplained lists. |
 
 ---
 
@@ -92,7 +92,7 @@ Each agent is evaluated separately AND as part of the full pipeline:
 - Did it recommend a grant outside the user's geography? (Geographic Precision)
 - Did it recommend a grant the user is ineligible for? (Eligibility Check)
 - Did it include rationale for each recommendation? (Rationale Check)
-- Did it recommend more than 2 grants? (Overwhelm Check)
+- Did the number of top recommendations match the user's capacity? (Overwhelm Check — solo first-timer should see 1-2, experienced up to 3. Remaining strong fits should appear as near-misses, not top picks.)
 
 **Scorer evals:**
 - Did the Scorer catch geographic mismatches Scout missed? (Scorer Catch Rate)
