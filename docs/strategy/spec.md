@@ -105,6 +105,11 @@ We simulate with representative public data. The quality of curation is only as 
 **Real customer conversations**
 This prototype is built on Capterra reviews, public feedback, and synthesized personas. The obvious next step is talking to customers directly — especially the ones who churned after 3-6 months and the ones who stayed but describe feeling overwhelmed. The gap between those two groups is where the real product insight lives.
 
+**Domain knowledge the team has that the agent doesn't**
+Here's a concrete example of why this matters. In testing, one synthetic user (Maria) previously won a $3K grant from a local Rotary club. Scout sometimes recommends the same Rotary club's grant again — framing her prior win as a strength ("they know this model works"). Other times, Scout drops it entirely. Both could be right, but the agent doesn't know because it lacks domain knowledge that the Instrumentl team has: Do local foundations typically fund repeat grantees? Is a prior relationship a signal to lean in or move on? Should the agent weight funder history differently for community foundations vs. federal programs?
+
+This is exactly the kind of knowledge that turns an eval from "did the agent recommend the right grants?" into "did the agent reason about funder relationships the way an expert would?" The team's domain expertise doesn't just inform the product — it becomes eval criteria that makes the agent measurably better. Every question like this that gets answered and encoded into the eval suite is a permanent improvement to recommendation quality.
+
 **Matching and ranking algorithm**
 The prototype demonstrates conversation quality and eval rigor, not recommendation engine performance. I'd want to understand how matching works today before proposing anything — what signals it uses, whether it can support weighted criteria (dealbreakers vs. nice-to-haves), and where the bottlenecks are. The scout agent's value depends on what's already been built underneath it.
 
