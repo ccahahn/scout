@@ -562,7 +562,7 @@ else:
     # ---- INTAKE ----
     else:
         with page.container():
-            st.caption("Grant prospecting co-pilot")
+            st.caption("Grant prospecting co-pilot (v2)")
             st.write("")
             st.markdown("**Fill in what you know from the call.** Leave blank anything you didn't cover.")
             st.text("""Organization:
