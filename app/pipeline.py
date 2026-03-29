@@ -51,7 +51,64 @@ def load_braintrust_prompt(slug):
 
 
 GRANTS = load_grants()
-GRANTS_TEXT = json.dumps(GRANTS, indent=2)
+
+# US state abbreviations for extraction
+US_STATES = {
+    "alabama": "AL", "alaska": "AK", "arizona": "AZ", "arkansas": "AR",
+    "california": "CA", "colorado": "CO", "connecticut": "CT", "delaware": "DE",
+    "florida": "FL", "georgia": "GA", "hawaii": "HI", "idaho": "ID",
+    "illinois": "IL", "indiana": "IN", "iowa": "IA", "kansas": "KS",
+    "kentucky": "KY", "louisiana": "LA", "maine": "ME", "maryland": "MD",
+    "massachusetts": "MA", "michigan": "MI", "minnesota": "MN",
+    "mississippi": "MS", "missouri": "MO", "montana": "MT", "nebraska": "NE",
+    "nevada": "NV", "new hampshire": "NH", "new jersey": "NJ",
+    "new mexico": "NM", "new york": "NY", "north carolina": "NC",
+    "north dakota": "ND", "ohio": "OH", "oklahoma": "OK", "oregon": "OR",
+    "pennsylvania": "PA", "rhode island": "RI", "south carolina": "SC",
+    "south dakota": "SD", "tennessee": "TN", "texas": "TX", "utah": "UT",
+    "vermont": "VT", "virginia": "VA", "washington": "WA",
+    "west virginia": "WV", "wisconsin": "WI", "wyoming": "WY",
+}
+STATE_ABBREVS = {v: v for v in US_STATES.values()}
+
+
+def extract_state(profile_text):
+    """Extract US state abbreviation from profile text."""
+    text_lower = profile_text.lower()
+    # Check for abbreviation in Location line first
+    for line in profile_text.split("\n"):
+        if line.strip().lower().startswith("location"):
+            # Look for 2-letter state abbreviation
+            abbrev_match = re.search(r'\b([A-Z]{2})\b', line)
+            if abbrev_match and abbrev_match.group(1) in STATE_ABBREVS:
+                return abbrev_match.group(1)
+            # Look for full state name
+            for name, abbrev in US_STATES.items():
+                if name in line.lower():
+                    return abbrev
+    # Fallback: search full text for state names
+    for name, abbrev in US_STATES.items():
+        if name in text_lower:
+            return abbrev
+    return None
+
+
+def filter_grants_for_profile(grants, profile_text):
+    """
+    Pre-filter grants by state before sending to Scout.
+    Keeps: grants in the user's state + national-scope grants.
+    Removes: grants in other states (obvious geographic mismatches).
+    Scout still handles county-level matching and all judgment calls.
+    """
+    state = extract_state(profile_text)
+    if not state:
+        return grants  # Can't determine state, send all grants
+
+    filtered = [
+        g for g in grants
+        if g.get("state") == state or g.get("state") == "national"
+    ]
+    return filtered
 
 
 def run_transcriber(conversation_text):
@@ -108,11 +165,15 @@ def escape_dollars(text):
     return text.replace('$', '&#36;')
 
 
-def run_scout(profile_text, thinking_callback=None):
+def run_scout(profile_text, grants=None, thinking_callback=None):
     """
     Scout: Takes confirmed profile, searches grants, returns raw text (JSON).
     If thinking_callback is provided, streams extended thinking tokens to it.
+    Grants are pre-filtered by state before being passed in.
     """
+    if grants is None:
+        grants = GRANTS
+    grants_text = json.dumps(grants, indent=2)
     prompt = load_braintrust_prompt(SCOUT_SLUG)
 
     if thinking_callback:
@@ -128,7 +189,7 @@ def run_scout(profile_text, thinking_callback=None):
             messages=[
                 {
                     "role": "user",
-                    "content": f"Here is the confirmed user profile:\n\n{profile_text}\n\nHere is the grant database:\n\n{GRANTS_TEXT}",
+                    "content": f"Here is the confirmed user profile:\n\n{profile_text}\n\nHere is the grant database:\n\n{grants_text}",
                 }
             ],
         ) as stream:
@@ -151,7 +212,7 @@ def run_scout(profile_text, thinking_callback=None):
             messages=[
                 {
                     "role": "user",
-                    "content": f"Here is the confirmed user profile:\n\n{profile_text}\n\nHere is the grant database:\n\n{GRANTS_TEXT}",
+                    "content": f"Here is the confirmed user profile:\n\n{profile_text}\n\nHere is the grant database:\n\n{grants_text}",
                 }
             ],
         )
@@ -230,9 +291,12 @@ def run_pipeline(profile_text, thinking_callback=None, scorer_callback=None, sta
         if status_callback:
             status_callback(msg)
 
+    # Step 0: Pre-filter grants by state (mechanical, fast)
+    filtered_grants = filter_grants_for_profile(GRANTS, profile_text)
+    update_status(f"Pre-filtered to {len(filtered_grants)} grants in your area...")
+
     # Step 1: Scout searches and recommends
-    update_status("Filtering through 200 grants...")
-    scout_output = run_scout(profile_text, thinking_callback=thinking_callback)
+    scout_output = run_scout(profile_text, grants=filtered_grants, thinking_callback=thinking_callback)
 
     # Parse Scout's JSON output
     try:
@@ -317,7 +381,8 @@ def run_pipeline(profile_text, thinking_callback=None, scorer_callback=None, sta
         retries += 1
         update_status(f"Refining recommendations (attempt {retries + 1})...")
         scout_output = run_scout(
-            f"{profile_text}\n\nPrevious recommendation was rejected by quality check:\n{scorer_output}\n\nPlease try again with this feedback."
+            f"{profile_text}\n\nPrevious recommendation was rejected by quality check:\n{scorer_output}\n\nPlease try again with this feedback.",
+            grants=filtered_grants,
         )
         try:
             scout_data = parse_json_output(scout_output)
