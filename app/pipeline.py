@@ -4,15 +4,26 @@ Pipeline: Orchestrates Transcriber → Scout → Scorer
 import os
 import re
 import json
-from dotenv import load_dotenv
 import anthropic
 from braintrust import init_logger, wrap_anthropic
 
-load_dotenv()
+try:
+    import streamlit as st
+    api_key = st.secrets.get("ANTHROPIC_API_KEY")
+    bt_key = st.secrets.get("BRAINTRUST_API_KEY")
+    if bt_key:
+        os.environ["BRAINTRUST_API_KEY"] = bt_key
+except Exception:
+    api_key = None
+
+if not api_key:
+    from dotenv import load_dotenv
+    load_dotenv()
+    api_key = os.getenv("ANTHROPIC_API_KEY")
 
 # Initialize Braintrust-wrapped Anthropic client
 client = wrap_anthropic(
-    anthropic.Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
+    anthropic.Anthropic(api_key=api_key)
 )
 logger = init_logger(project="Scout")
 
