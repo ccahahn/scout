@@ -93,11 +93,69 @@ This is the bar. The agent should feel like the best grant consultant the user h
 
 ## 4. Evals and metrics
 
-See `docs/build/eval_plan.md` for the full eval plan: 19 unacceptable behaviors across 4 categories, 6 metrics, 12 synthetic users with trap grants, and the Braintrust scoring workflow.
+### Philosophy: start with 3-5, expand from error analysis
+
+The right way to build evals: build the product, run it, do error analysis on real outputs, then write scorers only for the failure patterns you actually observe. Don't write 19 scorers before the first eval run — let the failures teach you what to measure. This prototype can't follow that advice fully because there are no real users to generate real failures. The synthetic users and trap grants are a deliberate substitute: designed to provoke specific failure modes so the eval suite has something real to catch. But given the choice, I'd run Scout with real users first, catalog what goes wrong, and build scorers from that — not from a checklist written before the first output exists. That's the process I'd follow on the job.
+
+### Tier 1 scorers (implemented)
+
+Three scorers that cover the highest-stakes failure modes — where a bad output wastes the user's most scarce resource (time) or destroys trust.
+
+| Scorer | What it catches | Pass condition |
+|--------|----------------|----------------|
+| **Trap Avoidance** | Agent recommends a grant that violates a stated dealbreaker or geographic/eligibility mismatch | Zero trap grants in output |
+| **Hit Rate** | Agent fails to surface any genuinely good match | At least 1 correct grant recommended |
+| **Overwhelm Check** | Agent pushes more grants than the user can act on | Grant count ≤ user capacity (solo: 2, team: 3) |
+
+**Why these three first:**
+- Trap avoidance is the most dangerous failure — the user spends weeks on an application they were never eligible for. This is the "never ship this" metric.
+- Hit rate is the core promise — if the agent can't find a single good match, the product doesn't work.
+- Overwhelm is the pain point Scout exists to solve — if we recreate the 200-result scroll, we've failed.
+
+### Tier 2 scorers (next, based on what Tier 1 reveals)
+
+Candidates to promote once we run Tier 1 and do error analysis. We don't build them until we see which failures actually occur:
+
+- **Geographic Precision** — same-state-wrong-county mismatches (the most common failure mode in testing so far)
+- **Dealbreaker Violation** — more granular than trap avoidance: did the agent respect *every* stated dealbreaker, not just the ones encoded as trap grants?
+- **Nuance Flattening** (LLM-as-judge) — did the agent flatten "fatherhood initiative" to "family services"?
+- **Language Mirror** (LLM-as-judge) — did the rationale use the user's words or upgrade to jargon they didn't use?
+
+Any LLM-as-judge scorer must be calibrated against manual scores before shipping. Don't trust the judge until it agrees with human judgment on known examples.
+
+### Synthetic users (12 profiles)
+
+Each user is designed to stress-test specific failure modes:
+
+| User | Key test |
+|------|----------|
+| Maria (Austin, TX) | Jargon mirroring, dealbreaker detection |
+| David (RI) | Terse user, doesn't over-ask |
+| Patricia (IN) | Extracts signal from rambling |
+| James (IN) | Protects from false hope, hidden disqualifiers (2yr org) |
+| Sandra (Oakland, CA) | Doesn't flatten nuance, handles pushback |
+| Tom (TN) | Navigates contradictions |
+| Rachel (CT) | Matches expert pace, doesn't over-explain |
+| Angela (Philadelphia) | Fatherhood-initiative test, same-state-wrong-county |
+| Margaret (IL) | Builds confidence, never makes client feel stupid |
+| Kevin (FL) | Handles skepticism, earns trust through accuracy |
+| Lisa (San Marcos, CA) | Cross-category missions, same-state-wrong-city |
+| Robert (MN) | Non-western frameworks, resists categorization |
+
+Each user has **correct grants** (what the agent should recommend) and **trap grants** (what looks right but violates a dealbreaker). The traps are where the evals catch failures.
+
+### The eval loop
+
+1. Load synthetic users → build call notes → run full pipeline (Transcriber → Scout → Scorer)
+2. Score each run with Tier 1 scorers, log everything to Braintrust
+3. Error analysis on failures → decide which Tier 2 scorer to promote next
+4. Update prompts → re-run → show improvement
+
+**The demo story:** "I started with 3 scorers that catch the highest-stakes failures. I ran 12 synthetic users through the pipeline, found the patterns that actually break, and promoted new scorers from error analysis. Here's the loop."
 
 ---
 
-## 6. Out of scope (and what I'd want to learn)
+## 5. Out of scope (and what I'd want to learn)
 
 **Access to Instrumentl's grant database**
 We simulate with representative public data. The quality of curation is only as good as the data feeding it — this is the first thing I'd want to understand: how grants are tagged, what metadata exists on funders, and where the gaps are.
@@ -119,12 +177,12 @@ I don't know how the scout would live inside Instrumentl's UI — sidebar, separ
 **Post-recommendation workflow**
 The prototype stops at curation. It doesn't cover what happens after the user says "yes, I'm interested" — pre-filling applications, pulling funder history, connecting to Apply. Getting the handoff to existing product surfaces right matters, and that requires understanding those surfaces first.
 
-**Geographic pre-filtering — and a question I can't answer yet**
-In the prototype, Scout reads 200 grants as raw context and reasons over all of them. A large chunk of its thinking time is spent eliminating grants that are obviously outside the user's state — work a simple database query could do instantly. The instinct is to pre-filter by state before the AI ever sees the data: keep the user's state + national-scope grants, discard the rest, and let Scout focus on the hard judgment calls (county-level matching, mission alignment, capacity fit).
+**Geographic precision beyond state level — and a question I can't answer yet**
+The prototype already pre-filters grants by state before Scout sees them (user's state + national-scope grants only). That mechanical step is built and working. The unsolved problem is finer-grained: county-level and regional geographic matching. A grant serving "Dallas County, TX" is in the right state but wrong county for a Travis County user. Scout handles this through reasoning, but at scale, geographic scope data is often ambiguous — "Southeast region," "greater metro area," "rural Appalachian communities" — and doesn't map cleanly to county-level filters.
 
-Capterra reviews confirm this is a real pain point. One user wrote: "The only thing missing is I can't filter my funders by state — that is a key search criterion." Another: "I wish it only finds funders that fit ALL of my research parameters instead of ANY." Geographic mismatch is one of the most common reasons users waste time on grants they'd never qualify for.
+Capterra reviews confirm geographic mismatch is a real pain point. One user wrote: "The only thing missing is I can't filter my funders by state — that is a key search criterion." Another: "I wish it only finds funders that fit ALL of my research parameters instead of ANY."
 
-But Instrumentl has extensive filtering already — so why doesn't aggressive geographic pre-filtering exist? There are a few possibilities I'd want to understand before building this: (1) Grant geographic scope data is often ambiguous ("Southeast region," "greater metro area") and doesn't map cleanly to state-level filters, so automated filtering produces false negatives that lose real opportunities. (2) The initial matching algorithm intentionally casts wide and treats geography as a user-applied refinement, not a system-applied filter. (3) The gap may be specific to funder research surfaces, not grant search. The answer matters — pre-filtering is either a clear win or a mistake they already considered and rejected. This is one of the first things I'd want to dig into with the engineering team.
+The question I'd want to explore with the engineering team: how is geographic scope data structured in the real database? Can county/region matching be automated, or is the ambiguity inherent in how funders describe their service areas? The answer determines whether geographic precision is a data problem (clean up the metadata) or a reasoning problem (the AI has to interpret "greater metro area" in context). The prototype treats it as a reasoning problem. At scale, it may need to be both.
 
 **Indexing and pre-filtering at scale**
 The geographic question above is a specific case of a broader scaling problem. The prototype does not scale to 400,000 grants. An LLM should never be the one traversing a full database — it's too slow, too expensive, and it's the wrong tool for the job. The right approach is a funnel where existing search infrastructure does the fast, mechanical filtering first and the AI handles judgment and curation on a smaller candidate set. But how that funnel should work depends entirely on what Instrumentl has already built — I'd need to understand the existing search and matching infrastructure before designing around it.
@@ -132,9 +190,12 @@ The geographic question above is a specific case of a broader scaling problem. T
 **Scale and edge cases**
 Synthetic users let us test a few personas. Real coverage means stress-testing against the full diversity of orgs — tiny rural nonprofits, urban consultants with multiple clients, university research offices. Each has different language, different capacity, different dealbreakers. The evals need to hold across all of them, and getting there requires real user data.
 
+**CI/CD and rollout strategy**
+See `docs/strategy/playbook.md` for the full design: CI/CD pipeline, feature flags, A/B testing, controlled ramp, cohort analysis, automated signal processing, and kill switches.
+
 ---
 
-## 7. Things to think about — user trust and safety in voice
+## 6. Things to think about — user trust and safety in voice
 
 The advisor-on-a-call experience involves the agent listening to live conversation audio. This requires careful design around consent and user control. These aren't solved in the prototype but matter deeply.
 

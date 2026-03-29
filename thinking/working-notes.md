@@ -71,6 +71,82 @@ At peak delight (grant win or great recommendation), prompt user to invite a col
 - MRR, MAP, NDCG for ranking quality
 - Diversity, Novelty, Serendipity for discovery/trust
 
+## Original eval thinking — 19 unacceptable behaviors (archived)
+
+This was the original eval design before we converged on Hamel's "start with 3-5 most critical" approach. Preserved here for reference — these are real failure modes we identified and may promote to scorers later as error analysis reveals which ones actually fire.
+
+The 3 scorers we shipped in `evals.py` (trap avoidance, hit rate, overwhelm check) came from narrowing this list to what matters most for the prototype. The rest lives here, not in the spec.
+
+### Original unacceptables (19 across 4 categories)
+
+#### Trust breakers
+- Agent dismisses or ignores a stated criterion without compassionately prompting ("Are you sure? Here's why I ask...")
+- Agent flattens nuance into generic tags — e.g., treating "fatherhood initiative" as "family services" or "animal welfare" as "environment"
+- Agent presents a grant that violates a stated dealbreaker (e.g., federal reporting when user said no federal)
+- Agent makes client feel they lost the ability to talk to a human (they love Instrumentl's customer support and would feel a loss if they think the human has been replaced)
+
+#### Overwhelm recreators
+- Agent pushes more top recommendations than the user's capacity warrants — a solo first-timer should see 1-2, an experienced grant writer might see 3. The number of top picks should match what the user can realistically act on, based on team size, budget, and experience. Additional strong-fit grants belong in the bench ("worth keeping an eye on"), not the top picks.
+- Agent delivers a list without rationale — just names and deadlines, no "why this matters to you"
+- Agent pings/nudges when user has indicated they're in a quiet phase
+
+#### Comprehension failures
+- Agent asks the user to re-explain something it should already know from their history
+- Agent gives a generic summary that could apply to any nonprofit ("you care about making an impact")
+- Second interaction feels identical to the first — no evidence of learning
+
+#### White glove violations
+- Agent infers and states as fact without checking. "So you work with Title I schools" — but they don't. The agent inferred and presented it as truth instead of asking.
+- Agent follows its own agenda instead of the client's energy. Client gets excited about the coding lab, agent pivots back to "tell me more about your after-school programs."
+- Agent asks more than it needs to. Five questions is an interview. Three is a conversation.
+- Agent overwhelms with its own knowledge. "There are 47 foundations in your area that fund education" — the client didn't ask for a number.
+- Agent uses jargon the client didn't use first. If the client didn't say "LOI," the agent doesn't say "LOI."
+- Agent gives a recommendation without showing its reasoning.
+- Agent treats all criteria as equal weight. Must distinguish between dealbreakers and nice-to-haves.
+- Agent doesn't know when to stop. The consultant reads the client's capacity and gives them only what they can act on.
+
+### Original per-agent eval matrices
+
+**Transcriber evals:**
+- Did it mirror the user's language? (Language Mirror)
+- Did it state an inference as fact? (Inference Check)
+- Did it ask more than 3 direct questions? (Question Count)
+- Did it flatten nuance into generic categories? (Nuance Check)
+- Did it follow the user's energy or redirect to its own agenda? (Energy Check)
+- Did it produce a complete, accurate profile? (Profile Completeness)
+
+**Scout evals:**
+- Did it recommend correct_grants? (Hit Rate)
+- Did it recommend any trap_grants? (Trap Avoidance)
+- Did it recommend a grant outside the user's geography? (Geographic Precision)
+- Did it recommend a grant the user is ineligible for? (Eligibility Check)
+- Did it include rationale for each recommendation? (Rationale Check)
+- Did the number of top recommendations match the user's capacity? (Overwhelm Check)
+
+**Scorer evals:**
+- Did the Scorer catch geographic mismatches Scout missed? (Scorer Catch Rate)
+- Did the Scorer catch eligibility failures Scout missed? (Scorer Catch Rate)
+- Did the Scorer catch dealbreaker violations Scout missed? (Scorer Catch Rate)
+- Did the Scorer let through a bad recommendation? (Scorer Miss Rate — should be 0)
+
+**Retry loop evals:**
+- When the Scorer rejected, did Scout improve on the retry? (Retry Improvement Rate)
+- Did Scout's retry address the specific feedback from the Scorer? (Feedback Incorporation)
+- After max retries, if still rejected, did the user see a clean no-match message? (Graceful Failure)
+
+### Original metrics (6)
+
+| Metric | What it proves |
+|--------|---------------|
+| **Time-to-Yes** | How many interactions before the user commits to pursuing a specific grant. Goal is 1. |
+| **Time-to-First-Value** | How quickly does the agent say something the user didn't explicitly state but is true about them? |
+| **Hit Rate@3** | Of the grants surfaced, did at least 1 make the user say "yes"? |
+| **Precision@3** | Of the grants surfaced, how many were genuinely relevant? |
+| **Trap Avoidance** | Agent never recommends a grant that violates a stated dealbreaker or geographic mismatch. |
+| **Overwhelm Index** | Top recommendations match user's capacity. No unexplained lists. |
+
+---
+
 ## Product Ideas — Ranked
 
 Ranking criteria:

@@ -7,6 +7,11 @@ import json
 import anthropic
 from braintrust import init_logger, wrap_anthropic
 
+import logging
+
+logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
+log = logging.getLogger("scout.pipeline")
+
 try:
     import streamlit as st
     api_key = st.secrets.get("ANTHROPIC_API_KEY")
@@ -29,6 +34,63 @@ logger = init_logger(project="Scout")
 
 MODEL = "claude-sonnet-4-20250514"
 MAX_SCORER_RETRIES = 2
+
+# Tool schema for Scout — forces structured output via tool use
+SCOUT_TOOL = {
+    "name": "submit_recommendations",
+    "description": "Submit your grant recommendations, near-misses, follow-up questions, and elimination summary after completing your analysis.",
+    "input_schema": {
+        "type": "object",
+        "properties": {
+            "grants": {
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "properties": {
+                        "id": {"type": "string"},
+                        "title": {"type": "string"},
+                        "amount_min": {"type": ["number", "null"]},
+                        "amount_max": {"type": ["number", "null"]},
+                        "deadline": {"type": "string"},
+                        "rationale": {"type": "string"},
+                        "caveats": {"type": ["string", "null"]},
+                        "confidence": {"type": "string", "enum": ["High", "Medium"]},
+                    },
+                    "required": ["id", "title", "rationale", "confidence"],
+                },
+            },
+            "near_misses": {
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "properties": {
+                        "id": {"type": "string"},
+                        "title": {"type": "string"},
+                        "what_aligns": {"type": "string"},
+                        "the_issue": {"type": "string"},
+                        "the_play": {"type": "string"},
+                    },
+                    "required": ["id", "title", "what_aligns", "the_issue", "the_play"],
+                },
+            },
+            "follow_up_questions": {
+                "type": "array",
+                "items": {"type": "string"},
+            },
+            "elimination_summary": {
+                "type": "object",
+                "properties": {
+                    "total_reviewed": {"type": "integer"},
+                    "eliminated_geographic": {"type": "integer"},
+                    "eliminated_dealbreaker": {"type": "integer"},
+                    "eliminated_eligibility": {"type": "integer"},
+                    "recommended": {"type": "integer"},
+                },
+            },
+        },
+        "required": ["grants", "near_misses", "follow_up_questions", "elimination_summary"],
+    },
+}
 
 # Braintrust prompt slugs
 TRANSCRIBER_SLUG = "transcriber-prompt-3997"
@@ -167,7 +229,8 @@ def escape_dollars(text):
 
 def run_scout(profile_text, grants=None, thinking_callback=None):
     """
-    Scout: Takes confirmed profile, searches grants, returns raw text (JSON).
+    Scout: Takes confirmed profile, searches grants, returns structured dict.
+    Uses tool use to guarantee valid JSON output — no free-text parsing.
     If thinking_callback is provided, streams extended thinking tokens to it.
     Grants are pre-filtered by state before being passed in.
     """
@@ -176,50 +239,88 @@ def run_scout(profile_text, grants=None, thinking_callback=None):
     grants_text = json.dumps(grants, indent=2)
     prompt = load_braintrust_prompt(SCOUT_SLUG)
 
+    api_params = dict(
+        model=MODEL,
+        max_tokens=16000,
+        thinking={"type": "enabled", "budget_tokens": 15000},
+        tools=[SCOUT_TOOL],
+        system=prompt.build()["messages"][0]["content"],
+        messages=[
+            {
+                "role": "user",
+                "content": f"Here is the confirmed user profile:\n\n{profile_text}\n\nHere is the grant database:\n\n{grants_text}",
+            }
+        ],
+    )
+
     if thinking_callback:
-        result_text = ""
-        with client.messages.stream(
-            model=MODEL,
-            max_tokens=16000,
-            thinking={
-                "type": "enabled",
-                "budget_tokens": 15000,
-            },
-            system=prompt.build()["messages"][0]["content"],
-            messages=[
-                {
-                    "role": "user",
-                    "content": f"Here is the confirmed user profile:\n\n{profile_text}\n\nHere is the grant database:\n\n{grants_text}",
-                }
-            ],
-        ) as stream:
+        tool_json = ""
+        fallback_text = ""
+        thinking_text = ""
+        with client.messages.stream(**api_params) as stream:
             for event in stream:
                 if event.type == "content_block_delta":
-                    if event.delta.type == "thinking_delta":
+                    delta_type = getattr(event.delta, "type", None)
+                    if delta_type == "thinking_delta":
                         thinking_callback(event.delta.thinking)
-                    elif event.delta.type == "text_delta":
-                        result_text += event.delta.text
-        return result_text
+                        thinking_text += event.delta.thinking
+                    elif delta_type == "input_json_delta":
+                        tool_json += event.delta.partial_json
+                    elif delta_type == "text_delta":
+                        fallback_text += event.delta.text
+        if tool_json:
+            return json.loads(tool_json)
+        # Model didn't call the tool — try to recover from thinking
+        log.warning("Scout did not call tool — attempting recovery")
+        if thinking_text:
+            return _recover_from_thinking(thinking_text, api_params)
+        if fallback_text:
+            return parse_json_output(fallback_text)
+        return {"grants": [], "near_misses": [], "follow_up_questions": [], "elimination_summary": {}}
     else:
-        response = client.messages.create(
-            model=MODEL,
-            max_tokens=16000,
-            thinking={
-                "type": "enabled",
-                "budget_tokens": 15000,
-            },
-            system=prompt.build()["messages"][0]["content"],
-            messages=[
-                {
-                    "role": "user",
-                    "content": f"Here is the confirmed user profile:\n\n{profile_text}\n\nHere is the grant database:\n\n{grants_text}",
-                }
-            ],
-        )
+        response = client.messages.create(**api_params)
         for block in response.content:
-            if block.type == "text":
-                return block.text
-        return ""
+            if block.type == "tool_use":
+                return block.input
+        # Model didn't call the tool — fall back to text parsing
+        log.warning("Scout did not call tool — falling back to text parsing")
+        for block in response.content:
+            if block.type == "text" and block.text:
+                return parse_json_output(block.text)
+        return {"grants": [], "near_misses": [], "follow_up_questions": [], "elimination_summary": {}}
+
+
+def _recover_from_thinking(thinking_text, original_params):
+    """
+    Scout analyzed grants but didn't call the tool.
+    Feed the thinking back and ask it to just call submit_recommendations.
+    Cheap call — no grant database, no extended thinking, just the tool call.
+    """
+    log.info("Attempting tool recovery from thinking (%d chars)", len(thinking_text))
+    response = client.messages.create(
+        model=MODEL,
+        max_tokens=4000,
+        tools=[SCOUT_TOOL],
+        system=original_params["system"],
+        messages=[
+            original_params["messages"][0],  # original user message with profile + grants
+            {"role": "assistant", "content": [{"type": "thinking", "thinking": thinking_text, "signature": ""}, {"type": "text", "text": "Let me now submit my recommendations."}]},
+            {"role": "user", "content": "Please call submit_recommendations now based on your analysis above."},
+        ],
+    )
+    for block in response.content:
+        if block.type == "tool_use":
+            log.info("Tool recovery succeeded")
+            return block.input
+    log.error("Tool recovery failed — no tool call in response")
+    # Last resort: try parsing text
+    for block in response.content:
+        if block.type == "text" and block.text:
+            try:
+                return parse_json_output(block.text)
+            except ValueError:
+                pass
+    return {"grants": [], "near_misses": [], "follow_up_questions": [], "elimination_summary": {}}
 
 
 def run_scorer(profile_text, scout_output, scorer_callback=None):
@@ -295,24 +396,10 @@ def run_pipeline(profile_text, thinking_callback=None, scorer_callback=None, sta
     filtered_grants = filter_grants_for_profile(GRANTS, profile_text)
     update_status(f"Searching {len(GRANTS)} grants — {len(filtered_grants)} match your area...")
 
-    # Step 1: Scout searches and recommends
-    scout_output = run_scout(profile_text, grants=filtered_grants, thinking_callback=thinking_callback)
-
-    # Parse Scout's JSON output
-    try:
-        scout_data = parse_json_output(scout_output)
-    except ValueError:
-        return {
-            "needs_follow_up": False,
-            "profile": profile_text,
-            "scout_output": scout_output,
-            "grants": [],
-            "near_misses": [],
-            "message": NO_MATCH_MESSAGE,
-            "retries": 0,
-            "approved": False,
-            "scorer_skipped": False,
-        }
+    # Step 1: Scout searches and recommends (returns structured dict via tool use)
+    scout_data = run_scout(profile_text, grants=filtered_grants, thinking_callback=thinking_callback)
+    scout_output = json.dumps(scout_data, indent=2)  # string form for Scorer and chat context
+    log.info("Scout returned %d grants, %d near_misses", len(scout_data.get("grants", [])), len(scout_data.get("near_misses", [])))
 
     # Step 1b: Check if Scout has follow-up questions
     follow_up = scout_data.get("follow_up_questions", [])
@@ -331,6 +418,7 @@ def run_pipeline(profile_text, thinking_callback=None, scorer_callback=None, sta
 
     # No grants found
     if not grants:
+        log.warning("Scout returned 0 grants — showing no-match message")
         return {
             "needs_follow_up": False,
             "profile": profile_text,
@@ -350,6 +438,7 @@ def run_pipeline(profile_text, thinking_callback=None, scorer_callback=None, sta
     )
 
     if all_high:
+        log.info("All grants High confidence — skipping Scorer, presenting %d grants", len(grants))
         update_status("High confidence - presenting results...")
         return {
             "needs_follow_up": False,
@@ -365,8 +454,10 @@ def run_pipeline(profile_text, thinking_callback=None, scorer_callback=None, sta
         }
 
     # Medium/Low confidence — Scorer reviews
+    log.info("Medium/Low confidence detected — running Scorer on %d grants", len(grants))
     update_status("Running quality checks on recommendations...")
     scorer_output = run_scorer(profile_text, scout_output, scorer_callback=scorer_callback)
+    log.info("Scorer verdict: %s", "REJECTED" if "REJECTED" in scorer_output.upper() else "APPROVED")
 
     def is_rejected(output):
         try:
@@ -379,23 +470,22 @@ def run_pipeline(profile_text, thinking_callback=None, scorer_callback=None, sta
     retries = 0
     while is_rejected(scorer_output) and retries < MAX_SCORER_RETRIES:
         retries += 1
+        log.info("Scorer rejected — retry %d of %d", retries, MAX_SCORER_RETRIES)
         update_status(f"Refining recommendations (attempt {retries + 1})...")
-        scout_output = run_scout(
+        scout_data = run_scout(
             f"{profile_text}\n\nPrevious recommendation was rejected by quality check:\n{scorer_output}\n\nPlease try again with this feedback.",
             grants=filtered_grants,
         )
-        try:
-            scout_data = parse_json_output(scout_output)
-            grants = scout_data.get("grants", [])
-            near_misses = scout_data.get("near_misses", [])
-            elimination = scout_data.get("elimination_summary", {})
-        except ValueError:
-            pass
+        scout_output = json.dumps(scout_data, indent=2)
+        grants = scout_data.get("grants", [])
+        near_misses = scout_data.get("near_misses", [])
+        elimination = scout_data.get("elimination_summary", {})
         update_status("Re-checking quality...")
         scorer_output = run_scorer(profile_text, scout_output)
 
     # Final check: still rejected after retries?
     if is_rejected(scorer_output):
+        log.error("Scorer still REJECTED after %d retries — showing no-match message", retries)
         return {
             "needs_follow_up": False,
             "profile": profile_text,

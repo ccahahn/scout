@@ -72,13 +72,13 @@ Streamlit Web App (Python)
 - Scout streams thinking + text tokens; Scorer streams text tokens (both shown live in thinking box)
 
 **4. Grant data (`data/grants.json`)**
-- 200 grants (35 real from GrantWatch + 165 synthetic)
+- 100 grants (35 real from GrantWatch + 65 synthetic)
 - Loaded at startup, passed to Scout as context
 - Not passed to Transcriber or Scorer (they don't need it)
 
 **5. Braintrust tracing + evals**
 - Full pipeline traced via `wrap_anthropic`: Transcriber, Scout, Scorer calls all logged
-- Eval scorers (not yet built) will run against pipeline output — see `eval-plan.md`
+- Eval scorers (not yet built) will run against pipeline output — see spec section 4
 - Two types of scorers planned:
   - Rule-based: trap grant avoidance, geographic precision, recommendation count, dealbreaker violations
   - LLM-as-judge: nuance flattening, language mirroring, tone matching, rationale quality
@@ -134,13 +134,13 @@ instrumentl/
 ├── docs/
 │   ├── build/
 │   │   ├── architecture.md            # This file
-│   │   ├── eval-plan.md               # Eval criteria + metrics + synthetic users
 │   │   ├── model-spec-transcriber.md  # How Transcriber behaves
 │   │   ├── model-spec-scout.md        # How Scout behaves
-│   │   └── model-spec-scorer.md       # How Scorer behaves
+│   │   ├── model-spec-scorer.md       # How Scorer behaves
 │   │   └── test-plan.md               # 25 manual test scenarios for testers
 │   └── strategy/
-│       └── spec.md                    # Product spec
+│       ├── spec.md                    # Product spec
+│       └── playbook.md               # How we operate: eval loop, rollout, CI/CD
 │
 ├── thinking/
 │   ├── research.md
@@ -154,7 +154,7 @@ instrumentl/
 │   └── .env                           # API keys (gitignored)
 │
 └── data/
-    ├── grants.json                    # 200 grants
+    ├── grants.json                    # 100 grants
     └── synthetic-users.json           # 12 synthetic user profiles
 ```
 
