@@ -121,7 +121,13 @@ Candidates to promote once we run Tier 1 and do error analysis. We don't build t
 - **Nuance Flattening** (LLM-as-judge) — did the agent flatten "fatherhood initiative" to "family services"?
 - **Language Mirror** (LLM-as-judge) — did the rationale use the user's words or upgrade to jargon they didn't use?
 
-Any LLM-as-judge scorer must be calibrated against manual scores before shipping. Don't trust the judge until it agrees with human judgment on known examples.
+### LLM-as-judge (out of scope for prototype)
+
+The Nuance Flattening and Language Mirror scorers require LLM-as-judge — using one model to evaluate another model's output. These are the right scorers for catching the subtle failures that rule-based checks can't: did the agent preserve the user's meaning, not just their keywords? Did it reason about "fatherhood initiative" as a distinct concept, or collapse it into "family services"?
+
+These scorers are out of scope for the prototype because they require calibration to be meaningful. An uncalibrated LLM judge is just another model's opinion. A calibrated one is a validated measurement tool. The difference is: you score a set of outputs manually first, then run the judge on the same outputs, and only ship it when the judge agrees with human judgment on known examples. That calibration process requires real pipeline outputs to score against — and doing it well matters more than doing it fast.
+
+This is the right next step after completing Tier 1 error analysis: identify which subtle failure patterns actually occur, write the judge prompt, calibrate against manual scores, then promote.
 
 ### Synthetic users (12 profiles)
 

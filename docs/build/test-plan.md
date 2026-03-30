@@ -1,3 +1,11 @@
+# Manual Test Plan: Scorers
+**How to use this:** Navigate to Experiments in Braintrust to see the scenarios. Evaluate the result manually then promote a scorer. 
+
+---
+
+
+
+---
 # Manual Test Plan: Scout Prototype
 
 **How to use this:** Copy-paste the "Call Notes Input" into the Scout text area and click "Find Grants." Check the results against the Expected Result and Pass Criteria columns. Mark Pass/Fail and add notes.

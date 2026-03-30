@@ -58,7 +58,7 @@ The advisor's job is to follow the client's energy. These questions are a toolki
 *What it reveals:*
 - Capacity for application complexity (→ solo = simple apps only; team = can handle RFPs)
 - Capacity for reporting and compliance (→ federal grants require significant post-award management)
-- Bandwidth for how many grants they can realistically pursue (→ agent should recommend 1-2, not 5)
+- Bandwidth for how many grants they can realistically pursue (→ solo: 1-2, experienced team: up to 3)
 - Whether they have administrative support (→ affects matching fund requirements, mandatory meetings)
 
 *What the agent infers:*

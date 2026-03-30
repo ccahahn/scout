@@ -20,7 +20,7 @@ User (browser)
 
 **Transcriber** — Receives call notes from the advisor (pasted into the intake form after or during the 1:1 call). Extracts a structured profile. If critical fields are missing, asks only the specific questions needed. Does not recommend grants.
 
-**Scout** — Receives the confirmed profile. Searches the grant database. Filters out dealbreakers, geographic mismatches, eligibility failures. Ranks what remains. Produces 1-2 draft recommendations with full rationale. Does not present to the user.
+**Scout** — Receives the confirmed profile. Searches the grant database (pre-filtered to user's state + national). Filters out dealbreakers, geographic mismatches, eligibility failures. Ranks what remains. Produces draft recommendations based on user capacity (solo first-timer: 1-2, experienced team: up to 3) with full rationale. Does not present to the user.
 
 **Scorer** — Receives the profile AND Scout's draft recommendations. Runs every recommendation through a checklist: geographic check, eligibility check, dealbreaker check, nuance check, language check, overwhelm check. If all pass → approved, presented to user. If any fail → rejected, Scout tries again.
 
@@ -49,18 +49,19 @@ Streamlit Web App (Python)
 **1. Streamlit app (`app.py`)**
 - Intake form: advisor pastes call notes into a structured template (org, location, mission, dealbreakers, etc.)
 - One-shot flow: paste notes → click "Find Grants" → pipeline runs → results appear
-- Session state holds: pipeline phase (intake / searching / follow_up / results / apply), confirmed profile, approved grants, chat history
+- Session state holds: pipeline phase (intake / searching / follow_up / searching_with_answers / results / apply), confirmed profile, approved grants, chat history
 - Thinking box: shows Scout filtering, Scout drafting, and Scorer quality-checking in real time with color-coded sections
 - Results page: grant cards with rationale + "Apply" buttons + follow-up chat
 - Apply page: mock application with profile fields pre-filled by Scout
 - No login, no auth, no database
 
-**2. Three Braintrust prompts**
-- `transcriber-prompt` — profile extraction from call notes
-- `scout-prompt` — grant search, ranking, rationale writing (uses extended thinking)
-- `scorer-prompt` — quality gate, checklist verification
+**2. Three Braintrust prompts + one hardcoded prompt**
+- `transcriber-prompt-3997` — profile extraction from call notes
+- `scout-prompt-7867` — grant search, ranking, rationale writing (uses extended thinking)
+- `scorer-prompt-e86a` — quality gate, checklist verification
 - Each updated independently in Braintrust UI — no code redeploy
-- Fetched at runtime via `braintrust.load_prompt()`
+- Fetched at runtime via `braintrust.load_prompt(project="Scout", slug=...)`
+- `CHAT_SYSTEM_PROMPT` — hardcoded in `pipeline.py`, powers follow-up chat after results are shown. Not in Braintrust because it's a simple conversational prompt that doesn't need iteration.
 
 **3. Claude API**
 - Model: claude-sonnet-4-20250514 for all three agents
@@ -130,7 +131,7 @@ AssemblyAI Real-Time API (or equivalent)
 ### File structure
 
 ```
-instrumentl/
+scout/
 ├── docs/
 │   ├── build/
 │   │   ├── architecture.md            # This file
@@ -170,9 +171,9 @@ Phase 1 — Intake
 Phase 2 — Pipeline (behind the scenes, shown in thinking box)
 4. App fetches transcriber-prompt from Braintrust
 5. Transcriber receives call notes, extracts structured profile
-6. If Scout has follow-up questions → shown to advisor, answers fed back in
-7. App fetches scout-prompt, loads grants.json
-8. Scout receives profile + grants → searches with extended thinking → produces draft recs
+6. App fetches scout-prompt, loads grants.json (pre-filtered to user's state + national)
+7. Scout receives profile + grants → searches with extended thinking → produces draft recs
+8. If Scout has follow-up questions → shown to advisor → answers appended to profile → Scout re-runs with allow_follow_up=False
 9. App fetches scorer-prompt
 10. Scorer receives profile + Scout's recs → runs checklist
 11. If all high confidence → Scorer skipped, results shown directly
@@ -186,23 +187,22 @@ Phase 3 — Results
 17. "Start new search" resets everything
 ```
 
-**Eval flow (testing synthetic users — not yet built):**
+**Eval flow (testing synthetic users):**
 ```
 1. evals.py loads synthetic-users.json
 2. For each synthetic user:
-   a. Feeds their call notes to Transcriber
-   b. Transcriber extracts profile
-   c. Scout searches and recommends
-   d. Scorer evaluates
-   e. Scorers check full pipeline:
-      - Did Transcriber mirror the user's language? (Language Mirror)
-      - Did Transcriber state inference as fact? (Inference Check)
-      - Did Scout recommend correct_grants? (Hit Rate)
-      - Did Scout recommend any trap_grants? (Trap Avoidance)
-      - Did Scorer catch geographic mismatches? (Scorer Catch Rate)
-      - Were final recommendations ≤3? (Overwhelm Check)
-   f. Logs scores to Braintrust
-3. Results visible in Braintrust dashboard: per-agent scores, per-user pass rates
+   a. build_call_notes() constructs advisor-style notes from the user profile
+   b. Transcriber extracts structured profile from call notes
+   c. Scout searches and recommends (allow_follow_up=False)
+   d. Scorer evaluates (if triggered by Medium confidence)
+   e. Tier 1 scorers check pipeline output:
+      - Trap Avoidance: did Scout recommend any trap_grants? (0 allowed)
+      - Hit Rate: did Scout recommend at least 1 correct_grant?
+      - Overwhelm Check: grant count ≤ user capacity (solo: 2, team: 3)
+   f. Logs scores to Braintrust via braintrust.Eval()
+3. Results visible in Braintrust dashboard: per-scorer scores, per-user pass rates
+4. Tier 2 scorers (geographic precision, dealbreaker violation, nuance flattening,
+   language mirror) — candidates to promote after Tier 1 error analysis
 ```
 
 ### Dependencies
@@ -227,7 +227,7 @@ Both go in `.env` file (gitignored). For Streamlit Cloud, these move to Streamli
 
 ### Cost estimate
 
-Three Claude calls per pipeline run. Scout uses extended thinking (15K token budget).
+Three Claude calls per pipeline run (Transcriber + Scout + conditional Scorer). A 4th call happens if the user asks follow-up questions in the chat after results. Scout uses extended thinking (15K token budget).
 
 | Activity | Estimated tokens | Cost (Sonnet) |
 |----------|-----------------|---------------|
@@ -257,7 +257,7 @@ Three Claude calls per pipeline run. Scout uses extended thinking (15K token bud
 | 9 | Added Apply page: mock application with profile fields pre-filled | Done |
 | 10 | Polished UI: brand colors, grant card formatting, metadata line breaks | Done |
 | 11 | Created test plan: 25 manual scenarios across 12 synthetic users | Done |
-| 12 | Wire up Braintrust eval runner (`evals.py`) with automated scorers | Next |
+| 12 | Wire up Braintrust eval runner (`evals.py`) with Tier 1 scorers (trap avoidance, hit rate, overwhelm check) | Done |
 | 13 | Run evals → find failures → update prompts → re-run (the development loop) | Next |
 | 14 | Push to GitHub + deploy to Streamlit Cloud | Next |
 | 15 | Add live transcription (AssemblyAI or equivalent) for v2 intake flow | Next |

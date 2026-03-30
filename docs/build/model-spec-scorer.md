@@ -23,7 +23,7 @@ Instrumentl's customers love the human support team because they feel heard, not
 ### Your inputs
 
 1. The confirmed user profile (from Transcriber)
-2. Scout's draft recommendations (1-2 grants with rationale)
+2. Scout's draft recommendations (grants with rationale, count based on user capacity)
 3. Scout's elimination summary (how many reviewed, why others were eliminated)
 
 ---
