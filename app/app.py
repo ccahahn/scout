@@ -391,7 +391,7 @@ def make_thinking_ui():
             )
             last_timer_update[0] = elapsed
 
-    _render_status("Searching so you don't have to. Back in two minutes.")
+    _render_status("Finding your best-fit grants. Back in two minutes.")
 
     def on_thinking(chunk):
         _update_timer()
@@ -430,7 +430,7 @@ if st.session_state.phase == "apply":
     budget = get_field("budget") or get_field("annual budget")
     team = get_field("team") or get_field("team size")
 
-    if st.button("< Back to Results"):
+    if st.button("\u2190 Back to Results"):
         st.session_state.phase = "results"
         st.rerun()
 
@@ -497,7 +497,7 @@ if st.session_state.phase == "apply":
 elif st.session_state.phase == "grant_detail":
     grant = st.session_state.detail_grant
 
-    if st.button("< Back to Results"):
+    if st.button("\u2190 Back to Results"):
         st.session_state.phase = "results"
         st.rerun()
 
@@ -581,7 +581,7 @@ elif st.session_state.phase == "grant_detail":
     st.write("")
     col1, col2 = st.columns(2)
     with col1:
-        if st.button("< Back to Results ", key="detail_back_bottom"):
+        if st.button("\u2190 Back to Results", key="detail_back_bottom"):
             st.session_state.phase = "results"
             st.rerun()
     with col2:
@@ -593,7 +593,7 @@ elif st.session_state.phase == "grant_detail":
 
 # ---- EXPLORE ALL (mock Instrumentl search page) ----
 elif st.session_state.phase == "explore":
-    if st.button("< Back to Results"):
+    if st.button("\u2190 Back to Results"):
         st.session_state.phase = "results"
         st.rerun()
 
@@ -663,7 +663,7 @@ elif st.session_state.phase == "searching":
         st.title("Scout")
     with header_col2:
         st.write("")
-        if st.button("< Back"):
+        if st.button("\u2190 Back"):
             go_back_to_intake()
             st.rerun()
 
@@ -695,7 +695,7 @@ elif st.session_state.phase == "searching_with_answers":
         st.title("Scout")
     with header_col2:
         st.write("")
-        if st.button("< Back"):
+        if st.button("\u2190 Back"):
             go_back_to_intake()
             st.rerun()
 
