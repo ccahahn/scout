@@ -1272,15 +1272,6 @@ else:
                 st.session_state.phase = "extracting"
                 st.rerun()
 
-            # DEBUG: skip to results with mock data
-            st.write("")
-            if st.button("DEBUG: Skip to matches", key="debug_skip"):
-                st.session_state.profile_dict = {"organization": "Raices del Valle", "location": "Austin, Travis County, Texas", "mission": "After-school tutoring and mentoring for first-generation Latino students in south Austin", "who_they_serve": "Latino youth, first-generation students, low-income families", "budget": "~$180K/year", "grant_experience": "Some — one prior Rotary club grant", "sweet_spot": "$2K – $10K", "dealbreakers": "Complex federal reporting, heavy compliance requirements", "urgency": "Ready to apply now", "looking_for": "Education grants for youth programs", "fund_use": "", "renewability": ""}
-                st.session_state.profile = profile_dict_to_text(st.session_state.profile_dict)
-                st.session_state.results = {"profile": st.session_state.profile, "scout_output": "{}", "grants": [{"id": "grant-tx-01", "title": "Travis County Youth Education Mini-Grants", "funder": "Austin Community Foundation — Vecinos Fund", "amount_min": 2000, "amount_max": 8000, "deadline": "June 15, 2026", "rationale": "Specifically designed for after-school tutoring and mentoring programs serving first-generation Latino students in Travis County. The $2K–$8K range fits your sweet spot, and the Vecinos Fund shows they understand your community.", "confidence": "High", "fit_tags": ["location match", "mission match", "budget fit", "simple application"]}, {"id": "grant-tx-02", "title": "Manos Unidas Education Grants", "funder": "Manos Unidas Foundation", "amount_min": 3000, "amount_max": 10000, "deadline": "July 1, 2026", "rationale": "National foundation specifically funding Latino youth education, mentoring, and college readiness for first-generation students.", "confidence": "High", "fit_tags": ["mission match", "budget fit", "simple application"]}, {"id": "grant-tx-03", "title": "Texas Community Impact Grants", "funder": "Texas Philanthropy Partners", "amount_min": 1500, "amount_max": 5000, "deadline": "August 30, 2026", "rationale": "Broad community impact fund for Texas-based nonprofits. Good fit for your budget and mission.", "confidence": "Medium", "fit_tags": ["location match", "budget fit"]}], "near_misses": [], "elimination_summary": {"total_reviewed": 214}}
-                st.session_state.phase = "results"
-                st.rerun()
-
             # Auto-focus the text area on page load
             st.components.v1.html("""
             <script>
