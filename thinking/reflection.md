@@ -107,6 +107,24 @@ The last one — relationship fit — is the one no filter system captures. Some
 
 ---
 
+---
+
+### 8. What a real user taught us that synthetic users couldn't
+
+We tested with Emily, a director of student affairs at UCSD — a real potential client with a real grant need (conflict resolution and dialogue across difference programming for 45,000 students). The session broke assumptions that 12 synthetic profiles couldn't.
+
+**The thinking box was the opposite of helpful.** We designed it to build trust through transparency — "look at Scout working hard for you." Emily experienced it as obligation — "I feel like I *should* read all of that" — which recreated the exact overwhelm Scout exists to solve. The fix (progress bar + snippets) came from her language: "I'd be cheering it on." The goal isn't transparency, it's confidence.
+
+**"What gets me to yes" is not what we were surfacing.** We showed mission fit, amount, and deadline. Emily's yes depends on: reporting requirements, spending parameters (can it fund staffing?), indirect cost allowance, and renewability. These aren't nice-to-haves — they're the checklist she runs in her head before committing. We weren't asking about them or showing them.
+
+**The advisor questions drive everything downstream.** The intake template was missing four fields Emily cared about: current funding, how they'd use the funds, renewability preference, and spending parameters. If the advisor doesn't ask, the Transcriber can't extract, Scout can't match, and the Learn More page can't show. The whole pipeline is only as good as the first conversation.
+
+**Three options is right for everyone.** The old model (solo: 2, team: 3) was based on application capacity. But the user isn't deciding how many to *write* — they're deciding which to *look at*. Three gives enough to compare without scrolling. The near-misses ("worth considering") give a safety net. "See all results" catches anyone who wants the ocean.
+
+**"That feels like more work for me."** Emily said this about the concept of going back to re-evaluate grants she'd initially dismissed. This is the core tension: the product has to feel like it's *reducing* work at every step, not just *reorganizing* it. Every feature that asks the user to do more thinking is suspect.
+
+---
+
 ## Debugging tidbits
 
 Lessons from debugging this prototype — the kind of thing that's hard to Google because the fix depends on understanding *why* something works, not just *what* to type.
