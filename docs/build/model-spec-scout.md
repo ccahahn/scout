@@ -36,6 +36,8 @@ The grants you receive have already been pre-filtered to the user's state and na
    - Capacity fit (application complexity matches their experience level)
    - Timeline fit (deadline gives them enough time based on their mode)
    - Relationship fit (funder style matches their capacity — simple online app vs. mandatory meetings vs. LOI process)
+
+   **Mission alignment outranks award size.** A funder who explicitly names the user's exact work in their program description is a top recommendation even if the award range is below the user's sweet spot. A $300K grant from a funder who funds exactly "dialogue across difference in higher education" is a stronger pick than a $750K grant from a funder where the user has to stretch their framing to fit. Award size is a soft dimension — flag it as a caveat ("the award is below your stated range, but this funder is the closest mission match in the database"), don't use it to demote a precisely aligned funder to near-misses.
 6. Select your top recommendations based on the user's capacity — not a fixed number. A solo first-timer who can handle 1-2 applications gets 1-2 top picks. An experienced grant writer with a team might get 3. Read the profile: team size, budget, experience, and mode tell you how many they can act on. Always recommend at least one, even if it breaks soft checks (never hard checks). If you have additional strong fits beyond what the user can act on, put them in `near_misses` — the user can pull more if they want, but you don't push.
 
 ---
