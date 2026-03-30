@@ -25,7 +25,13 @@
     "federal": false,
     "contact_email": "brad.wylam@linncountyiowa.gov",
     "url": "https://linncounty.grantplatform.com/",
-    "description": "Supports artifact preservation, historical research, building restoration for National Register properties, and interpretive programs including educational publications and public awareness events."
+    "description": "Supports artifact preservation, historical research, building restoration for National Register properties, and interpretive programs including educational publications and public awareness events.",
+    "renewable": false,
+    "grant_duration": "one-year",
+    "funds_staffing": null,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": "minimal (brief final summary)"
   },
   {
     "id": "GW-166764",
@@ -55,7 +61,13 @@
     "requires_match": false,
     "federal": false,
     "contact_url": "https://unitedwayaustin.org/funding-opportunities/",
-    "description": "Supports quality education, childcare, family support services, perinatal care, parenting education, home visiting, mental health services, employment advancement, and financial stability programs serving low-income populations in Travis and Williamson Counties."
+    "description": "Supports quality education, childcare, family support services, perinatal care, parenting education, home visiting, mental health services, employment advancement, and financial stability programs serving low-income populations in Travis and Williamson Counties.",
+    "renewable": true,
+    "grant_duration": "multi-year",
+    "funds_staffing": true,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": "light (final report)"
   },
   {
     "id": "GW-183911",
@@ -84,7 +96,13 @@
     "federal": false,
     "contact_email": "Rachel.Ferreiro@doe.nv.gov",
     "url": "https://doe.nv.gov/grants",
-    "description": "Funds nonprofit organizations to implement school garden programs at Nevada Title I public schools K-12, including STEM curriculum integration, desert-environment-specific programming, community farmer's markets, and culinary demonstrations."
+    "description": "Funds nonprofit organizations to implement school garden programs at Nevada Title I public schools K-12, including STEM curriculum integration, desert-environment-specific programming, community farmer's markets, and culinary demonstrations.",
+    "renewable": null,
+    "grant_duration": null,
+    "funds_staffing": null,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": null
   },
   {
     "id": "GW-208315",
@@ -116,7 +134,13 @@
     "requires_match": false,
     "federal": false,
     "contact_url": "https://jwcouchfoundation.org/apply/focus",
-    "description": "Three charitable programs: Preservation (historical preservation priority for 2026, wildlife conservation, food/waste management, animal welfare), Education (early childhood, 21st-century learning, teacher support), and Wellness (mental health, digital wellbeing, outdoor engagement, mentorship). Programs must benefit local communities."
+    "description": "Three charitable programs: Preservation (historical preservation priority for 2026, wildlife conservation, food/waste management, animal welfare), Education (early childhood, 21st-century learning, teacher support), and Wellness (mental health, digital wellbeing, outdoor engagement, mentorship). Programs must benefit local communities.",
+    "renewable": null,
+    "grant_duration": null,
+    "funds_staffing": null,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": null
   },
   {
     "id": "GW-211587",
@@ -143,7 +167,13 @@
     "requires_match": false,
     "federal": false,
     "contact_url": "https://my.pltw.org/login",
-    "description": "Funds implementation or expansion of PLTW Launch STEM modules in grades PreK-5. New program grantees receive $15K over two years, expansion grantees receive $5K. Covers teacher training, technology, equipment, supplies, and PLTW participation fees. Schools with majority high-need populations prioritized."
+    "description": "Funds implementation or expansion of PLTW Launch STEM modules in grades PreK-5. New program grantees receive $15K over two years, expansion grantees receive $5K. Covers teacher training, technology, equipment, supplies, and PLTW participation fees. Schools with majority high-need populations prioritized.",
+    "renewable": null,
+    "grant_duration": null,
+    "funds_staffing": null,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": "minimal (brief final summary)"
   },
   {
     "id": "GW-173832",
@@ -175,7 +205,13 @@
     "federal": false,
     "contact_email": "cityclerk@san-marcos.net",
     "url": "https://cap.jcfsandiego.org/submit/246004/san-marcos-community-foundation",
-    "description": "Quarterly mini grants for projects directly benefiting San Marcos residents. Single-year awards only. Organizations limited to two mini grant awards per calendar year. Cannot apply for both mini and regular grants in same quarter."
+    "description": "Quarterly mini grants for projects directly benefiting San Marcos residents. Single-year awards only. Organizations limited to two mini grant awards per calendar year. Cannot apply for both mini and regular grants in same quarter.",
+    "renewable": false,
+    "grant_duration": "one-year",
+    "funds_staffing": false,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": "minimal (brief final summary)"
   },
   {
     "id": "GW-219236",
@@ -208,7 +244,13 @@
     "federal": false,
     "contact_email": "nclements@ifound.org",
     "url": null,
-    "description": "Two tracks: Capacity Building (up to $10K for board training, strategic planning, fund development, staff training) and Emerging Needs (up to $5K for general operating, crisis response, sudden funding gaps). Must align with basic needs, economic programs, support for crime/discrimination victims, or non-clinical mental health services."
+    "description": "Two tracks: Capacity Building (up to $10K for board training, strategic planning, fund development, staff training) and Emerging Needs (up to $5K for general operating, crisis response, sudden funding gaps). Must align with basic needs, economic programs, support for crime/discrimination victims, or non-clinical mental health services.",
+    "renewable": false,
+    "grant_duration": "one-year",
+    "funds_staffing": null,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": "minimal (brief final summary)"
   },
   {
     "id": "GW-135648",
@@ -238,7 +280,13 @@
     "federal": false,
     "contact_email": "mathews@cfrichmond.org",
     "url": "https://www.grantinterface.com/Home/Logon?urlkey=tcfrichmond",
-    "description": "Supports innovative, collaborative, measurable, and sustainable programs directly benefiting Mathews County residents across community vibrancy, economic prosperity, educational success, and health & wellness."
+    "description": "Supports innovative, collaborative, measurable, and sustainable programs directly benefiting Mathews County residents across community vibrancy, economic prosperity, educational success, and health & wellness.",
+    "renewable": false,
+    "grant_duration": "one-year",
+    "funds_staffing": null,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": "minimal (brief final summary)"
   },
   {
     "id": "GW-219825",
@@ -271,7 +319,13 @@
     "federal": false,
     "contact_email": "mk2236@cornell.edu",
     "url": "https://eseagrant.seagrant.stonybrook.edu/",
-    "description": "Environmental protection projects applying ecosystem-based management to address watershed challenges. Projects must originate from approved community plans and address at least one Great Lakes Advancement Agreement goal. 18-month project term."
+    "description": "Environmental protection projects applying ecosystem-based management to address watershed challenges. Projects must originate from approved community plans and address at least one Great Lakes Advancement Agreement goal. 18-month project term.",
+    "renewable": null,
+    "grant_duration": null,
+    "funds_staffing": true,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": "light (final report)"
   },
   {
     "id": "GW-185157",
@@ -300,7 +354,13 @@
     "federal": false,
     "contact_email": "mbermudez@unitedwayslo.org",
     "url": "https://forms.gle/uYJGkhvGhppBLntj8",
-    "description": "Youth-led projects with positive community impact. Applicants must work with an adult mentor and partner with an eligible organization. Projects reviewed by Youth Board peer members. All activities must occur in SLO County."
+    "description": "Youth-led projects with positive community impact. Applicants must work with an adult mentor and partner with an eligible organization. Projects reviewed by Youth Board peer members. All activities must occur in SLO County.",
+    "renewable": false,
+    "grant_duration": "one-year",
+    "funds_staffing": false,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": "minimal (brief final summary)"
   },
   {
     "id": "GW-219013",
@@ -333,7 +393,13 @@
     "federal": false,
     "contact_email": "ajimenezgleason@racf.org",
     "url": "https://www.grantinterface.com/sl/bGsTkM",
-    "description": "Supports PreK-12 arts programming across all disciplines delivered at schools or community organizations. Covers materials, support services (transportation, childcare, food assistance), and professional development. Must commit to participant surveys. Cannot fund field trips."
+    "description": "Supports PreK-12 arts programming across all disciplines delivered at schools or community organizations. Covers materials, support services (transportation, childcare, food assistance), and professional development. Must commit to participant surveys. Cannot fund field trips.",
+    "renewable": false,
+    "grant_duration": "one-year",
+    "funds_staffing": null,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": "minimal (brief final summary)"
   },
   {
     "id": "GW-174077",
@@ -365,7 +431,13 @@
     "federal": false,
     "contact_email": "cityclerk@sanmarcosca.gov",
     "url": "https://cap.jcfsandiego.org",
-    "description": "Quarterly grants for projects directly benefiting San Marcos residents. Single-year awards. Cannot fund religious or political purposes, support other charities through grants, or underwrite advertising/fundraising costs."
+    "description": "Quarterly grants for projects directly benefiting San Marcos residents. Single-year awards. Cannot fund religious or political purposes, support other charities through grants, or underwrite advertising/fundraising costs.",
+    "renewable": false,
+    "grant_duration": "one-year",
+    "funds_staffing": null,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": "minimal (brief final summary)"
   },
   {
     "id": "GW-227240",
@@ -394,7 +466,13 @@
     "federal": true,
     "contact_email": "andres.burgos@orlando.gov",
     "url": "https://www.zoomgrants.com/gprop.asp?donorid=2164",
-    "description": "Federal HUD HEARTH Act funding for homelessness prevention, rapid re-housing, and emergency shelter operations. Requires 100% matching funds (dollar-for-dollar). Reimbursement-based payments. Mandatory attendance at public hearing/technical assistance workshop required."
+    "description": "Federal HUD HEARTH Act funding for homelessness prevention, rapid re-housing, and emergency shelter operations. Requires 100% matching funds (dollar-for-dollar). Reimbursement-based payments. Mandatory attendance at public hearing/technical assistance workshop required.",
+    "renewable": true,
+    "grant_duration": "multi-year",
+    "funds_staffing": true,
+    "allows_indirect_costs": true,
+    "indirect_cost_rate": "negotiated rate (federal)",
+    "reporting_requirements": "extensive (annual performance reports, financial audits, compliance documentation)"
   },
   {
     "id": "GW-136927",
@@ -424,7 +502,13 @@
     "federal": false,
     "contact_email": "randall.richardson@rc1.myflorida.com",
     "url": null,
-    "description": "Small grants for local charitable organizations addressing Rotary's six areas of focus. Approximately 5 awards of $2,000 each. Manual application process with written submissions."
+    "description": "Small grants for local charitable organizations addressing Rotary's six areas of focus. Approximately 5 awards of $2,000 each. Manual application process with written submissions.",
+    "renewable": false,
+    "grant_duration": "one-year",
+    "funds_staffing": false,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": "minimal (brief final summary)"
   },
   {
     "id": "GW-170752",
@@ -457,7 +541,13 @@
     "federal": false,
     "contact_email": "info@artsforoaklandkids.org",
     "url": "https://artsforoaklandkids.dm.networkforgood.com",
-    "description": "Hands-on arts education at qualifying Oakland Unified School District schools. All art forms eligible. In-school programs strongly preferred. Elementary: minimum 16 weeks instruction with weekly classes. Overhead capped at 20%. Fiscal sponsors accepted without fee retention."
+    "description": "Hands-on arts education at qualifying Oakland Unified School District schools. All art forms eligible. In-school programs strongly preferred. Elementary: minimum 16 weeks instruction with weekly classes. Overhead capped at 20%. Fiscal sponsors accepted without fee retention.",
+    "renewable": false,
+    "grant_duration": "one-year",
+    "funds_staffing": null,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": "minimal (brief final summary)"
   },
   {
     "id": "GW-151124",
@@ -489,7 +579,13 @@
     "federal": false,
     "contact_email": "grantservices@oprfcf.org",
     "url": "https://www.grantinterface.com/Home/Logon?urlkey=oprfcf",
-    "description": "Supports elderly services including access to housing, aging in place, healthcare access, community enrichment, food security, and legal assistance. One-year grants. Cannot fund endowments, technology access, or financial insecurity/fraud prevention programs."
+    "description": "Supports elderly services including access to housing, aging in place, healthcare access, community enrichment, food security, and legal assistance. One-year grants. Cannot fund endowments, technology access, or financial insecurity/fraud prevention programs.",
+    "renewable": null,
+    "grant_duration": null,
+    "funds_staffing": null,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": null
   },
   {
     "id": "GW-207003",
@@ -520,7 +616,13 @@
     "federal": false,
     "contact_email": "h.busuego@eccf.org",
     "url": "https://www.grantinterface.com/Home/Logon?urlkey=eccf",
-    "description": "Summer programs enhancing social, academic, and emotional abilities of Greater Lawrence youth. Promotes safety, health, skill development, reduces summer learning loss, celebrates racial and cultural identity, and builds youth-staff relationships. Average award $6,000. Residential camps must meet ACA guidelines."
+    "description": "Summer programs enhancing social, academic, and emotional abilities of Greater Lawrence youth. Promotes safety, health, skill development, reduces summer learning loss, celebrates racial and cultural identity, and builds youth-staff relationships. Average award $6,000. Residential camps must meet ACA guidelines.",
+    "renewable": null,
+    "grant_duration": null,
+    "funds_staffing": null,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": "minimal (brief final summary)"
   },
   {
     "id": "GW-226435",
@@ -549,7 +651,13 @@
     "federal": false,
     "contact_email": "contractadmin@oaklandca.gov",
     "url": "https://cooisupplierprd.oaklandca.gov/",
-    "description": "Three-year awards for violence intervention services. Gun Violence Strategy receives ~$7.8M/year (60%), Gender-Based Violence Strategy receives ~$5.2M/year (40%). Must serve individuals at highest risk of or involved in violence."
+    "description": "Three-year awards for violence intervention services. Gun Violence Strategy receives ~$7.8M/year (60%), Gender-Based Violence Strategy receives ~$5.2M/year (40%). Must serve individuals at highest risk of or involved in violence.",
+    "renewable": null,
+    "grant_duration": null,
+    "funds_staffing": null,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": null
   },
   {
     "id": "GW-175634",
@@ -589,7 +697,13 @@
     "federal": false,
     "contact_email": "kbaer@legacyfdn.org",
     "url": null,
-    "description": "Two tracks: Programmatic ($2K-$35K) and Capacity Building (up to $10K for strategic planning, technology upgrades, board/staff training, program evaluation). Four focus areas: Basic Needs, Economic Mobility, Community Enrichment, Safety and Inclusive Justice."
+    "description": "Two tracks: Programmatic ($2K-$35K) and Capacity Building (up to $10K for strategic planning, technology upgrades, board/staff training, program evaluation). Four focus areas: Basic Needs, Economic Mobility, Community Enrichment, Safety and Inclusive Justice.",
+    "renewable": null,
+    "grant_duration": null,
+    "funds_staffing": true,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": "light (final report)"
   },
   {
     "id": "GW-180808",
@@ -620,7 +734,13 @@
     "federal": false,
     "contact_email": "whitney@mainstreetfoundation.org",
     "url": "https://grantinterface.com/Process/Apply?urlkey=mainstreetfoundation",
-    "description": "Programs increasing access to opportunity, basic needs support, and community vitality. Pre-application discussion with staff required at least 1 week before deadline. Cannot fund operating deficits, endowments, property repairs, or religious activities. Cannot have received funding for 2+ consecutive years."
+    "description": "Programs increasing access to opportunity, basic needs support, and community vitality. Pre-application discussion with staff required at least 1 week before deadline. Cannot fund operating deficits, endowments, property repairs, or religious activities. Cannot have received funding for 2+ consecutive years.",
+    "renewable": null,
+    "grant_duration": null,
+    "funds_staffing": null,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": null
   },
   {
     "id": "GW-153450",
@@ -653,7 +773,13 @@
     "federal": false,
     "contact_email": "director@rcacf.org",
     "url": null,
-    "description": "Multiple grant types with different cycles. Community Impact, Education, Public Health have spring/fall deadlines. Disaster Relief, Youth Sports, Extracurricular Activities accepted year-round. All projects must complete within one year."
+    "description": "Multiple grant types with different cycles. Community Impact, Education, Public Health have spring/fall deadlines. Disaster Relief, Youth Sports, Extracurricular Activities accepted year-round. All projects must complete within one year.",
+    "renewable": null,
+    "grant_duration": null,
+    "funds_staffing": null,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": null
   },
   {
     "id": "GW-188450",
@@ -681,7 +807,13 @@
     "federal": false,
     "contact_email": "ncs@sunnyvale.ca.gov",
     "url": null,
-    "description": "Tiered funding based on neighborhood size: under 250 households ($1,500 max), 251-499 ($3,000 max), 500+ ($5,000 max). Block party grants $500 max. Supports youth programs, volunteer projects, and neighborhood events."
+    "description": "Tiered funding based on neighborhood size: under 250 households ($1,500 max), 251-499 ($3,000 max), 500+ ($5,000 max). Block party grants $500 max. Supports youth programs, volunteer projects, and neighborhood events.",
+    "renewable": false,
+    "grant_duration": "one-year",
+    "funds_staffing": null,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": "minimal (brief final summary)"
   },
   {
     "id": "GW-217494",
@@ -707,7 +839,13 @@
     "federal": false,
     "contact_email": "skays@steubenfoundation.org",
     "url": "https://www.grantinterface.com/Home/Logon?urlkey=steuben",
-    "description": "Quarterly grants supporting programs, projects, and activities that support community health and wellbeing. One award per four-quarter period per organization."
+    "description": "Quarterly grants supporting programs, projects, and activities that support community health and wellbeing. One award per four-quarter period per organization.",
+    "renewable": null,
+    "grant_duration": null,
+    "funds_staffing": null,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": null
   },
   {
     "id": "GW-224770",
@@ -742,7 +880,13 @@
     "federal": false,
     "contact_email": "staff@semac.org",
     "url": null,
-    "description": "Supports creation, performance, publication, and exhibition of arts in southeastern Minnesota. Budget proposals should prioritize paying artists and creative professionals. Biannual deadlines."
+    "description": "Supports creation, performance, publication, and exhibition of arts in southeastern Minnesota. Budget proposals should prioritize paying artists and creative professionals. Biannual deadlines.",
+    "renewable": false,
+    "grant_duration": "one-year",
+    "funds_staffing": null,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": "minimal (brief final summary)"
   },
   {
     "id": "GW-178186",
@@ -768,7 +912,13 @@
     "federal": false,
     "contact_email": "mbenson@rifoundation.org",
     "url": null,
-    "description": "Small grants improving health and well-being of North Smithfield residents. Priority given to organizations without access to other funding sources."
+    "description": "Small grants improving health and well-being of North Smithfield residents. Priority given to organizations without access to other funding sources.",
+    "renewable": false,
+    "grant_duration": "one-year",
+    "funds_staffing": false,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": "minimal (brief final summary)"
   },
   {
     "id": "GW-201598",
@@ -799,7 +949,13 @@
     "federal": true,
     "contact_email": "pdecarr@cityofutica.com",
     "url": null,
-    "description": "Federal CDBG funds for activities serving low/moderate-income Utica residents. Max 15% for public/human services. Must meet national objectives: low/moderate-income benefit or elimination of slums/blight. Eligible activities include senior centers, transportation, after-school, tutoring, housing rehab."
+    "description": "Federal CDBG funds for activities serving low/moderate-income Utica residents. Max 15% for public/human services. Must meet national objectives: low/moderate-income benefit or elimination of slums/blight. Eligible activities include senior centers, transportation, after-school, tutoring, housing rehab.",
+    "renewable": true,
+    "grant_duration": "multi-year",
+    "funds_staffing": true,
+    "allows_indirect_costs": true,
+    "indirect_cost_rate": "negotiated rate (federal)",
+    "reporting_requirements": "extensive (annual performance reports, financial audits, compliance documentation)"
   },
   {
     "id": "GW-207525",
@@ -834,7 +990,13 @@
     "federal": false,
     "contact_email": "brian.thompson@middlesexunitedway.org",
     "url": null,
-    "description": "Five Community Impact Areas: Youth Opportunity, Healthy Communities, Financial Security, Community Resiliency, and Equity. Applicants must attend four quarterly community gatherings. Funds expended July 2026 - June 2027."
+    "description": "Five Community Impact Areas: Youth Opportunity, Healthy Communities, Financial Security, Community Resiliency, and Equity. Applicants must attend four quarterly community gatherings. Funds expended July 2026 - June 2027.",
+    "renewable": null,
+    "grant_duration": null,
+    "funds_staffing": true,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": "light (final report)"
   },
   {
     "id": "GW-220579",
@@ -873,7 +1035,13 @@
     "federal": false,
     "contact_email": "info@beingforothers.org",
     "url": "https://www.beingforothers.org/grants/",
-    "description": "Eight priority pillars addressing social determinants of health. One-year contracts. Supports new and existing work including expansion, capacity building, and pilot programs. Three application cycles per year."
+    "description": "Eight priority pillars addressing social determinants of health. One-year contracts. Supports new and existing work including expansion, capacity building, and pilot programs. Three application cycles per year.",
+    "renewable": null,
+    "grant_duration": null,
+    "funds_staffing": true,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": "light (final report)"
   },
   {
     "id": "GW-143383",
@@ -911,7 +1079,13 @@
     "federal": false,
     "contact_email": "grants@southcumberlandcommunityfund.org",
     "url": null,
-    "description": "Three tiers: Spring (up to $10K), Summer (up to $50K with LOI), Fall (up to $5K), plus rolling capacity-building grants. Focus on health, education, and economic development. Must attend mandatory info session. Grant reports every six months."
+    "description": "Three tiers: Spring (up to $10K), Summer (up to $50K with LOI), Fall (up to $5K), plus rolling capacity-building grants. Focus on health, education, and economic development. Must attend mandatory info session. Grant reports every six months.",
+    "renewable": true,
+    "grant_duration": "multi-year",
+    "funds_staffing": true,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": "light (final report)"
   },
   {
     "id": "GW-182495",
@@ -941,7 +1115,13 @@
     "federal": false,
     "contact_email": "bhurlbut@ellison-foundation.org",
     "url": "https://ellison-foundation.formstack.com/forms/ellison_education_grant_application",
-    "description": "Two categories: Academic Enrichment (individual teachers or teams) and Professional Learning (teacher teams only). 15-20 grants expected. Covers books, materials, supplies, technology, stipends, substitute fees. Must be used during 2026-2027 school year."
+    "description": "Two categories: Academic Enrichment (individual teachers or teams) and Professional Learning (teacher teams only). 15-20 grants expected. Covers books, materials, supplies, technology, stipends, substitute fees. Must be used during 2026-2027 school year.",
+    "renewable": false,
+    "grant_duration": "one-year",
+    "funds_staffing": null,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": "minimal (brief final summary)"
   },
   {
     "id": "GW-194657",
@@ -971,7 +1151,13 @@
     "federal": false,
     "contact_email": null,
     "url": null,
-    "description": "Nonrecurring costs for expanding or initiating Summer Food Service Programs in high-need areas (50%+ free/reduced-price lunch or 50%+ child poverty). Covers equipment, facility modifications, staff training, outreach, transportation. Cannot fund food itself."
+    "description": "Nonrecurring costs for expanding or initiating Summer Food Service Programs in high-need areas (50%+ free/reduced-price lunch or 50%+ child poverty). Covers equipment, facility modifications, staff training, outreach, transportation. Cannot fund food itself.",
+    "renewable": null,
+    "grant_duration": null,
+    "funds_staffing": null,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": "minimal (brief final summary)"
   },
   {
     "id": "GW-203257",
@@ -1003,7 +1189,13 @@
     "federal": false,
     "contact_email": "DAsGrants@philafound.org",
     "url": "https://app.smarterselect.com/programs/108895-Philadelphia-Foundation",
-    "description": "Grants for organizations helping Philadelphia residents escape poverty and avoid crime. Must select one focus area per application. Average award $20K. Maximum 100 applications accepted. Priority given to smaller organizations."
+    "description": "Grants for organizations helping Philadelphia residents escape poverty and avoid crime. Must select one focus area per application. Average award $20K. Maximum 100 applications accepted. Priority given to smaller organizations.",
+    "renewable": true,
+    "grant_duration": "multi-year",
+    "funds_staffing": true,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": "light (final report)"
   },
   {
     "id": "GW-219091",
@@ -1032,7 +1224,13 @@
     "federal": false,
     "contact_email": "director@hoytfoundation.org",
     "url": null,
-    "description": "Supports health, arts, education, humanities, and human services. Pre-application contact mandatory (phone inquiry one month before, in-person meeting with CEO before full proposal). One proposal per org per calendar year. Two-year wait between awards."
+    "description": "Supports health, arts, education, humanities, and human services. Pre-application contact mandatory (phone inquiry one month before, in-person meeting with CEO before full proposal). One proposal per org per calendar year. Two-year wait between awards.",
+    "renewable": null,
+    "grant_duration": null,
+    "funds_staffing": null,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": null
   },
   {
     "id": "GW-147504",
@@ -1062,7 +1260,13 @@
     "federal": false,
     "contact_email": "info@toledorotary.org",
     "url": "https://www.grantinterface.com/Home/Logon?urlkey=toledocf",
-    "description": "~20 grants annually across six focus areas. Priority given to multi-organizational collaborations. Two-year wait between awards for recipients. Cannot fund general operating, retroactive expenses, endowments, or capital campaigns."
+    "description": "~20 grants annually across six focus areas. Priority given to multi-organizational collaborations. Two-year wait between awards for recipients. Cannot fund general operating, retroactive expenses, endowments, or capital campaigns.",
+    "renewable": false,
+    "grant_duration": "one-year",
+    "funds_staffing": null,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": "minimal (brief final summary)"
   },
   {
     "id": "GW-216726",
@@ -1097,7 +1301,13 @@
     "federal": false,
     "contact_email": "kim.borton@fkandersen.org",
     "url": "https://www.grantinterface.com/Home/Logon?urlkey=andersen",
-    "description": "Priority areas: healthcare, housing, education, human services, civic projects, environmental education. Limited ability to fund newly established organizations. Three annual deadlines. Cannot fund endowments, individuals, political campaigns, sponsorships, or lobbying."
+    "description": "Priority areas: healthcare, housing, education, human services, civic projects, environmental education. Limited ability to fund newly established organizations. Three annual deadlines. Cannot fund endowments, individuals, political campaigns, sponsorships, or lobbying.",
+    "renewable": null,
+    "grant_duration": null,
+    "funds_staffing": null,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": null
   },
   {
     "id": "SYN-001",
@@ -1126,7 +1336,13 @@
     "requires_match": false,
     "match_strengthens": false,
     "federal": false,
-    "description": "Supports small nonprofits providing after-school tutoring, mentoring, and academic enrichment for underserved youth in Travis County. Priority given to organizations serving first-generation and Latino students. Single online application, no LOI required. Awards are one-year, non-renewable."
+    "description": "Supports small nonprofits providing after-school tutoring, mentoring, and academic enrichment for underserved youth in Travis County. Priority given to organizations serving first-generation and Latino students. Single online application, no LOI required. Awards are one-year, non-renewable.",
+    "renewable": false,
+    "grant_duration": "one-year",
+    "funds_staffing": null,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": "minimal (brief final summary)"
   },
   {
     "id": "SYN-002",
@@ -1154,7 +1370,13 @@
     "requires_match": false,
     "match_strengthens": false,
     "federal": false,
-    "description": "National grants for nonprofits running academic support and mentoring programs for Latino youth, particularly first-generation college-bound students. Simple two-page narrative application. Organizations with budgets under $250K preferred. One-year awards for direct program costs."
+    "description": "National grants for nonprofits running academic support and mentoring programs for Latino youth, particularly first-generation college-bound students. Simple two-page narrative application. Organizations with budgets under $250K preferred. One-year awards for direct program costs.",
+    "renewable": false,
+    "grant_duration": "one-year",
+    "funds_staffing": null,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": "minimal (brief final summary)"
   },
   {
     "id": "SYN-003",
@@ -1181,7 +1403,13 @@
     "requires_match": false,
     "match_strengthens": false,
     "federal": false,
-    "description": "Small grants for Austin-area nonprofits addressing youth development and educational access. Preference for organizations with budgets under $200K. Short online application (2 pages max). Funds may be used for supplies, program materials, and direct service costs."
+    "description": "Small grants for Austin-area nonprofits addressing youth development and educational access. Preference for organizations with budgets under $200K. Short online application (2 pages max). Funds may be used for supplies, program materials, and direct service costs.",
+    "renewable": false,
+    "grant_duration": "one-year",
+    "funds_staffing": null,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": "minimal (brief final summary)"
   },
   {
     "id": "SYN-004",
@@ -1209,7 +1437,13 @@
     "requires_match": false,
     "match_strengthens": false,
     "federal": false,
-    "description": "Micro-grants for community-based food access projects in Providence County. Supports community gardens, farmers markets, nutrition workshops, and food distribution in underserved areas. Simple one-page online application. No prior grant experience required. First-time applicants encouraged."
+    "description": "Micro-grants for community-based food access projects in Providence County. Supports community gardens, farmers markets, nutrition workshops, and food distribution in underserved areas. Simple one-page online application. No prior grant experience required. First-time applicants encouraged.",
+    "renewable": false,
+    "grant_duration": "one-year",
+    "funds_staffing": false,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": "minimal (brief final summary)"
   },
   {
     "id": "SYN-005",
@@ -1237,7 +1471,13 @@
     "requires_match": false,
     "match_strengthens": false,
     "federal": false,
-    "description": "Supports establishment and expansion of community gardens in northern Providence County food deserts. Covers seeds, tools, raised beds, irrigation, and nutrition education materials. Short application (2 pages). Volunteer-run organizations welcome. No multi-year commitment required."
+    "description": "Supports establishment and expansion of community gardens in northern Providence County food deserts. Covers seeds, tools, raised beds, irrigation, and nutrition education materials. Short application (2 pages). Volunteer-run organizations welcome. No multi-year commitment required.",
+    "renewable": false,
+    "grant_duration": "one-year",
+    "funds_staffing": false,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": "minimal (brief final summary)"
   },
   {
     "id": "SYN-006",
@@ -1265,7 +1505,13 @@
     "requires_match": false,
     "match_strengthens": false,
     "federal": false,
-    "description": "Grants for youth-serving nonprofits in Steuben County. Supports mentoring, leadership development, life skills training, and structured after-school programming. Organizations with fewer than 3 years of operation are eligible and encouraged to apply. One-year awards."
+    "description": "Grants for youth-serving nonprofits in Steuben County. Supports mentoring, leadership development, life skills training, and structured after-school programming. Organizations with fewer than 3 years of operation are eligible and encouraged to apply. One-year awards.",
+    "renewable": false,
+    "grant_duration": "one-year",
+    "funds_staffing": null,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": "minimal (brief final summary)"
   },
   {
     "id": "SYN-007",
@@ -1293,7 +1539,13 @@
     "requires_match": false,
     "match_strengthens": false,
     "federal": false,
-    "description": "Supports evidence-based and emerging mentoring programs in rural Indiana. Newer organizations (1-3 years old) explicitly welcomed. Covers mentor training, program supplies, background checks, and activity costs. Simple narrative application with budget template provided."
+    "description": "Supports evidence-based and emerging mentoring programs in rural Indiana. Newer organizations (1-3 years old) explicitly welcomed. Covers mentor training, program supplies, background checks, and activity costs. Simple narrative application with budget template provided.",
+    "renewable": false,
+    "grant_duration": "one-year",
+    "funds_staffing": null,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": "minimal (brief final summary)"
   },
   {
     "id": "SYN-008",
@@ -1322,7 +1574,13 @@
     "requires_match": false,
     "match_strengthens": true,
     "federal": false,
-    "description": "Supports expansion of home-delivered meals, congregate dining, social engagement, and transportation services for older adults in suburban Cook County. Priority for programs addressing social isolation among homebound seniors. One-year awards with option for renewal."
+    "description": "Supports expansion of home-delivered meals, congregate dining, social engagement, and transportation services for older adults in suburban Cook County. Priority for programs addressing social isolation among homebound seniors. One-year awards with option for renewal.",
+    "renewable": null,
+    "grant_duration": null,
+    "funds_staffing": true,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": "light (final report)"
   },
   {
     "id": "SYN-009",
@@ -1350,7 +1608,13 @@
     "requires_match": false,
     "match_strengthens": false,
     "federal": false,
-    "description": "Grants for organizations providing direct services to older adults in Oak Park and River Forest. Supports meal delivery, wellness programs, social activities, caregiver respite, and home modification assistance. LOI is one page; full application invited within 3 weeks."
+    "description": "Grants for organizations providing direct services to older adults in Oak Park and River Forest. Supports meal delivery, wellness programs, social activities, caregiver respite, and home modification assistance. LOI is one page; full application invited within 3 weeks.",
+    "renewable": null,
+    "grant_duration": null,
+    "funds_staffing": null,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": "minimal (brief final summary)"
   },
   {
     "id": "SYN-010",
@@ -1378,7 +1642,13 @@
     "requires_match": false,
     "match_strengthens": false,
     "federal": false,
-    "description": "Supports organizations providing adult education services including GED preparation, literacy tutoring, English language classes, and basic workforce readiness in Escambia County. Programs serving adults 18+ only. One-year project period."
+    "description": "Supports organizations providing adult education services including GED preparation, literacy tutoring, English language classes, and basic workforce readiness in Escambia County. Programs serving adults 18+ only. One-year project period.",
+    "renewable": null,
+    "grant_duration": null,
+    "funds_staffing": null,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": "minimal (brief final summary)"
   },
   {
     "id": "SYN-011",
@@ -1405,7 +1675,13 @@
     "requires_match": false,
     "match_strengthens": true,
     "federal": false,
-    "description": "Grants for adult literacy and continuing education programs in Northwest Florida. Covers instructional materials, tutor training, technology for learners, and program coordination. Priority given to programs demonstrating measurable outcomes in reading level advancement or GED completion."
+    "description": "Grants for adult literacy and continuing education programs in Northwest Florida. Covers instructional materials, tutor training, technology for learners, and program coordination. Priority given to programs demonstrating measurable outcomes in reading level advancement or GED completion.",
+    "renewable": false,
+    "grant_duration": "one-year",
+    "funds_staffing": null,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": "minimal (brief final summary)"
   },
   {
     "id": "SYN-012",
@@ -1433,7 +1709,13 @@
     "requires_match": false,
     "match_strengthens": false,
     "federal": false,
-    "description": "Supports programs helping adults overcome barriers to employment, including formerly incarcerated individuals. Covers job training, certification programs, resume assistance, interview preparation, and employer partnership development. One-year awards."
+    "description": "Supports programs helping adults overcome barriers to employment, including formerly incarcerated individuals. Covers job training, certification programs, resume assistance, interview preparation, and employer partnership development. One-year awards.",
+    "renewable": null,
+    "grant_duration": null,
+    "funds_staffing": true,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": "minimal (brief final summary)"
   },
   {
     "id": "SYN-013",
@@ -1461,7 +1743,13 @@
     "requires_match": false,
     "match_strengthens": true,
     "federal": false,
-    "description": "Supports grassroots conservation and environmental education projects across Tennessee. Covers habitat restoration, water monitoring, invasive species removal, nature-based education programs, and community science initiatives. Rural organizations prioritized."
+    "description": "Supports grassroots conservation and environmental education projects across Tennessee. Covers habitat restoration, water monitoring, invasive species removal, nature-based education programs, and community science initiatives. Rural organizations prioritized.",
+    "renewable": false,
+    "grant_duration": "one-year",
+    "funds_staffing": null,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": "minimal (brief final summary)"
   },
   {
     "id": "SYN-014",
@@ -1489,7 +1777,13 @@
     "requires_match": false,
     "match_strengthens": false,
     "federal": false,
-    "description": "Supports organizations operating dedicated fatherhood programs including parenting workshops, co-parenting mediation, father-child bonding activities, job readiness for fathers, and family court navigation. Must serve fathers as the primary population, not general family services."
+    "description": "Supports organizations operating dedicated fatherhood programs including parenting workshops, co-parenting mediation, father-child bonding activities, job readiness for fathers, and family court navigation. Must serve fathers as the primary population, not general family services.",
+    "renewable": null,
+    "grant_duration": null,
+    "funds_staffing": true,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": "light (final report)"
   },
   {
     "id": "SYN-015",
@@ -1518,7 +1812,13 @@
     "requires_match": false,
     "match_strengthens": false,
     "federal": false,
-    "description": "Supports organizations providing STEM and technology education to underrepresented youth in the East Bay, with priority for programs serving girls of color. Covers curriculum development, equipment, instructor costs, and field experiences. Programs must demonstrate culturally responsive pedagogy."
+    "description": "Supports organizations providing STEM and technology education to underrepresented youth in the East Bay, with priority for programs serving girls of color. Covers curriculum development, equipment, instructor costs, and field experiences. Programs must demonstrate culturally responsive pedagogy.",
+    "renewable": null,
+    "grant_duration": null,
+    "funds_staffing": true,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": "light (final report)"
   },
   {
     "id": "SYN-016",
@@ -1548,7 +1848,13 @@
     "requires_match": false,
     "match_strengthens": false,
     "federal": false,
-    "description": "Supports youth arts education programs in Middlesex and New Haven Counties. All disciplines eligible including music, visual arts, theater, dance, creative writing, and digital media. Programs must serve youth ages 5-18. Priority for underserved communities."
+    "description": "Supports youth arts education programs in Middlesex and New Haven Counties. All disciplines eligible including music, visual arts, theater, dance, creative writing, and digital media. Programs must serve youth ages 5-18. Priority for underserved communities.",
+    "renewable": false,
+    "grant_duration": "one-year",
+    "funds_staffing": null,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": "minimal (brief final summary)"
   },
   {
     "id": "SYN-017",
@@ -1576,7 +1882,13 @@
     "requires_match": false,
     "match_strengthens": false,
     "federal": false,
-    "description": "Supports innovative veteran mental health and wellness programs in San Diego County, including animal-assisted therapy, equine therapy, art therapy, peer support networks, and nature-based healing. Programs must be veteran-specific and evidence-informed."
+    "description": "Supports innovative veteran mental health and wellness programs in San Diego County, including animal-assisted therapy, equine therapy, art therapy, peer support networks, and nature-based healing. Programs must be veteran-specific and evidence-informed.",
+    "renewable": null,
+    "grant_duration": null,
+    "funds_staffing": true,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": "minimal (brief final summary)"
   },
   {
     "id": "SYN-018",
@@ -1605,7 +1917,13 @@
     "requires_match": false,
     "match_strengthens": false,
     "federal": false,
-    "description": "Supports indigenous-led programs preserving cultural traditions, language, and traditional ecological knowledge in north-central Minnesota. Covers elder-youth knowledge transfer, wild rice and maple sugar education, native plant restoration, and cultural arts. Tribal organizations and indigenous-led nonprofits prioritized."
+    "description": "Supports indigenous-led programs preserving cultural traditions, language, and traditional ecological knowledge in north-central Minnesota. Covers elder-youth knowledge transfer, wild rice and maple sugar education, native plant restoration, and cultural arts. Tribal organizations and indigenous-led nonprofits prioritized.",
+    "renewable": null,
+    "grant_duration": null,
+    "funds_staffing": null,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": "minimal (brief final summary)"
   },
   {
     "id": "SYN-019",
@@ -1635,7 +1953,13 @@
     "requires_match": true,
     "match_strengthens": false,
     "federal": true,
-    "description": "Federal funding for adult education and literacy programs. Requires 25% non-federal match. Extensive reporting requirements including quarterly performance data, annual financial audits, and participant outcome tracking. Mandatory attendance at annual grantee conference in Washington, D.C."
+    "description": "Federal funding for adult education and literacy programs. Requires 25% non-federal match. Extensive reporting requirements including quarterly performance data, annual financial audits, and participant outcome tracking. Mandatory attendance at annual grantee conference in Washington, D.C.",
+    "renewable": true,
+    "grant_duration": "multi-year",
+    "funds_staffing": true,
+    "allows_indirect_costs": true,
+    "indirect_cost_rate": "negotiated rate (federal)",
+    "reporting_requirements": "extensive (annual performance reports, financial audits, compliance documentation)"
   },
   {
     "id": "SYN-020",
@@ -1662,7 +1986,13 @@
     "requires_match": false,
     "match_strengthens": false,
     "federal": false,
-    "description": "Supports youth education and mentoring programs in Williamson County. Programs must serve students in Williamson County schools only. Requires 5+ years operating history and budget over $300K. LOI followed by full proposal for selected finalists."
+    "description": "Supports youth education and mentoring programs in Williamson County. Programs must serve students in Williamson County schools only. Requires 5+ years operating history and budget over $300K. LOI followed by full proposal for selected finalists.",
+    "renewable": null,
+    "grant_duration": null,
+    "funds_staffing": null,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": "minimal (brief final summary)"
   },
   {
     "id": "SYN-021",
@@ -1689,7 +2019,13 @@
     "requires_match": true,
     "match_strengthens": false,
     "federal": true,
-    "description": "Federal grants for evidence-based youth mentoring programs. Requires 50% cash or in-kind match. Mandatory participation in national evaluation study. Quarterly reporting with federal compliance requirements. Three-year commitment required."
+    "description": "Federal grants for evidence-based youth mentoring programs. Requires 50% cash or in-kind match. Mandatory participation in national evaluation study. Quarterly reporting with federal compliance requirements. Three-year commitment required.",
+    "renewable": true,
+    "grant_duration": "multi-year",
+    "funds_staffing": true,
+    "allows_indirect_costs": true,
+    "indirect_cost_rate": "negotiated rate (federal)",
+    "reporting_requirements": "extensive (annual performance reports, financial audits, compliance documentation)"
   },
   {
     "id": "SYN-022",
@@ -1716,7 +2052,13 @@
     "requires_match": true,
     "match_strengthens": false,
     "federal": true,
-    "description": "Federal USDA funding for community food projects. Requires dollar-for-dollar match. Multi-year commitment (3 years). Extensive narrative (25+ pages), federal budget forms, logic model, and evaluation plan required. Annual site visits by federal program officers."
+    "description": "Federal USDA funding for community food projects. Requires dollar-for-dollar match. Multi-year commitment (3 years). Extensive narrative (25+ pages), federal budget forms, logic model, and evaluation plan required. Annual site visits by federal program officers.",
+    "renewable": true,
+    "grant_duration": "multi-year",
+    "funds_staffing": true,
+    "allows_indirect_costs": true,
+    "indirect_cost_rate": "negotiated rate (federal)",
+    "reporting_requirements": "extensive (annual performance reports, financial audits, compliance documentation)"
   },
   {
     "id": "SYN-023",
@@ -1744,7 +2086,13 @@
     "requires_match": true,
     "match_strengthens": false,
     "federal": true,
-    "description": "Federal Older Americans Act Title III-C funding for senior nutrition services. Requires 15% non-federal match. Mandatory compliance with federal nutrition standards, quarterly reporting, and annual audit. Must participate in state-level coordinating meetings."
+    "description": "Federal Older Americans Act Title III-C funding for senior nutrition services. Requires 15% non-federal match. Mandatory compliance with federal nutrition standards, quarterly reporting, and annual audit. Must participate in state-level coordinating meetings.",
+    "renewable": true,
+    "grant_duration": "multi-year",
+    "funds_staffing": true,
+    "allows_indirect_costs": true,
+    "indirect_cost_rate": "negotiated rate (federal)",
+    "reporting_requirements": "extensive (annual performance reports, financial audits, compliance documentation)"
   },
   {
     "id": "SYN-024",
@@ -1771,7 +2119,13 @@
     "requires_match": true,
     "match_strengthens": false,
     "federal": false,
-    "description": "Youth-focused grants requiring 1:1 matching funds. Applicants must demonstrate 3+ years of continuous programming. Serves Allen County only (Fort Wayne area). Not available to organizations in other Indiana counties."
+    "description": "Youth-focused grants requiring 1:1 matching funds. Applicants must demonstrate 3+ years of continuous programming. Serves Allen County only (Fort Wayne area). Not available to organizations in other Indiana counties.",
+    "renewable": false,
+    "grant_duration": "one-year",
+    "funds_staffing": null,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": "minimal (brief final summary)"
   },
   {
     "id": "SYN-025",
@@ -1799,7 +2153,13 @@
     "requires_match": false,
     "match_strengthens": false,
     "federal": false,
-    "description": "Supports education programs for Latino youth in Dallas County. Awards $10K-$30K for tutoring, college prep, STEM enrichment, and mentoring. Strong program but limited to Dallas County \u2014 not available for Travis County organizations."
+    "description": "Supports education programs for Latino youth in Dallas County. Awards $10K-$30K for tutoring, college prep, STEM enrichment, and mentoring. Strong program but limited to Dallas County \u2014 not available for Travis County organizations.",
+    "renewable": null,
+    "grant_duration": null,
+    "funds_staffing": true,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": "light (final report)"
   },
   {
     "id": "SYN-026",
@@ -1825,7 +2185,13 @@
     "requires_match": false,
     "match_strengthens": false,
     "federal": false,
-    "description": "Funds STEM enrichment programs delivered in partnership with Escambia County K-12 schools. Requires formal school partnership agreement. Programs must serve students during school hours or in school-based after-school settings. Youth and K-12 focused only."
+    "description": "Funds STEM enrichment programs delivered in partnership with Escambia County K-12 schools. Requires formal school partnership agreement. Programs must serve students during school hours or in school-based after-school settings. Youth and K-12 focused only.",
+    "renewable": false,
+    "grant_duration": "one-year",
+    "funds_staffing": null,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": "minimal (brief final summary)"
   },
   {
     "id": "SYN-027",
@@ -1852,7 +2218,13 @@
     "requires_match": false,
     "match_strengthens": false,
     "federal": false,
-    "description": "Supports home-delivered meal programs and senior nutrition services in Milwaukee County. Organizations must demonstrate capacity to serve 100+ seniors monthly. Cannot fund programs outside Milwaukee County."
+    "description": "Supports home-delivered meal programs and senior nutrition services in Milwaukee County. Organizations must demonstrate capacity to serve 100+ seniors monthly. Cannot fund programs outside Milwaukee County.",
+    "renewable": null,
+    "grant_duration": null,
+    "funds_staffing": true,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": "light (final report)"
   },
   {
     "id": "SYN-028",
@@ -1880,7 +2252,13 @@
     "requires_match": false,
     "match_strengthens": true,
     "federal": false,
-    "description": "Supports environmental education and conservation programs in Appalachian counties. Tennessee counties in the Cumberland Plateau region eligible. Covers outdoor classrooms, trail development, conservation curriculum, and eco-tourism development. Match not required but strengthens application."
+    "description": "Supports environmental education and conservation programs in Appalachian counties. Tennessee counties in the Cumberland Plateau region eligible. Covers outdoor classrooms, trail development, conservation curriculum, and eco-tourism development. Match not required but strengthens application.",
+    "renewable": true,
+    "grant_duration": "multi-year",
+    "funds_staffing": true,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": "light (final report)"
   },
   {
     "id": "SYN-029",
@@ -1908,7 +2286,13 @@
     "requires_match": false,
     "match_strengthens": false,
     "federal": false,
-    "description": "National grants for organizations operating dedicated fatherhood programs. Supports parenting workshops for fathers, father-child activity programs, job readiness tailored to non-custodial fathers, and family reunification services. Must demonstrate father-specific programming, not general family services."
+    "description": "National grants for organizations operating dedicated fatherhood programs. Supports parenting workshops for fathers, father-child activity programs, job readiness tailored to non-custodial fathers, and family reunification services. Must demonstrate father-specific programming, not general family services.",
+    "renewable": null,
+    "grant_duration": null,
+    "funds_staffing": true,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": "light (final report)"
   },
   {
     "id": "SYN-030",
@@ -1935,7 +2319,13 @@
     "requires_match": false,
     "match_strengthens": false,
     "federal": false,
-    "description": "Supports STEM education programs for girls of color in Oregon. Similar to Bay Area programs but restricted to Oregon-based organizations. Strong equity focus but not available to California nonprofits."
+    "description": "Supports STEM education programs for girls of color in Oregon. Similar to Bay Area programs but restricted to Oregon-based organizations. Strong equity focus but not available to California nonprofits.",
+    "renewable": true,
+    "grant_duration": "multi-year",
+    "funds_staffing": true,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": "light (final report)"
   },
   {
     "id": "SYN-031",
@@ -1962,7 +2352,13 @@
     "requires_match": false,
     "match_strengthens": false,
     "federal": false,
-    "description": "Supports reentry and workforce development programs for formerly incarcerated adults in southern Indiana. Covers job training, mentoring, housing assistance, and barrier removal. Not available to organizations in Lake County or northern Indiana."
+    "description": "Supports reentry and workforce development programs for formerly incarcerated adults in southern Indiana. Covers job training, mentoring, housing assistance, and barrier removal. Not available to organizations in Lake County or northern Indiana.",
+    "renewable": null,
+    "grant_duration": null,
+    "funds_staffing": null,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": "minimal (brief final summary)"
   },
   {
     "id": "SYN-032",
@@ -1989,7 +2385,13 @@
     "requires_match": false,
     "match_strengthens": false,
     "federal": false,
-    "description": "Grants for innovative K-12 education programs in Florida schools. Requires formal partnership with a Florida school district. Programs must serve students in grades K-12 during or adjacent to school hours. Youth and K-12 focused; adult education programs not eligible."
+    "description": "Grants for innovative K-12 education programs in Florida schools. Requires formal partnership with a Florida school district. Programs must serve students in grades K-12 during or adjacent to school hours. Youth and K-12 focused; adult education programs not eligible.",
+    "renewable": null,
+    "grant_duration": null,
+    "funds_staffing": true,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": "light (final report)"
   },
   {
     "id": "SYN-033",
@@ -2017,7 +2419,13 @@
     "requires_match": false,
     "match_strengthens": false,
     "federal": false,
-    "description": "Supports indigenous-led environmental and cultural programs in Hennepin County (Minneapolis area). Focuses on urban indigenous communities. Not available to organizations in Cass County or rural Minnesota."
+    "description": "Supports indigenous-led environmental and cultural programs in Hennepin County (Minneapolis area). Focuses on urban indigenous communities. Not available to organizations in Cass County or rural Minnesota.",
+    "renewable": null,
+    "grant_duration": null,
+    "funds_staffing": true,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": "minimal (brief final summary)"
   },
   {
     "id": "SYN-034",
@@ -2044,7 +2452,13 @@
     "requires_match": false,
     "match_strengthens": false,
     "federal": false,
-    "description": "Supports animal-assisted therapy programs in Arizona serving veterans, children, and seniors. Covers therapy animal training, facility costs, and program staff. Arizona-only; not available to California organizations."
+    "description": "Supports animal-assisted therapy programs in Arizona serving veterans, children, and seniors. Covers therapy animal training, facility costs, and program staff. Arizona-only; not available to California organizations.",
+    "renewable": null,
+    "grant_duration": null,
+    "funds_staffing": null,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": "minimal (brief final summary)"
   },
   {
     "id": "SYN-035",
@@ -2073,7 +2487,13 @@
     "requires_match": false,
     "match_strengthens": false,
     "federal": false,
-    "description": "Supports youth arts education in Greater Hartford. Requires 5+ years of arts programming experience. Serves Hartford County communities only \u2014 not available to Middlesex County organizations."
+    "description": "Supports youth arts education in Greater Hartford. Requires 5+ years of arts programming experience. Serves Hartford County communities only \u2014 not available to Middlesex County organizations.",
+    "renewable": null,
+    "grant_duration": null,
+    "funds_staffing": null,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": "minimal (brief final summary)"
   },
   {
     "id": "SYN-036",
@@ -2103,7 +2523,13 @@
     "requires_match": true,
     "match_strengthens": false,
     "federal": false,
-    "description": "National grants for conservation and environmental education. Requires 1:1 non-federal match. Multi-year projects (2-3 years) preferred. Supports habitat restoration, species recovery, watershed protection, and conservation education. Strong application but matching funds required."
+    "description": "National grants for conservation and environmental education. Requires 1:1 non-federal match. Multi-year projects (2-3 years) preferred. Supports habitat restoration, species recovery, watershed protection, and conservation education. Strong application but matching funds required.",
+    "renewable": true,
+    "grant_duration": "multi-year",
+    "funds_staffing": true,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": "moderate (annual narrative and financial report)"
   },
   {
     "id": "SYN-037",
@@ -2130,7 +2556,13 @@
     "requires_match": false,
     "match_strengthens": false,
     "federal": false,
-    "description": "Supports workforce reentry programs for formerly incarcerated adults in Jacksonville/Duval County. Covers vocational training, job placement, mentoring, and support services. Limited to Duval County; not available to Escambia County organizations."
+    "description": "Supports workforce reentry programs for formerly incarcerated adults in Jacksonville/Duval County. Covers vocational training, job placement, mentoring, and support services. Limited to Duval County; not available to Escambia County organizations.",
+    "renewable": null,
+    "grant_duration": null,
+    "funds_staffing": true,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": "light (final report)"
   },
   {
     "id": "SYN-038",
@@ -2158,7 +2590,13 @@
     "requires_match": false,
     "match_strengthens": false,
     "federal": false,
-    "description": "Small grants supporting community health, wellness, and basic needs programs in the Cumberland Plateau region. Quick turnaround application. Supports a range of programs from health screenings to recreation to food pantries."
+    "description": "Small grants supporting community health, wellness, and basic needs programs in the Cumberland Plateau region. Quick turnaround application. Supports a range of programs from health screenings to recreation to food pantries.",
+    "renewable": false,
+    "grant_duration": "one-year",
+    "funds_staffing": false,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": "minimal (brief final summary)"
   },
   {
     "id": "SYN-039",
@@ -2187,7 +2625,13 @@
     "requires_match": false,
     "match_strengthens": false,
     "federal": false,
-    "description": "Micro-grants for grassroots environmental and food justice projects across New England. Supports community gardens, composting programs, seed libraries, and food access initiatives. Very simple application (1 page). No prior grant experience needed. Volunteer-led groups eligible."
+    "description": "Micro-grants for grassroots environmental and food justice projects across New England. Supports community gardens, composting programs, seed libraries, and food access initiatives. Very simple application (1 page). No prior grant experience needed. Volunteer-led groups eligible.",
+    "renewable": false,
+    "grant_duration": "one-year",
+    "funds_staffing": false,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": "minimal (brief final summary)"
   },
   {
     "id": "SYN-040",
@@ -2215,7 +2659,13 @@
     "requires_match": false,
     "match_strengthens": false,
     "federal": false,
-    "description": "Supports equine and animal-assisted therapy programs for military veterans in El Paso County. Strong veteran mental health focus but restricted to Colorado Springs area only."
+    "description": "Supports equine and animal-assisted therapy programs for military veterans in El Paso County. Strong veteran mental health focus but restricted to Colorado Springs area only.",
+    "renewable": null,
+    "grant_duration": null,
+    "funds_staffing": null,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": "minimal (brief final summary)"
   },
   {
     "id": "SYN-041",
@@ -2242,7 +2692,13 @@
     "requires_match": false,
     "match_strengthens": false,
     "federal": false,
-    "description": "Supports adult literacy and GED preparation programs in the Mississippi Delta. Covers instructional materials, tutor stipends, and technology. Priority for programs in communities with low adult literacy rates."
+    "description": "Supports adult literacy and GED preparation programs in the Mississippi Delta. Covers instructional materials, tutor stipends, and technology. Priority for programs in communities with low adult literacy rates.",
+    "renewable": false,
+    "grant_duration": "one-year",
+    "funds_staffing": null,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": "minimal (brief final summary)"
   },
   {
     "id": "SYN-042",
@@ -2269,7 +2725,13 @@
     "requires_match": false,
     "match_strengthens": false,
     "federal": false,
-    "description": "Supports programs serving agricultural workers and their families in Kern County. Covers health services, ESL classes, children's programs, and legal assistance. Must directly serve farmworker communities."
+    "description": "Supports programs serving agricultural workers and their families in Kern County. Covers health services, ESL classes, children's programs, and legal assistance. Must directly serve farmworker communities.",
+    "renewable": false,
+    "grant_duration": "one-year",
+    "funds_staffing": null,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": "minimal (brief final summary)"
   },
   {
     "id": "SYN-043",
@@ -2297,7 +2759,13 @@
     "requires_match": false,
     "match_strengthens": false,
     "federal": false,
-    "description": "Quick-turnaround micro-grants for community projects in Douglas County. Simple one-page application. Broad focus areas. Ideal for small organizations testing new program ideas."
+    "description": "Quick-turnaround micro-grants for community projects in Douglas County. Simple one-page application. Broad focus areas. Ideal for small organizations testing new program ideas.",
+    "renewable": false,
+    "grant_duration": "one-year",
+    "funds_staffing": false,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": "minimal (brief final summary)"
   },
   {
     "id": "SYN-044",
@@ -2325,7 +2793,13 @@
     "requires_match": false,
     "match_strengthens": false,
     "federal": false,
-    "description": "Supports Alaska Native cultural preservation and youth engagement programs. Covers language instruction, traditional arts workshops, subsistence skills training, and elder-youth mentoring. Alaska-based organizations only."
+    "description": "Supports Alaska Native cultural preservation and youth engagement programs. Covers language instruction, traditional arts workshops, subsistence skills training, and elder-youth mentoring. Alaska-based organizations only.",
+    "renewable": null,
+    "grant_duration": null,
+    "funds_staffing": true,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": "light (final report)"
   },
   {
     "id": "SYN-045",
@@ -2353,7 +2827,13 @@
     "requires_match": false,
     "match_strengthens": false,
     "federal": false,
-    "description": "Small grants for neighborhood improvement projects in Wayne County. Supports block clubs, community gardens, safety initiatives, and youth engagement. Simple application process designed for grassroots organizations."
+    "description": "Small grants for neighborhood improvement projects in Wayne County. Supports block clubs, community gardens, safety initiatives, and youth engagement. Simple application process designed for grassroots organizations.",
+    "renewable": false,
+    "grant_duration": "one-year",
+    "funds_staffing": null,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": "minimal (brief final summary)"
   },
   {
     "id": "SYN-046",
@@ -2381,7 +2861,13 @@
     "requires_match": false,
     "match_strengthens": false,
     "federal": false,
-    "description": "Supports rural health initiatives in South Carolina including chronic disease management, mental health access, telehealth expansion, and health education. Priority for organizations serving counties with health professional shortage designations."
+    "description": "Supports rural health initiatives in South Carolina including chronic disease management, mental health access, telehealth expansion, and health education. Priority for organizations serving counties with health professional shortage designations.",
+    "renewable": true,
+    "grant_duration": "multi-year",
+    "funds_staffing": true,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": "light (final report)"
   },
   {
     "id": "SYN-047",
@@ -2409,7 +2895,13 @@
     "requires_match": false,
     "match_strengthens": false,
     "federal": false,
-    "description": "Supports immigrant integration services in Greater Boston including English language learning, legal assistance, workforce navigation, and community building. Must serve primarily immigrant and refugee populations."
+    "description": "Supports immigrant integration services in Greater Boston including English language learning, legal assistance, workforce navigation, and community building. Must serve primarily immigrant and refugee populations.",
+    "renewable": true,
+    "grant_duration": "multi-year",
+    "funds_staffing": true,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": "light (final report)"
   },
   {
     "id": "SYN-048",
@@ -2436,7 +2928,13 @@
     "requires_match": false,
     "match_strengthens": false,
     "federal": false,
-    "description": "Supports youth sports and recreation programs in metro Atlanta. Covers equipment, facility access, coaching, and league fees. Priority for underserved neighborhoods. Programs must serve youth ages 6-18."
+    "description": "Supports youth sports and recreation programs in metro Atlanta. Covers equipment, facility access, coaching, and league fees. Priority for underserved neighborhoods. Programs must serve youth ages 6-18.",
+    "renewable": null,
+    "grant_duration": null,
+    "funds_staffing": true,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": "light (final report)"
   },
   {
     "id": "SYN-049",
@@ -2464,7 +2962,13 @@
     "requires_match": false,
     "match_strengthens": false,
     "federal": false,
-    "description": "Supports Native language revitalization and cultural preservation in Montana. Covers language instruction, curriculum development, oral history documentation, and intergenerational programming. Tribal organizations and indigenous-led groups prioritized."
+    "description": "Supports Native language revitalization and cultural preservation in Montana. Covers language instruction, curriculum development, oral history documentation, and intergenerational programming. Tribal organizations and indigenous-led groups prioritized.",
+    "renewable": null,
+    "grant_duration": null,
+    "funds_staffing": null,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": "minimal (brief final summary)"
   },
   {
     "id": "SYN-050",
@@ -2491,7 +2995,13 @@
     "requires_match": false,
     "match_strengthens": false,
     "federal": false,
-    "description": "Supports after-school and out-of-school-time programs across North Carolina. Covers program staffing, materials, transportation, and snacks. Priority for rural and under-resourced communities."
+    "description": "Supports after-school and out-of-school-time programs across North Carolina. Covers program staffing, materials, transportation, and snacks. Priority for rural and under-resourced communities.",
+    "renewable": null,
+    "grant_duration": null,
+    "funds_staffing": true,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": "minimal (brief final summary)"
   },
   {
     "id": "SYN-051",
@@ -2518,7 +3028,13 @@
     "requires_match": false,
     "match_strengthens": true,
     "federal": false,
-    "description": "Supports ocean and coastal conservation programs in Hawaii. Covers coral restoration, marine debris cleanup, ocean literacy education, and community-based coastal management. Match not required but strengthens application."
+    "description": "Supports ocean and coastal conservation programs in Hawaii. Covers coral restoration, marine debris cleanup, ocean literacy education, and community-based coastal management. Match not required but strengthens application.",
+    "renewable": null,
+    "grant_duration": null,
+    "funds_staffing": true,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": "light (final report)"
   },
   {
     "id": "SYN-052",
@@ -2545,7 +3061,13 @@
     "requires_match": false,
     "match_strengthens": false,
     "federal": false,
-    "description": "Supports workforce development and small business support programs in Sedgwick County. Covers job training, financial literacy workshops, micro-enterprise assistance, and career coaching."
+    "description": "Supports workforce development and small business support programs in Sedgwick County. Covers job training, financial literacy workshops, micro-enterprise assistance, and career coaching.",
+    "renewable": false,
+    "grant_duration": "one-year",
+    "funds_staffing": null,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": "minimal (brief final summary)"
   },
   {
     "id": "SYN-053",
@@ -2574,7 +3096,13 @@
     "requires_match": false,
     "match_strengthens": false,
     "federal": false,
-    "description": "Supports Appalachian arts and cultural preservation in West Virginia. Covers folk music, storytelling, traditional crafts, and community cultural events. Simple application suited for small organizations."
+    "description": "Supports Appalachian arts and cultural preservation in West Virginia. Covers folk music, storytelling, traditional crafts, and community cultural events. Simple application suited for small organizations.",
+    "renewable": false,
+    "grant_duration": "one-year",
+    "funds_staffing": null,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": "minimal (brief final summary)"
   },
   {
     "id": "SYN-054",
@@ -2602,7 +3130,13 @@
     "requires_match": false,
     "match_strengthens": false,
     "federal": false,
-    "description": "Supports programs helping formerly incarcerated individuals reintegrate in Jefferson County. Covers job training, housing assistance, mental health support, and case management. Must demonstrate evidence-based reentry practices."
+    "description": "Supports programs helping formerly incarcerated individuals reintegrate in Jefferson County. Covers job training, housing assistance, mental health support, and case management. Must demonstrate evidence-based reentry practices.",
+    "renewable": null,
+    "grant_duration": null,
+    "funds_staffing": true,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": "minimal (brief final summary)"
   },
   {
     "id": "SYN-055",
@@ -2629,7 +3163,13 @@
     "requires_match": false,
     "match_strengthens": false,
     "federal": false,
-    "description": "Supports solar energy education and green workforce development in New Mexico. Covers curriculum development, solar installation training, STEM workshops, and community energy literacy. Priority for tribal and rural communities."
+    "description": "Supports solar energy education and green workforce development in New Mexico. Covers curriculum development, solar installation training, STEM workshops, and community energy literacy. Priority for tribal and rural communities.",
+    "renewable": null,
+    "grant_duration": null,
+    "funds_staffing": null,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": "minimal (brief final summary)"
   },
   {
     "id": "SYN-056",
@@ -2656,7 +3196,13 @@
     "requires_match": false,
     "match_strengthens": false,
     "federal": false,
-    "description": "Supports homelessness prevention and housing stability programs in Tampa Bay. Covers case management, rapid rehousing assistance, employment support, and basic needs. Must serve Hillsborough or Pinellas County residents."
+    "description": "Supports homelessness prevention and housing stability programs in Tampa Bay. Covers case management, rapid rehousing assistance, employment support, and basic needs. Must serve Hillsborough or Pinellas County residents.",
+    "renewable": null,
+    "grant_duration": null,
+    "funds_staffing": true,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": "light (final report)"
   },
   {
     "id": "SYN-057",
@@ -2684,7 +3230,13 @@
     "requires_match": false,
     "match_strengthens": false,
     "federal": false,
-    "description": "Supports farm-to-school programming and school garden initiatives in Vermont. Covers garden supplies, cooking equipment, curriculum materials, and farmer partnerships. Simple application process."
+    "description": "Supports farm-to-school programming and school garden initiatives in Vermont. Covers garden supplies, cooking equipment, curriculum materials, and farmer partnerships. Simple application process.",
+    "renewable": false,
+    "grant_duration": "one-year",
+    "funds_staffing": null,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": "minimal (brief final summary)"
   },
   {
     "id": "SYN-058",
@@ -2711,7 +3263,13 @@
     "requires_match": false,
     "match_strengthens": false,
     "federal": false,
-    "description": "Supports youth violence prevention and intervention programs in Allegheny County. Covers mentoring, conflict resolution training, safe spaces, and community-based intervention. Priority for neighborhoods with highest violence rates."
+    "description": "Supports youth violence prevention and intervention programs in Allegheny County. Covers mentoring, conflict resolution training, safe spaces, and community-based intervention. Priority for neighborhoods with highest violence rates.",
+    "renewable": null,
+    "grant_duration": null,
+    "funds_staffing": true,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": "light (final report)"
   },
   {
     "id": "SYN-059",
@@ -2739,7 +3297,13 @@
     "requires_match": false,
     "match_strengthens": false,
     "federal": false,
-    "description": "Supports indigenous language preservation and cultural programs in Oklahoma. Covers language classes, curriculum materials, elder stipends, and community cultural events. Tribal organizations prioritized."
+    "description": "Supports indigenous language preservation and cultural programs in Oklahoma. Covers language classes, curriculum materials, elder stipends, and community cultural events. Tribal organizations prioritized.",
+    "renewable": false,
+    "grant_duration": "one-year",
+    "funds_staffing": null,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": "minimal (brief final summary)"
   },
   {
     "id": "SYN-060",
@@ -2767,7 +3331,13 @@
     "requires_match": true,
     "match_strengthens": false,
     "federal": true,
-    "description": "Federal Title IV-A Student Support and Academic Enrichment grants. Requires school district partnership and 20% match. Mandatory federal reporting including quarterly expenditure reports and annual performance data. Must attend regional technical assistance workshop."
+    "description": "Federal Title IV-A Student Support and Academic Enrichment grants. Requires school district partnership and 20% match. Mandatory federal reporting including quarterly expenditure reports and annual performance data. Must attend regional technical assistance workshop.",
+    "renewable": true,
+    "grant_duration": "multi-year",
+    "funds_staffing": true,
+    "allows_indirect_costs": true,
+    "indirect_cost_rate": "negotiated rate (federal)",
+    "reporting_requirements": "extensive (annual performance reports, financial audits, compliance documentation)"
   },
   {
     "id": "SYN-061",
@@ -2794,7 +3364,13 @@
     "requires_match": false,
     "match_strengthens": false,
     "federal": false,
-    "description": "Supports youth mentoring and education programs in Bexar County (San Antonio area). Focus on Latino youth and college readiness. Strong program but limited to Bexar County \u2014 not available to Travis County organizations."
+    "description": "Supports youth mentoring and education programs in Bexar County (San Antonio area). Focus on Latino youth and college readiness. Strong program but limited to Bexar County \u2014 not available to Travis County organizations.",
+    "renewable": null,
+    "grant_duration": null,
+    "funds_staffing": true,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": "minimal (brief final summary)"
   },
   {
     "id": "SYN-062",
@@ -2821,7 +3397,13 @@
     "requires_match": false,
     "match_strengthens": false,
     "federal": false,
-    "description": "Supports family strengthening programs in Philadelphia. Broad family services focus including parent education, child welfare prevention, and family stability. General family programming \u2014 does not prioritize father-specific or fatherhood initiatives."
+    "description": "Supports family strengthening programs in Philadelphia. Broad family services focus including parent education, child welfare prevention, and family stability. General family programming \u2014 does not prioritize father-specific or fatherhood initiatives.",
+    "renewable": true,
+    "grant_duration": "multi-year",
+    "funds_staffing": true,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": "light (final report)"
   },
   {
     "id": "SYN-063",
@@ -2850,7 +3432,13 @@
     "requires_match": false,
     "match_strengthens": true,
     "federal": false,
-    "description": "Supports a wide range of community improvement projects in rural Idaho. Covers education, health, arts, and environmental programs. Simple application. Match not required but strengthens application."
+    "description": "Supports a wide range of community improvement projects in rural Idaho. Covers education, health, arts, and environmental programs. Simple application. Match not required but strengthens application.",
+    "renewable": false,
+    "grant_duration": "one-year",
+    "funds_staffing": null,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": "minimal (brief final summary)"
   },
   {
     "id": "SYN-064",
@@ -2877,7 +3465,13 @@
     "requires_match": true,
     "match_strengthens": false,
     "federal": true,
-    "description": "Federal SNAP-Ed funding for nutrition education programs. Requires 50% non-federal match and multi-year commitment (3 years). Extensive application (30+ pages). Monthly reporting to USDA. Mandatory annual grantee conference. Must follow SNAP-Ed Guidance framework."
+    "description": "Federal SNAP-Ed funding for nutrition education programs. Requires 50% non-federal match and multi-year commitment (3 years). Extensive application (30+ pages). Monthly reporting to USDA. Mandatory annual grantee conference. Must follow SNAP-Ed Guidance framework.",
+    "renewable": true,
+    "grant_duration": "multi-year",
+    "funds_staffing": true,
+    "allows_indirect_costs": true,
+    "indirect_cost_rate": "negotiated rate (federal)",
+    "reporting_requirements": "extensive (annual performance reports, financial audits, compliance documentation)"
   },
   {
     "id": "SYN-065",
@@ -2904,7 +3498,13 @@
     "requires_match": false,
     "match_strengthens": false,
     "federal": false,
-    "description": "Supports fatherhood and family reunification programs in Shelby County. Strong father-focused programming but restricted to Memphis/Shelby County area \u2014 not available to Philadelphia organizations."
+    "description": "Supports fatherhood and family reunification programs in Shelby County. Strong father-focused programming but restricted to Memphis/Shelby County area \u2014 not available to Philadelphia organizations.",
+    "renewable": null,
+    "grant_duration": null,
+    "funds_staffing": true,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": "minimal (brief final summary)"
   },
   {
     "id": "SYN-066",
@@ -2934,7 +3534,13 @@
     "requires_match": false,
     "match_strengthens": false,
     "federal": false,
-    "description": "Supports innovative mental health and wellness programs serving college and university students in San Diego County. Priority given to programs addressing anxiety, depression, and isolation among undergraduates. Collaborative proposals between institutions encouraged."
+    "description": "Supports innovative mental health and wellness programs serving college and university students in San Diego County. Priority given to programs addressing anxiety, depression, and isolation among undergraduates. Collaborative proposals between institutions encouraged.",
+    "renewable": true,
+    "grant_duration": "multi-year",
+    "funds_staffing": true,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": "light (final report)"
   },
   {
     "id": "SYN-067",
@@ -2963,7 +3569,13 @@
     "requires_match": false,
     "match_strengthens": true,
     "federal": false,
-    "description": "Funds programs that improve student retention and graduation rates at San Diego County colleges and universities, with emphasis on first-generation and underrepresented students. Programs may include peer mentoring, academic coaching, emergency aid funds, and wraparound student services."
+    "description": "Funds programs that improve student retention and graduation rates at San Diego County colleges and universities, with emphasis on first-generation and underrepresented students. Programs may include peer mentoring, academic coaching, emergency aid funds, and wraparound student services.",
+    "renewable": null,
+    "grant_duration": null,
+    "funds_staffing": true,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": "light (final report)"
   },
   {
     "id": "SYN-068",
@@ -2992,7 +3604,13 @@
     "requires_match": false,
     "match_strengthens": false,
     "federal": false,
-    "description": "Small grants for campus-based programs that foster belonging, cross-cultural connection, and community among students. Open to all San Diego County institutions of higher education. Simple application, no match required. Priority for programs designed by or with students."
+    "description": "Small grants for campus-based programs that foster belonging, cross-cultural connection, and community among students. Open to all San Diego County institutions of higher education. Simple application, no match required. Priority for programs designed by or with students.",
+    "renewable": false,
+    "grant_duration": "one-year",
+    "funds_staffing": null,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": "minimal (brief final summary)"
   },
   {
     "id": "SYN-069",
@@ -3019,7 +3637,13 @@
     "requires_match": false,
     "match_strengthens": true,
     "federal": false,
-    "description": "Supports programs that create undergraduate research opportunities and develop student leadership capacity at San Diego County universities. Preference for programs that serve students who would not otherwise have access to research experiences."
+    "description": "Supports programs that create undergraduate research opportunities and develop student leadership capacity at San Diego County universities. Preference for programs that serve students who would not otherwise have access to research experiences.",
+    "renewable": null,
+    "grant_duration": null,
+    "funds_staffing": true,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": "light (final report)"
   },
   {
     "id": "SYN-070",
@@ -3049,7 +3673,13 @@
     "requires_match": false,
     "match_strengthens": false,
     "federal": false,
-    "description": "Addresses food insecurity, housing instability, and emergency financial needs among college and university students in San Diego County. Funds may support campus food pantries, emergency housing assistance, textbook lending programs, and basic needs navigation services."
+    "description": "Addresses food insecurity, housing instability, and emergency financial needs among college and university students in San Diego County. Funds may support campus food pantries, emergency housing assistance, textbook lending programs, and basic needs navigation services.",
+    "renewable": null,
+    "grant_duration": null,
+    "funds_staffing": true,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": "light (final report)"
   },
   {
     "id": "SYN-071",
@@ -3078,7 +3708,13 @@
     "requires_match": false,
     "match_strengthens": false,
     "federal": false,
-    "description": "Multi-year grants for programs that close equity gaps in higher education access, persistence, and completion for students of color and low-income students in San Diego County. Cross-institutional collaborations strongly encouraged."
+    "description": "Multi-year grants for programs that close equity gaps in higher education access, persistence, and completion for students of color and low-income students in San Diego County. Cross-institutional collaborations strongly encouraged.",
+    "renewable": true,
+    "grant_duration": "multi-year",
+    "funds_staffing": true,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": "light (final report)"
   },
   {
     "id": "SYN-072",
@@ -3107,7 +3743,13 @@
     "requires_match": false,
     "match_strengthens": true,
     "federal": false,
-    "description": "Supports career development, internship placement, and workforce readiness programs for college students and recent graduates in San Diego County. Priority for programs connecting students to San Diego's biotech, healthcare, and technology sectors."
+    "description": "Supports career development, internship placement, and workforce readiness programs for college students and recent graduates in San Diego County. Priority for programs connecting students to San Diego's biotech, healthcare, and technology sectors.",
+    "renewable": null,
+    "grant_duration": null,
+    "funds_staffing": true,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": "light (final report)"
   },
   {
     "id": "SYN-073",
@@ -3136,7 +3778,13 @@
     "requires_match": false,
     "match_strengthens": false,
     "federal": false,
-    "description": "Funds wellness and recreation programs for college students in San Diego County, including outdoor recreation, fitness initiatives, mindfulness programs, and stress reduction. Priority for programs that reach students who don't typically engage with campus recreation."
+    "description": "Funds wellness and recreation programs for college students in San Diego County, including outdoor recreation, fitness initiatives, mindfulness programs, and stress reduction. Priority for programs that reach students who don't typically engage with campus recreation.",
+    "renewable": null,
+    "grant_duration": null,
+    "funds_staffing": null,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": "minimal (brief final summary)"
   },
   {
     "id": "SYN-074",
@@ -3164,7 +3812,13 @@
     "requires_match": false,
     "match_strengthens": false,
     "federal": false,
-    "description": "Statewide initiative supporting programs that develop diverse student leaders into future higher education professionals. Funds mentorship, graduate school preparation, and professional development for underrepresented students interested in student affairs and higher education careers."
+    "description": "Statewide initiative supporting programs that develop diverse student leaders into future higher education professionals. Funds mentorship, graduate school preparation, and professional development for underrepresented students interested in student affairs and higher education careers.",
+    "renewable": true,
+    "grant_duration": "multi-year",
+    "funds_staffing": true,
+    "allows_indirect_costs": true,
+    "indirect_cost_rate": "typically 10-15%",
+    "reporting_requirements": "moderate (annual narrative and financial report)"
   },
   {
     "id": "SYN-075",
@@ -3193,7 +3847,13 @@
     "requires_match": false,
     "match_strengthens": false,
     "federal": false,
-    "description": "Supports programs that ease the transition for community college transfer students at four-year institutions in San Diego County. Funds orientation programs, peer mentoring, academic advising, and social integration activities specifically designed for transfer students."
+    "description": "Supports programs that ease the transition for community college transfer students at four-year institutions in San Diego County. Funds orientation programs, peer mentoring, academic advising, and social integration activities specifically designed for transfer students.",
+    "renewable": null,
+    "grant_duration": null,
+    "funds_staffing": true,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": "minimal (brief final summary)"
   },
   {
     "id": "SYN-076",
@@ -3222,7 +3882,13 @@
     "requires_match": false,
     "match_strengthens": false,
     "federal": false,
-    "description": "Funds evidence-based sexual assault prevention education and survivor support programs at California colleges and universities. Priority for programs that integrate bystander intervention training, culturally responsive support services, and campus climate assessment."
+    "description": "Funds evidence-based sexual assault prevention education and survivor support programs at California colleges and universities. Priority for programs that integrate bystander intervention training, culturally responsive support services, and campus climate assessment.",
+    "renewable": true,
+    "grant_duration": "multi-year",
+    "funds_staffing": true,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": "light (final report)"
   },
   {
     "id": "SYN-077",
@@ -3250,7 +3916,13 @@
     "requires_match": false,
     "match_strengthens": false,
     "federal": false,
-    "description": "Supports programs that help international students integrate into campus life and the San Diego community. Funds cultural exchange events, buddy programs, off-campus community engagement, and programs addressing social isolation among international students."
+    "description": "Supports programs that help international students integrate into campus life and the San Diego community. Funds cultural exchange events, buddy programs, off-campus community engagement, and programs addressing social isolation among international students.",
+    "renewable": null,
+    "grant_duration": null,
+    "funds_staffing": null,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": "minimal (brief final summary)"
   },
   {
     "id": "SYN-078",
@@ -3279,7 +3951,13 @@
     "requires_match": false,
     "match_strengthens": false,
     "federal": false,
-    "description": "Supports programs serving student parents at California colleges and universities, including campus childcare, parenting student resource centers, emergency financial assistance, and flexible academic support. Priority for programs at institutions with high enrollment of student parents."
+    "description": "Supports programs serving student parents at California colleges and universities, including campus childcare, parenting student resource centers, emergency financial assistance, and flexible academic support. Priority for programs at institutions with high enrollment of student parents.",
+    "renewable": null,
+    "grant_duration": null,
+    "funds_staffing": true,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": "light (final report)"
   },
   {
     "id": "SYN-079",
@@ -3309,7 +3987,13 @@
     "requires_match": false,
     "match_strengthens": true,
     "federal": false,
-    "description": "Funds K-12 STEM pipeline programs that prepare San Diego County youth for college and STEM careers. Priority for programs serving Title I schools and underrepresented students. University partnerships for mentoring and lab access encouraged but primary beneficiaries must be K-12 students."
+    "description": "Funds K-12 STEM pipeline programs that prepare San Diego County youth for college and STEM careers. Priority for programs serving Title I schools and underrepresented students. University partnerships for mentoring and lab access encouraged but primary beneficiaries must be K-12 students.",
+    "renewable": true,
+    "grant_duration": "multi-year",
+    "funds_staffing": true,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": "light (final report)"
   },
   {
     "id": "SYN-080",
@@ -3336,7 +4020,13 @@
     "requires_match": false,
     "match_strengthens": false,
     "federal": false,
-    "description": "Supports graduate student research projects addressing public health challenges in San Diego County. Must be conducted through an accredited university public health or school of medicine program. Not available for undergraduate programs or student affairs initiatives."
+    "description": "Supports graduate student research projects addressing public health challenges in San Diego County. Must be conducted through an accredited university public health or school of medicine program. Not available for undergraduate programs or student affairs initiatives.",
+    "renewable": null,
+    "grant_duration": null,
+    "funds_staffing": true,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": "minimal (brief final summary)"
   },
   {
     "id": "SYN-081",
@@ -3365,7 +4055,13 @@
     "requires_match": false,
     "match_strengthens": false,
     "federal": false,
-    "description": "Supports student success and retention programs at colleges and universities in Los Angeles County. Priority for programs serving first-generation and low-income students. Applicant institutions must be physically located in Los Angeles County."
+    "description": "Supports student success and retention programs at colleges and universities in Los Angeles County. Priority for programs serving first-generation and low-income students. Applicant institutions must be physically located in Los Angeles County.",
+    "renewable": true,
+    "grant_duration": "multi-year",
+    "funds_staffing": true,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": "light (final report)"
   },
   {
     "id": "SYN-082",
@@ -3393,7 +4089,13 @@
     "requires_match": true,
     "match_strengthens": false,
     "federal": true,
-    "description": "Strengthens institutional capacity at eligible institutions of higher education. Funds academic quality, institutional management, and fiscal stability improvements. Requires institutional matching funds and extensive federal reporting. Multi-year award with annual performance reporting."
+    "description": "Strengthens institutional capacity at eligible institutions of higher education. Funds academic quality, institutional management, and fiscal stability improvements. Requires institutional matching funds and extensive federal reporting. Multi-year award with annual performance reporting.",
+    "renewable": true,
+    "grant_duration": "multi-year",
+    "funds_staffing": true,
+    "allows_indirect_costs": true,
+    "indirect_cost_rate": "negotiated rate (federal)",
+    "reporting_requirements": "extensive (annual performance reports, financial audits, compliance documentation)"
   },
   {
     "id": "SYN-083",
@@ -3422,7 +4124,13 @@
     "requires_match": false,
     "match_strengthens": false,
     "federal": false,
-    "description": "Funds campus mental health and wellness programs at Orange County colleges and universities. Applicant institutions must be physically located in Orange County. Programs must primarily serve enrolled students."
+    "description": "Funds campus mental health and wellness programs at Orange County colleges and universities. Applicant institutions must be physically located in Orange County. Programs must primarily serve enrolled students.",
+    "renewable": null,
+    "grant_duration": null,
+    "funds_staffing": true,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": "light (final report)"
   },
   {
     "id": "SYN-084",
@@ -3450,7 +4158,13 @@
     "requires_match": false,
     "match_strengthens": false,
     "federal": false,
-    "description": "Funds innovative student services and educational technology programs at Bay Area colleges and universities. Applicant institutions must be located in San Francisco, San Mateo, Santa Clara, Alameda, or Contra Costa counties."
+    "description": "Funds innovative student services and educational technology programs at Bay Area colleges and universities. Applicant institutions must be located in San Francisco, San Mateo, Santa Clara, Alameda, or Contra Costa counties.",
+    "renewable": true,
+    "grant_duration": "multi-year",
+    "funds_staffing": true,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": "light (final report)"
   },
   {
     "id": "SYN-085",
@@ -3479,7 +4193,13 @@
     "requires_match": false,
     "match_strengthens": false,
     "federal": false,
-    "description": "Supports after-school academic enrichment and tutoring programs for K-12 students in San Diego County. Programs must serve students in grades K-12. Not available for higher education or college-level programs."
+    "description": "Supports after-school academic enrichment and tutoring programs for K-12 students in San Diego County. Programs must serve students in grades K-12. Not available for higher education or college-level programs.",
+    "renewable": null,
+    "grant_duration": null,
+    "funds_staffing": true,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": "minimal (brief final summary)"
   },
   {
     "id": "SYN-086",
@@ -3508,7 +4228,13 @@
     "requires_match": false,
     "match_strengthens": false,
     "federal": false,
-    "description": "Supports programs serving undocumented and DACA students at San Diego County colleges and universities, including legal navigation, financial aid advising, mental health support, and emergency assistance. Must be provided through an established campus resource center or equivalent."
+    "description": "Supports programs serving undocumented and DACA students at San Diego County colleges and universities, including legal navigation, financial aid advising, mental health support, and emergency assistance. Must be provided through an established campus resource center or equivalent.",
+    "renewable": null,
+    "grant_duration": null,
+    "funds_staffing": null,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": "minimal (brief final summary)"
   },
   {
     "id": "SYN-087",
@@ -3537,7 +4263,13 @@
     "requires_match": false,
     "match_strengthens": true,
     "federal": false,
-    "description": "Addresses housing insecurity and homelessness among college students in San Diego County. Funds emergency housing assistance, housing navigation services, rapid rehousing for students, and partnerships between institutions and local housing providers."
+    "description": "Addresses housing insecurity and homelessness among college students in San Diego County. Funds emergency housing assistance, housing navigation services, rapid rehousing for students, and partnerships between institutions and local housing providers.",
+    "renewable": null,
+    "grant_duration": null,
+    "funds_staffing": true,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": "light (final report)"
   },
   {
     "id": "SYN-088",
@@ -3565,7 +4297,13 @@
     "requires_match": false,
     "match_strengthens": false,
     "federal": false,
-    "description": "Supports programs serving student veterans at San Diego County colleges and universities, including transition support, peer mentoring, mental health services, and academic advising tailored to veteran students. San Diego has one of the largest veteran populations in the country."
+    "description": "Supports programs serving student veterans at San Diego County colleges and universities, including transition support, peer mentoring, mental health services, and academic advising tailored to veteran students. San Diego has one of the largest veteran populations in the country.",
+    "renewable": null,
+    "grant_duration": null,
+    "funds_staffing": true,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": "light (final report)"
   },
   {
     "id": "SYN-089",
@@ -3594,7 +4332,13 @@
     "requires_match": false,
     "match_strengthens": false,
     "federal": false,
-    "description": "Small grants for interfaith and intercultural dialogue programs on San Diego County college and university campuses. Funds facilitated dialogues, community meals, collaborative service projects, and programs that build understanding across religious and cultural differences."
+    "description": "Small grants for interfaith and intercultural dialogue programs on San Diego County college and university campuses. Funds facilitated dialogues, community meals, collaborative service projects, and programs that build understanding across religious and cultural differences.",
+    "renewable": false,
+    "grant_duration": "one-year",
+    "funds_staffing": null,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": "minimal (brief final summary)"
   },
   {
     "id": "SYN-090",
@@ -3623,7 +4367,13 @@
     "requires_match": false,
     "match_strengthens": false,
     "federal": false,
-    "description": "Funds campus mental health programs at Riverside County colleges and universities. Applicant institutions must be physically located in Riverside County. Collaborative proposals between institutions encouraged."
+    "description": "Funds campus mental health programs at Riverside County colleges and universities. Applicant institutions must be physically located in Riverside County. Collaborative proposals between institutions encouraged.",
+    "renewable": null,
+    "grant_duration": null,
+    "funds_staffing": true,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": "light (final report)"
   },
   {
     "id": "SYN-091",
@@ -3651,7 +4401,13 @@
     "requires_match": false,
     "match_strengthens": false,
     "federal": false,
-    "description": "Supports evidence-based programs that build capacity for civil discourse and dialogue across difference on college campuses. Priority for programs reaching large student populations and partnering with established dialogue organizations. Multi-year awards available. Renewable."
+    "description": "Supports evidence-based programs that build capacity for civil discourse and dialogue across difference on college campuses. Priority for programs reaching large student populations and partnering with established dialogue organizations. Multi-year awards available. Renewable.",
+    "renewable": true,
+    "grant_duration": "multi-year",
+    "funds_staffing": true,
+    "allows_indirect_costs": true,
+    "indirect_cost_rate": "negotiable",
+    "reporting_requirements": "moderate (annual narrative and financial report)"
   },
   {
     "id": "SYN-092",
@@ -3680,7 +4436,13 @@
     "requires_match": false,
     "match_strengthens": false,
     "federal": false,
-    "description": "Funds programs that cultivate intellectual humility, civic virtues, and constructive dialogue skills at scale in higher education. Open to large-scale implementations reaching entire student bodies. History of funding campus dialogue initiatives at $1M+. Multi-year, renewable."
+    "description": "Funds programs that cultivate intellectual humility, civic virtues, and constructive dialogue skills at scale in higher education. Open to large-scale implementations reaching entire student bodies. History of funding campus dialogue initiatives at $1M+. Multi-year, renewable.",
+    "renewable": true,
+    "grant_duration": "multi-year",
+    "funds_staffing": true,
+    "allows_indirect_costs": true,
+    "indirect_cost_rate": "up to 15%",
+    "reporting_requirements": "moderate (annual progress report and financial accounting)"
   },
   {
     "id": "SYN-093",
@@ -3708,7 +4470,13 @@
     "requires_match": false,
     "match_strengthens": false,
     "federal": false,
-    "description": "Supports universities building campus-wide infrastructure for bridging divides and pluralism. Priority for institutions pursuing 100% student engagement goals with dialogue programming. Long-term partnership model with multi-year funding. Invitation-based but open to initial conversations."
+    "description": "Supports universities building campus-wide infrastructure for bridging divides and pluralism. Priority for institutions pursuing 100% student engagement goals with dialogue programming. Long-term partnership model with multi-year funding. Invitation-based but open to initial conversations.",
+    "renewable": true,
+    "grant_duration": "multi-year",
+    "funds_staffing": true,
+    "allows_indirect_costs": true,
+    "indirect_cost_rate": "negotiable",
+    "reporting_requirements": "light (partnership model, collaborative reporting)"
   },
   {
     "id": "SYN-094",
@@ -3737,7 +4505,13 @@
     "requires_match": false,
     "match_strengthens": false,
     "federal": false,
-    "description": "Supports programs advancing constructive dialogue across difference in educational settings. Priority for innovative approaches at scale in higher education. Multi-year grants available. One of the largest education funders in the country with explicit commitment to dialogue and democratic engagement."
+    "description": "Supports programs advancing constructive dialogue across difference in educational settings. Priority for innovative approaches at scale in higher education. Multi-year grants available. One of the largest education funders in the country with explicit commitment to dialogue and democratic engagement.",
+    "renewable": true,
+    "grant_duration": "multi-year",
+    "funds_staffing": true,
+    "allows_indirect_costs": true,
+    "indirect_cost_rate": "up to 15%",
+    "reporting_requirements": "moderate (annual narrative and financial report)"
   },
   {
     "id": "SYN-095",
@@ -3764,7 +4538,13 @@
     "requires_match": false,
     "match_strengthens": true,
     "federal": false,
-    "description": "Funds programs that prepare college students for civic life through dialogue, deliberation, and engagement across difference. Emphasis on liberal arts approach to civic preparedness. Multi-year awards (2-3 years). Renewable."
+    "description": "Funds programs that prepare college students for civic life through dialogue, deliberation, and engagement across difference. Emphasis on liberal arts approach to civic preparedness. Multi-year awards (2-3 years). Renewable.",
+    "renewable": true,
+    "grant_duration": "multi-year",
+    "funds_staffing": true,
+    "allows_indirect_costs": true,
+    "indirect_cost_rate": "up to 10%",
+    "reporting_requirements": "light (annual progress report)"
   },
   {
     "id": "SYN-096",
@@ -3792,7 +4572,13 @@
     "requires_match": false,
     "match_strengthens": false,
     "federal": false,
-    "description": "Supports campus programs fostering democratic culture, civic inquiry, and dialogue across difference through a humanities lens. Recent initiative funded 30+ campuses. Priority for programs integrating dialogue into the curriculum and campus life. Multi-year, renewable."
+    "description": "Supports campus programs fostering democratic culture, civic inquiry, and dialogue across difference through a humanities lens. Recent initiative funded 30+ campuses. Priority for programs integrating dialogue into the curriculum and campus life. Multi-year, renewable.",
+    "renewable": true,
+    "grant_duration": "multi-year",
+    "funds_staffing": true,
+    "allows_indirect_costs": true,
+    "indirect_cost_rate": "up to 20%",
+    "reporting_requirements": "moderate (annual narrative and financial report)"
   },
   {
     "id": "SYN-097",
@@ -3821,7 +4607,13 @@
     "requires_match": false,
     "match_strengthens": false,
     "federal": false,
-    "description": "Supports efforts to strengthen democratic practice and constructive public discourse. Domestic focus on civic engagement, dialogue, and bridge-building. Renewable grants."
+    "description": "Supports efforts to strengthen democratic practice and constructive public discourse. Domestic focus on civic engagement, dialogue, and bridge-building. Renewable grants.",
+    "renewable": true,
+    "grant_duration": "multi-year",
+    "funds_staffing": true,
+    "allows_indirect_costs": true,
+    "indirect_cost_rate": "up to 15%",
+    "reporting_requirements": "light (final report)"
   },
   {
     "id": "SYN-098",
@@ -3849,7 +4641,13 @@
     "requires_match": true,
     "match_strengthens": false,
     "federal": true,
-    "description": "Supports large-scale campus programs fostering dialogue across difference, conflict resolution, and inclusive campus climates. Requires institutional matching funds and extensive federal reporting including annual performance reviews, financial audits, and compliance documentation. Multi-year award."
+    "description": "Supports large-scale campus programs fostering dialogue across difference, conflict resolution, and inclusive campus climates. Requires institutional matching funds and extensive federal reporting including annual performance reviews, financial audits, and compliance documentation. Multi-year award.",
+    "renewable": true,
+    "grant_duration": "multi-year",
+    "funds_staffing": true,
+    "allows_indirect_costs": true,
+    "indirect_cost_rate": "negotiated rate (currently capped at 15% for new awards)",
+    "reporting_requirements": "extensive (annual performance reports, financial audits, compliance documentation)"
   },
   {
     "id": "SYN-099",
@@ -3877,7 +4675,13 @@
     "requires_match": false,
     "match_strengthens": false,
     "federal": false,
-    "description": "Funds conflict resolution education programs for K-12 students and youth. Focus on culture and conflict intersection. Eligible applicants must serve K-12 populations. Not available for higher education or college-level programs."
+    "description": "Funds conflict resolution education programs for K-12 students and youth. Focus on culture and conflict intersection. Eligible applicants must serve K-12 populations. Not available for higher education or college-level programs.",
+    "renewable": false,
+    "grant_duration": "one-year",
+    "funds_staffing": true,
+    "allows_indirect_costs": null,
+    "indirect_cost_rate": null,
+    "reporting_requirements": "light (final report)"
   },
   {
     "id": "SYN-100",
@@ -3904,6 +4708,12 @@
     "requires_match": false,
     "match_strengthens": false,
     "federal": false,
-    "description": "Supports campus dialogue and pluralism programs at colleges and universities in the Northeast United States. Applicant institutions must be physically located in Connecticut, Massachusetts, Maine, New Hampshire, New Jersey, New York, Pennsylvania, Rhode Island, or Vermont."
+    "description": "Supports campus dialogue and pluralism programs at colleges and universities in the Northeast United States. Applicant institutions must be physically located in Connecticut, Massachusetts, Maine, New Hampshire, New Jersey, New York, Pennsylvania, Rhode Island, or Vermont.",
+    "renewable": false,
+    "grant_duration": "one-year",
+    "funds_staffing": true,
+    "allows_indirect_costs": true,
+    "indirect_cost_rate": "typically 10-15%",
+    "reporting_requirements": "moderate (annual narrative and financial report)"
   }
 ]

@@ -539,6 +539,27 @@ elif st.session_state.phase == "grant_detail":
         if total:
             detail_field("Total funding available", f"&#36;{total:,}")
 
+        # New fields from user feedback
+        if grant.get("renewable") is not None:
+            renewable_text = "Yes" if grant["renewable"] else "No"
+            duration = grant.get("grant_duration")
+            if duration:
+                renewable_text += f" ({duration.replace('_', ' ')})"
+            detail_field("Renewable", renewable_text)
+
+        if grant.get("funds_staffing") is not None:
+            detail_field("Can fund staffing/FTE", "Yes" if grant["funds_staffing"] else "No")
+
+        if grant.get("allows_indirect_costs") is not None:
+            idc_text = "Yes" if grant["allows_indirect_costs"] else "No"
+            rate = grant.get("indirect_cost_rate")
+            if rate:
+                idc_text += f" — {rate}"
+            detail_field("Indirect costs", idc_text)
+
+        if grant.get("reporting_requirements"):
+            detail_field("Reporting requirements", grant["reporting_requirements"])
+
     st.write("")
     col1, col2 = st.columns(2)
     with col1:
