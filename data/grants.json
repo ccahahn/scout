@@ -3624,5 +3624,286 @@
     "match_strengthens": false,
     "federal": false,
     "description": "Funds campus mental health programs at Riverside County colleges and universities. Applicant institutions must be physically located in Riverside County. Collaborative proposals between institutions encouraged."
+  },
+  {
+    "id": "SYN-091",
+    "source": "synthetic",
+    "title": "Civil Discourse and Dialogue in Higher Education",
+    "funder": "Arthur Vining Davis Foundations",
+    "funder_type": "private_foundation",
+    "amount_min": 100000,
+    "amount_max": 300000,
+    "total_funding": 2000000,
+    "deadline": "2026-10-01",
+    "geographic_scope": "USA (all 50 states)",
+    "state": "national",
+    "eligible_applicants": [
+      "accredited colleges and universities"
+    ],
+    "focus_areas": [
+      "civic engagement",
+      "dialogue across difference",
+      "higher education",
+      "conflict resolution",
+      "student development"
+    ],
+    "application_type": "LOI_then_full",
+    "requires_match": false,
+    "match_strengthens": false,
+    "federal": false,
+    "description": "Supports evidence-based programs that build capacity for civil discourse and dialogue across difference on college campuses. Priority for programs reaching large student populations and partnering with established dialogue organizations. Multi-year awards available. Renewable."
+  },
+  {
+    "id": "SYN-092",
+    "source": "synthetic",
+    "title": "Character Virtue Development in Higher Education",
+    "funder": "John Templeton Foundation",
+    "funder_type": "private_foundation",
+    "amount_min": 200000,
+    "amount_max": 1000000,
+    "total_funding": 10000000,
+    "deadline": "2026-09-15",
+    "geographic_scope": "USA (all 50 states)",
+    "state": "national",
+    "eligible_applicants": [
+      "accredited colleges and universities",
+      "501(c)(3) nonprofits"
+    ],
+    "focus_areas": [
+      "character development",
+      "civic engagement",
+      "dialogue across difference",
+      "student development",
+      "conflict resolution"
+    ],
+    "application_type": "LOI_then_full",
+    "requires_match": false,
+    "match_strengthens": false,
+    "federal": false,
+    "description": "Funds programs that cultivate intellectual humility, civic virtues, and constructive dialogue skills at scale in higher education. Open to large-scale implementations reaching entire student bodies. History of funding campus dialogue initiatives at $1M+. Multi-year, renewable."
+  },
+  {
+    "id": "SYN-093",
+    "source": "synthetic",
+    "title": "Bridging Divides in Higher Education",
+    "funder": "Einhorn Collaborative",
+    "funder_type": "private_foundation",
+    "amount_min": 250000,
+    "amount_max": 1000000,
+    "total_funding": 5000000,
+    "deadline": "2026-11-01",
+    "geographic_scope": "USA (all 50 states)",
+    "state": "national",
+    "eligible_applicants": [
+      "accredited colleges and universities"
+    ],
+    "focus_areas": [
+      "bridging divides",
+      "pluralism",
+      "dialogue across difference",
+      "community building",
+      "higher education"
+    ],
+    "application_type": "LOI_then_full",
+    "requires_match": false,
+    "match_strengthens": false,
+    "federal": false,
+    "description": "Supports universities building campus-wide infrastructure for bridging divides and pluralism. Priority for institutions pursuing 100% student engagement goals with dialogue programming. Long-term partnership model with multi-year funding. Invitation-based but open to initial conversations."
+  },
+  {
+    "id": "SYN-094",
+    "source": "synthetic",
+    "title": "Constructive Dialogue and Education Program",
+    "funder": "William and Flora Hewlett Foundation",
+    "funder_type": "private_foundation",
+    "amount_min": 200000,
+    "amount_max": 750000,
+    "total_funding": 8000000,
+    "deadline": "2026-10-15",
+    "geographic_scope": "USA (all 50 states)",
+    "state": "national",
+    "eligible_applicants": [
+      "accredited colleges and universities",
+      "501(c)(3) education nonprofits"
+    ],
+    "focus_areas": [
+      "constructive dialogue",
+      "education",
+      "civic engagement",
+      "dialogue across difference",
+      "conflict resolution"
+    ],
+    "application_type": "LOI_then_full",
+    "requires_match": false,
+    "match_strengthens": false,
+    "federal": false,
+    "description": "Supports programs advancing constructive dialogue across difference in educational settings. Priority for innovative approaches at scale in higher education. Multi-year grants available. One of the largest education funders in the country with explicit commitment to dialogue and democratic engagement."
+  },
+  {
+    "id": "SYN-095",
+    "source": "synthetic",
+    "title": "Education for American Civic Life",
+    "funder": "Teagle Foundation",
+    "funder_type": "private_foundation",
+    "amount_min": 50000,
+    "amount_max": 350000,
+    "total_funding": 1500000,
+    "deadline": "2026-09-01",
+    "geographic_scope": "USA (all 50 states)",
+    "state": "national",
+    "eligible_applicants": [
+      "accredited colleges and universities"
+    ],
+    "focus_areas": [
+      "civic education",
+      "higher education",
+      "dialogue across difference",
+      "civic engagement"
+    ],
+    "application_type": "full_application",
+    "requires_match": false,
+    "match_strengthens": true,
+    "federal": false,
+    "description": "Funds programs that prepare college students for civic life through dialogue, deliberation, and engagement across difference. Emphasis on liberal arts approach to civic preparedness. Multi-year awards (2-3 years). Renewable."
+  },
+  {
+    "id": "SYN-096",
+    "source": "synthetic",
+    "title": "Cultures of Democracy in Higher Education",
+    "funder": "Andrew W. Mellon Foundation",
+    "funder_type": "private_foundation",
+    "amount_min": 250000,
+    "amount_max": 1000000,
+    "total_funding": 14000000,
+    "deadline": "2026-12-01",
+    "geographic_scope": "USA (all 50 states)",
+    "state": "national",
+    "eligible_applicants": [
+      "accredited colleges and universities"
+    ],
+    "focus_areas": [
+      "democracy",
+      "civic engagement",
+      "higher education",
+      "humanities",
+      "dialogue across difference"
+    ],
+    "application_type": "LOI_then_full",
+    "requires_match": false,
+    "match_strengthens": false,
+    "federal": false,
+    "description": "Supports campus programs fostering democratic culture, civic inquiry, and dialogue across difference through a humanities lens. Recent initiative funded 30+ campuses. Priority for programs integrating dialogue into the curriculum and campus life. Multi-year, renewable."
+  },
+  {
+    "id": "SYN-097",
+    "source": "synthetic",
+    "title": "Democratic Practice and Civic Discourse",
+    "funder": "Rockefeller Brothers Fund",
+    "funder_type": "private_foundation",
+    "amount_min": 75000,
+    "amount_max": 250000,
+    "total_funding": 1000000,
+    "deadline": "2026-10-01",
+    "geographic_scope": "USA (all 50 states)",
+    "state": "national",
+    "eligible_applicants": [
+      "501(c)(3) nonprofits",
+      "accredited colleges and universities"
+    ],
+    "focus_areas": [
+      "democratic practice",
+      "civic engagement",
+      "dialogue across difference",
+      "conflict resolution",
+      "community building"
+    ],
+    "application_type": "LOI_then_full",
+    "requires_match": false,
+    "match_strengthens": false,
+    "federal": false,
+    "description": "Supports efforts to strengthen democratic practice and constructive public discourse. Domestic focus on civic engagement, dialogue, and bridge-building. Renewable grants."
+  },
+  {
+    "id": "SYN-098",
+    "source": "synthetic",
+    "title": "Federal Campus Climate and Dialogue Initiative",
+    "funder": "U.S. Department of Education \u2014 Office of Postsecondary Education",
+    "funder_type": "federal_government",
+    "amount_min": 500000,
+    "amount_max": 2000000,
+    "total_funding": 25000000,
+    "deadline": "2026-08-15",
+    "geographic_scope": "USA (all 50 states)",
+    "state": "national",
+    "eligible_applicants": [
+      "accredited institutions of higher education"
+    ],
+    "focus_areas": [
+      "campus climate",
+      "dialogue across difference",
+      "conflict resolution",
+      "higher education",
+      "civic engagement"
+    ],
+    "application_type": "full_application",
+    "requires_match": true,
+    "match_strengthens": false,
+    "federal": true,
+    "description": "Supports large-scale campus programs fostering dialogue across difference, conflict resolution, and inclusive campus climates. Requires institutional matching funds and extensive federal reporting including annual performance reviews, financial audits, and compliance documentation. Multi-year award."
+  },
+  {
+    "id": "SYN-099",
+    "source": "synthetic",
+    "title": "K-12 Conflict Resolution and Peacebuilding Education",
+    "funder": "JAMS Foundation",
+    "funder_type": "private_foundation",
+    "amount_min": 20000,
+    "amount_max": 60000,
+    "total_funding": 300000,
+    "deadline": "2026-07-30",
+    "geographic_scope": "USA (all 50 states)",
+    "state": "national",
+    "eligible_applicants": [
+      "501(c)(3) nonprofits",
+      "K-12 schools and districts"
+    ],
+    "focus_areas": [
+      "conflict resolution",
+      "peacebuilding",
+      "youth development",
+      "K-12 education"
+    ],
+    "application_type": "full_application",
+    "requires_match": false,
+    "match_strengthens": false,
+    "federal": false,
+    "description": "Funds conflict resolution education programs for K-12 students and youth. Focus on culture and conflict intersection. Eligible applicants must serve K-12 populations. Not available for higher education or college-level programs."
+  },
+  {
+    "id": "SYN-100",
+    "source": "synthetic",
+    "title": "Northeast Campus Dialogue and Pluralism Fund",
+    "funder": "Luce Foundation",
+    "funder_type": "private_foundation",
+    "amount_min": 100000,
+    "amount_max": 500000,
+    "total_funding": 2000000,
+    "deadline": "2026-10-15",
+    "geographic_scope": "Northeast United States (CT, MA, ME, NH, NJ, NY, PA, RI, VT)",
+    "state": "national",
+    "eligible_applicants": [
+      "accredited colleges and universities in the Northeast"
+    ],
+    "focus_areas": [
+      "pluralism",
+      "dialogue across difference",
+      "higher education",
+      "civic engagement"
+    ],
+    "application_type": "LOI_then_full",
+    "requires_match": false,
+    "match_strengthens": false,
+    "federal": false,
+    "description": "Supports campus dialogue and pluralism programs at colleges and universities in the Northeast United States. Applicant institutions must be physically located in Connecticut, Massachusetts, Maine, New Hampshire, New Jersey, New York, Pennsylvania, Rhode Island, or Vermont."
   }
 ]
