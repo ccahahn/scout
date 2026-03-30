@@ -469,8 +469,8 @@ def run_pipeline(profile_text, thinking_callback=None, scorer_callback=None, sta
     # Retry loop if Scorer rejects
     retries = 0
     retry_messages = [
-        "Quality check caught an issue — Scout is finding a better fit...",
-        "Not quite right yet — Scout is trying a different angle...",
+        "Almost there — double-checking the fit...",
+        "Not quite right yet — trying a different angle...",
     ]
     while is_rejected(scorer_output) and retries < MAX_SCORER_RETRIES:
         # Try to extract what failed from Scorer output
