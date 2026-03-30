@@ -1,105 +1,180 @@
 import json
+from datetime import datetime, date
 import streamlit as st
-from pipeline import run_transcriber, run_pipeline, run_chat_followup, escape_dollars, filter_grants_for_profile, extract_state, GRANTS
+from pipeline import run_transcriber, run_pipeline, run_pipeline_with_answers, run_chat_followup, escape_dollars, filter_grants_for_profile, extract_state, profile_dict_to_text, GRANTS
+
+
+def days_until(deadline_str):
+    """Parse a deadline string and return days remaining, or None."""
+    if not deadline_str:
+        return None
+    for fmt in ("%B %d, %Y", "%b %d, %Y", "%Y-%m-%d", "%m/%d/%Y"):
+        try:
+            d = datetime.strptime(deadline_str.strip(), fmt).date()
+            delta = (d - date.today()).days
+            return delta if delta >= 0 else None
+        except ValueError:
+            continue
+    return None
 
 st.set_page_config(page_title="Scout by Instrumentl", layout="centered")
 
 # ---- Brand colors ----
-PURPLE = "#5b56b2"
-CORAL = "#f26f63"
+PURPLE = "#6B5CE7"
 LIGHT_PURPLE = "#7b77c9"
+CREAM = "#F8F6F1"
+WARM_BORDER = "#D4D2CC"
+TEXT_PRIMARY = "#2C2C2A"
+TEXT_SUPPORTING = "#A09E96"
+TEXT_TERMS = "#6B6A64"
+PLACEHOLDER_COLOR = "#C4C2BA"
 
 # ---- Global styles ----
 st.markdown(f"""
 <style>
-/* Base type scale — font loaded via .streamlit/config.toml */
-html, body {{
-    font-size: 16px !important;
-    line-height: 1.6 !important;
-    color: #262624 !important;
+/* Warm ivory background */
+html, body, [data-testid="stAppViewContainer"], [data-testid="stApp"],
+.main, .block-container, [data-testid="stMainBlockContainer"] {{
+    background-color: {CREAM} !important;
+    font-size: 14px !important;
+    line-height: 1.65 !important;
+    color: {TEXT_PRIMARY} !important;
+}}
+[data-testid="stHeader"] {{
+    background-color: {CREAM} !important;
 }}
 
-/* Page title: 28px */
-h1 {{
-    color: {PURPLE} !important;
-    font-size: 28px !important;
-    font-weight: 600 !important;
-    line-height: 1.3 !important;
-}}
-
-/* Section headers: 20px */
-h2, h3, h4 {{
-    font-size: 20px !important;
-    font-weight: 600 !important;
+/* Tier 1 — Primary content */
+h1, h2, h3, h4 {{
+    color: {TEXT_PRIMARY} !important;
+    font-size: 18px !important;
+    font-weight: 500 !important;
     line-height: 1.4 !important;
 }}
 
-/* Body text (paragraphs, list items, markdown): 16px */
+/* Body text */
 p, li, .stMarkdown {{
-    font-size: 16px !important;
-    line-height: 1.6 !important;
+    font-size: 14px !important;
+    line-height: 1.65 !important;
 }}
 
-/* Grant titles in results: 18px */
-.stMarkdown strong {{
-    font-size: 18px;
-    font-weight: 600;
-}}
-
-/* Metadata (amounts, deadlines): 13px */
+/* Metadata (amounts, deadlines) */
 .stCaption, [data-testid="stCaptionContainer"], [data-testid="stCaptionContainer"] p {{
     font-family: 'Inter', sans-serif !important;
     font-size: 13px !important;
     line-height: 1.5 !important;
+    color: {TEXT_SUPPORTING} !important;
 }}
 
-/* Buttons: 15px */
+/* Buttons */
 .stButton > button {{
-    font-size: 15px !important;
+    font-size: 14px !important;
     font-weight: 500 !important;
 }}
 
-/* Text inputs and areas: 16px */
-.stTextArea textarea, .stTextInput input,
-[data-testid="stChatInput"] textarea {{
-    font-size: 16px !important;
-    line-height: 1.6 !important;
+/* Textarea */
+.stTextArea textarea {{
+    font-size: 14px !important;
+    line-height: 1.65 !important;
+    background-color: white !important;
+    border-radius: 10px !important;
+    padding: 18px !important;
+    color: {TEXT_PRIMARY} !important;
+}}
+.stTextArea textarea::placeholder {{
+    color: {PLACEHOLDER_COLOR} !important;
+    font-style: italic !important;
 }}
 
-/* Primary buttons: coral */
+/* Text inputs */
+.stTextInput input,
+[data-testid="stChatInput"] textarea {{
+    font-size: 14px !important;
+    line-height: 1.65 !important;
+    background-color: white !important;
+    color: {TEXT_PRIMARY} !important;
+}}
+
+/* Primary buttons */
 .stButton > button[kind="primary"],
 .stButton > button[data-testid="stBaseButton-primary"] {{
-    background-color: {CORAL} !important;
-    border-color: {CORAL} !important;
+    background-color: {PURPLE} !important;
+    border-color: {PURPLE} !important;
     color: white !important;
+    border-radius: 7px !important;
 }}
 .stButton > button[kind="primary"]:hover,
 .stButton > button[data-testid="stBaseButton-primary"]:hover {{
-    background-color: #e05a4e !important;
-    border-color: #e05a4e !important;
+    background-color: #5a4dd0 !important;
+    border-color: #5a4dd0 !important;
 }}
 
-/* Subtle focus borders - just slightly darker than default, like Claude.ai */
-.stTextArea textarea:focus,
-.stTextInput input:focus {{
-    border-color: #c0c0c0 !important;
-    box-shadow: none !important;
+/* Secondary buttons — match primary shape, neutral color */
+.stButton > button[kind="secondary"],
+.stButton > button[data-testid="stBaseButton-secondary"] {{
+    background-color: #EDEAE4 !important;
+    border-color: #EDEAE4 !important;
+    color: {TEXT_PRIMARY} !important;
+    border-radius: 7px !important;
 }}
+.stButton > button[kind="secondary"]:hover,
+.stButton > button[data-testid="stBaseButton-secondary"]:hover {{
+    background-color: #E2DFD9 !important;
+    border-color: #E2DFD9 !important;
+}}
+
+/* Textarea border */
 .stTextArea > div,
 .stTextArea > div > div,
 .stTextArea [data-baseweb="textarea"],
 .stTextArea [data-baseweb="base-input"] {{
-    border-color: #e0e0e0 !important;
+    border: 0.5px solid {WARM_BORDER} !important;
+    border-radius: 10px !important;
 }}
+.stTextArea textarea:focus,
 .stTextArea > div:focus-within,
 .stTextArea > div > div:focus-within,
 .stTextArea [data-baseweb="textarea"]:focus-within,
 .stTextArea [data-baseweb="base-input"]:focus-within {{
-    border-color: #c0c0c0 !important;
+    border-color: #b0aea8 !important;
+    box-shadow: none !important;
+}}
+.stTextInput input:focus {{
+    border-color: #b0aea8 !important;
     box-shadow: none !important;
 }}
 
-/* Chat input focus - subtle */
+/* Text input containers — kill orange focus ring */
+.stTextInput > div,
+.stTextInput > div > div,
+.stTextInput [data-baseweb="input"],
+.stTextInput [data-baseweb="base-input"] {{
+    border-color: #e0e0e0 !important;
+}}
+.stTextInput > div:focus-within,
+.stTextInput > div > div:focus-within,
+.stTextInput [data-baseweb="input"]:focus-within,
+.stTextInput [data-baseweb="base-input"]:focus-within {{
+    border-color: {PURPLE} !important;
+    box-shadow: none !important;
+}}
+
+/* Chat input — match textarea styling */
+[data-testid="stChatInput"],
+[data-testid="stChatInput"] > div,
+.stChatInput > div {{
+    border-color: {WARM_BORDER} !important;
+    border-radius: 10px !important;
+    background-color: white !important;
+}}
+[data-testid="stChatInput"] textarea {{
+    font-size: 14px !important;
+    color: {TEXT_PRIMARY} !important;
+    background-color: white !important;
+}}
+[data-testid="stChatInput"] textarea::placeholder {{
+    color: {PLACEHOLDER_COLOR} !important;
+}}
 .stChatInput > div:focus-within,
 .stChatInput textarea:focus,
 .stChatInput div[data-baseweb]:focus-within,
@@ -107,29 +182,41 @@ p, li, .stMarkdown {{
 [data-testid="stChatInput"] textarea:focus,
 [data-testid="stChatInputTextArea"]:focus,
 [data-testid="stChatInputTextArea"]:focus-within {{
-    border-color: #c0c0c0 !important;
+    border-color: #b0aea8 !important;
     box-shadow: none !important;
     outline: none !important;
 }}
-
-/* Kill any orange/red focus globally */
-*:focus {{
-    outline-color: #c0c0c0 !important;
+/* Chat submit button — purple */
+[data-testid="stChatInput"] button,
+.stChatInput button {{
+    background-color: {PURPLE} !important;
+    color: white !important;
 }}
-textarea:focus, input:focus {{
-    border-color: #c0c0c0 !important;
+
+/* Toggle — purple instead of orange */
+[data-testid="stToggle"] span[data-baseweb="toggle"] > div {{
+    background-color: {PURPLE} !important;
+}}
+[data-testid="stToggle"] span[data-baseweb="toggle"]:focus-within > div {{
     box-shadow: none !important;
 }}
 
-/* Back link styling */
-.back-link {{
-    color: {LIGHT_PURPLE};
-    text-decoration: none;
-    font-size: 15px;
-    cursor: pointer;
+/* Selectbox — kill orange focus */
+[data-baseweb="select"] > div {{
+    border-color: {WARM_BORDER} !important;
 }}
-.back-link:hover {{
-    text-decoration: underline;
+[data-baseweb="select"] > div:focus-within,
+[data-baseweb="select"]:focus-within > div {{
+    border-color: #b0aea8 !important;
+    box-shadow: none !important;
+}}
+[data-baseweb="select"] [data-baseweb="input"]:focus {{
+    box-shadow: none !important;
+}}
+
+/* Clean focus globally — no browser outlines */
+*:focus {{
+    outline: none !important;
 }}
 
 /* Apply page header */
@@ -179,23 +266,6 @@ textarea:focus, input:focus {{
     vertical-align: middle;
 }}
 
-/* Grant card apply button */
-.apply-btn {{
-    display: inline-block;
-    background: {CORAL};
-    color: white !important;
-    padding: 6px 16px;
-    border-radius: 6px;
-    text-decoration: none;
-    font-size: 15px;
-    font-weight: 500;
-    cursor: pointer;
-    border: none;
-}}
-.apply-btn:hover {{
-    background: #e05a4e;
-}}
-
 /* Detail page header */
 .detail-header {{
     background: linear-gradient(135deg, {PURPLE} 0%, {LIGHT_PURPLE} 100%);
@@ -232,26 +302,7 @@ textarea:focus, input:focus {{
     line-height: 1.6;
 }}
 
-/* Mock banner */
-.mock-banner {{
-    background: #fff3cd;
-    border: 1px solid #ffc107;
-    border-radius: 6px;
-    padding: 8px 14px;
-    font-size: 13px;
-    color: #856404;
-    margin-bottom: 16px;
-    text-align: center;
-}}
-
-/* Explore page grant row */
-.explore-grant {{
-    padding: 12px 0;
-    border-bottom: 1px solid #eee;
-}}
-.explore-grant:last-child {{
-    border-bottom: none;
-}}
+/* Explore tag */
 .explore-tag {{
     display: inline-block;
     background: #f0eef9;
@@ -260,6 +311,93 @@ textarea:focus, input:focus {{
     padding: 2px 8px;
     border-radius: 12px;
     margin: 2px 2px 2px 0;
+}}
+
+
+
+/* Loading / progress display */
+.loading-container {{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+}}
+.loading-spinner {{
+    width: 64px;
+    height: 64px;
+    border: 3px solid {WARM_BORDER};
+    border-top-color: {PURPLE};
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 24px;
+}}
+.progress-count {{
+    width: 64px;
+    height: 64px;
+    border: 3px solid {PURPLE};
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 600;
+    color: #262624;
+    margin-bottom: 24px;
+}}
+@keyframes spin {{
+    to {{ transform: rotate(360deg); }}
+}}
+.loading-text {{
+    font-size: 20px;
+    font-weight: 500;
+    color: #262624;
+    margin-bottom: 24px;
+}}
+.step-list {{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-width: 300px;
+}}
+.step-row {{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}}
+.step-dot {{
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #ddd;
+    flex-shrink: 0;
+}}
+.step-dot.active {{
+    background: {PURPLE};
+    animation: pulse 1.5s ease-in-out infinite;
+}}
+.step-dot.done {{
+    background: {PURPLE};
+}}
+@keyframes pulse {{
+    0%, 100% {{ opacity: 0.4; }}
+    50% {{ opacity: 1; }}
+}}
+.step-label {{
+    font-size: 15px;
+    color: #666;
+    flex: 1;
+}}
+.step-detail {{
+    font-size: 14px;
+    color: #999;
+    text-align: right;
+}}
+.loading-timer {{
+    font-size: 13px;
+    color: #ccc;
+    margin-top: 16px;
+    font-variant-numeric: tabular-nums;
 }}
 </style>
 """, unsafe_allow_html=True)
@@ -300,6 +438,9 @@ if "phase" not in st.session_state:
     st.session_state.phase = "intake"
     st.session_state.notes = ""
     st.session_state.profile = None
+    st.session_state.profile_dict = None
+    st.session_state.editing_profile = False
+    st.session_state.editing_field = None
     st.session_state.results = None
     st.session_state.follow_up = None
     st.session_state.follow_up_answers = ""
@@ -314,6 +455,9 @@ def reset_all():
     st.session_state.phase = "intake"
     st.session_state.notes = ""
     st.session_state.profile = None
+    st.session_state.profile_dict = None
+    st.session_state.editing_profile = False
+    st.session_state.editing_field = None
     st.session_state.results = None
     st.session_state.follow_up = None
     st.session_state.follow_up_answers = ""
@@ -330,55 +474,75 @@ def go_back_to_intake():
 
 
 # ---- Progress UI ----
-THINKING_CSS = f"""
-<style>
-.thinking-container {{
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin: 32px 0;
-}}
-.thinking-dot {{
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: {PURPLE};
-    animation: pulse 1.5s ease-in-out infinite;
-}}
-@keyframes pulse {{
-    0%, 100% {{ opacity: 0.3; transform: scale(0.9); }}
-    50% {{ opacity: 1; transform: scale(1.1); }}
-}}
-.thinking-text {{
-    font-size: 15px;
-    color: #666;
-}}
-.thinking-timer {{
-    font-size: 13px;
-    color: #999;
-    font-variant-numeric: tabular-nums;
-    margin-top: -24px;
-    font-family: 'Inter', sans-serif;
-}}
-</style>
-"""
+
+STEP_LABELS = {
+    "reading_profile": "Reading your profile",
+    "scanning": "Scanning open grants",
+    "scoring": "Scoring for fit",
+}
+
+def _build_progress_html(current_step, step_detail=None, grant_count=None, done=False):
+    """Build the full progress HTML for a given pipeline state."""
+    steps = ["reading_profile", "scanning", "scoring"]
+
+    # Center circle
+    if done and grant_count is not None:
+        # Animate count from 0 to N via JS
+        circle = f'<div class="progress-count" id="grant-counter" data-target="{grant_count}">0</div>'
+        headline_id = 'id="done-headline"'
+        headline_text = f'Done — <span id="headline-count">{grant_count}</span> grant{"s" if grant_count != 1 else ""} found.'
+    else:
+        circle = '<div class="loading-spinner"></div>'
+        headline_id = ''
+        headline_text = "Finding the right grants for you"
+
+    # Step list
+    step_rows = ""
+    for s in steps:
+        label = STEP_LABELS[s]
+        past = steps.index(s) < steps.index(current_step) if current_step in steps else False
+        active = (s == current_step) and not done
+        is_done = done or past
+
+        # Dot color
+        if is_done:
+            dot_class = "step-dot done"
+        elif active:
+            dot_class = "step-dot active"
+        else:
+            dot_class = "step-dot"
+
+        # Right-side detail
+        detail = ""
+        if s == "scanning" and step_detail:
+            detail = f'<span class="step-detail">{step_detail}</span>'
+
+        step_rows += f'<div class="step-row"><span class="{dot_class}"></span><span class="step-label">{label}</span>{detail}</div>'
+
+    return (
+        '<div class="loading-container">'
+        f'{circle}'
+        f'<div class="loading-text" {headline_id}>{headline_text}</div>'
+        f'<div class="step-list">{step_rows}</div>'
+        '<div class="loading-timer" id="scout-timer"></div>'
+        '</div>'
+    )
 
 
 def make_thinking_ui():
-    """Create pulsing dot + elapsed timer UI while Scout thinks."""
-    st.markdown(THINKING_CSS, unsafe_allow_html=True)
-    status_display = st.empty()
+    """Create stepped progress display. Returns callbacks for pipeline."""
+    progress_el = st.empty()
 
-    status_display.markdown(
-        '<div class="thinking-container">'
-        '<div class="thinking-dot"></div>'
-        '<span class="thinking-text">Finding your best-fit grants. Back in two minutes.</span>'
-        '</div>'
-        '<div class="thinking-timer" id="scout-timer">0s</div>',
+    # State shared between callbacks
+    state = {"current_step": "reading_profile", "detail": None}
+
+    # Render initial state
+    progress_el.markdown(
+        _build_progress_html("reading_profile"),
         unsafe_allow_html=True,
     )
 
-    # Client-side timer — ticks every second in the browser, no LLM dependency
+    # Client-side timer
     st.components.v1.html("""
     <script>
     const el = window.parent.document.getElementById('scout-timer');
@@ -386,12 +550,51 @@ def make_thinking_ui():
         let seconds = 0;
         const tick = () => {
             seconds++;
-            el.textContent = seconds + 's';
+            if (seconds < 60) { el.textContent = seconds + 's'; }
+            else { el.textContent = Math.floor(seconds/60) + 'm ' + (seconds%60) + 's'; }
         };
         setInterval(tick, 1000);
     }
     </script>
     """, height=0)
+
+    # Placeholder for counter animation script
+    counter_el = st.empty()
+
+    def on_step(step, detail=None):
+        if step == "done":
+            count = int(detail) if detail else 0
+            progress_el.markdown(
+                _build_progress_html("scoring", state["detail"], grant_count=count, done=True),
+                unsafe_allow_html=True,
+            )
+            # Animate the counter from 0 → N
+            if count > 0:
+                with counter_el:
+                    st.components.v1.html(f"""
+                    <script>
+                    (function() {{
+                        var el = window.parent.document.getElementById('grant-counter');
+                        if (!el) return;
+                        var target = {count};
+                        var current = 0;
+                        var s = Math.max(50, Math.floor(600 / target));
+                        var timer = setInterval(function() {{
+                            current++;
+                            el.textContent = current;
+                            if (current >= target) clearInterval(timer);
+                        }}, s);
+                    }})();
+                    </script>
+                    """, height=0)
+        else:
+            state["current_step"] = step
+            if detail:
+                state["detail"] = detail
+            progress_el.markdown(
+                _build_progress_html(step, state["detail"]),
+                unsafe_allow_html=True,
+            )
 
     def on_thinking(chunk):
         pass
@@ -402,7 +605,7 @@ def make_thinking_ui():
     def on_status(msg):
         pass
 
-    return on_thinking, on_scorer, on_status
+    return on_thinking, on_scorer, on_status, on_step
 
 
 # =====================================================
@@ -412,22 +615,14 @@ def make_thinking_ui():
 # ---- APPLY (mock application page) ----
 if st.session_state.phase == "apply":
     grant = st.session_state.apply_grant
-    profile_text = st.session_state.profile or ""
+    profile = st.session_state.profile_dict or {}
 
-    # Parse profile fields
-    def get_field(label):
-        for line in profile_text.split("\n"):
-            if line.strip().lower().startswith(label.lower()):
-                val = line.split(":", 1)[-1].strip() if ":" in line else ""
-                return val
-        return ""
-
-    org = get_field("organization") or get_field("org")
-    location = get_field("location")
-    mission = get_field("mission")
-    serving = get_field("serving") or get_field("who they serve") or get_field("populations")
-    budget = get_field("budget") or get_field("annual budget")
-    team = get_field("team") or get_field("team size")
+    org = profile.get("organization", "")
+    location = profile.get("location", "")
+    mission = profile.get("mission", "")
+    serving = profile.get("who_they_serve", "")
+    budget = profile.get("budget", "")
+    team = ""  # not in structured profile
 
     if st.button("\u2190 Back to Results"):
         st.session_state.phase = "results"
@@ -654,28 +849,62 @@ elif st.session_state.phase == "explore":
                 tags_html = " ".join(f'<span class="explore-tag">{f}</span>' for f in focus[:5])
                 st.markdown(tags_html, unsafe_allow_html=True)
 
-# ---- SEARCHING (initial run) ----
-elif st.session_state.phase == "searching":
-    # Header with back button
+# ---- EXTRACTING (transcriber runs with simple loading screen) ----
+elif st.session_state.phase == "extracting":
+    # Header
     header_col1, header_col2 = st.columns([4, 1])
     with header_col1:
-        st.title("Scout")
+        st.markdown(f'<span style="font-family: Georgia, serif; font-size: 28px; font-weight: 600; color: {PURPLE};">Scout</span> <span style="font-size: 16px; color: #999;">grant prospecting co-pilot</span>', unsafe_allow_html=True)
     with header_col2:
         st.write("")
-        if st.button("\u2190 Back"):
-            go_back_to_intake()
+        if st.button("Clear"):
+            reset_all()
             st.rerun()
 
-    on_thinking, on_scorer, on_status = make_thinking_ui()
+    # Simple centered spinner while transcriber runs
+    st.markdown(
+        '<div class="loading-container">'
+        '<div class="loading-spinner"></div>'
+        '<div class="loading-text">Getting to know you</div>'
+        '<div class="loading-timer" id="scout-timer"></div>'
+        '</div>',
+        unsafe_allow_html=True,
+    )
+    st.components.v1.html("""
+    <script>
+    const el = window.parent.document.getElementById('scout-timer');
+    if (el) {
+        let seconds = 0;
+        const tick = () => { seconds++; el.textContent = seconds < 60 ? seconds + 's' : Math.floor(seconds/60) + 'm ' + (seconds%60) + 's'; };
+        setInterval(tick, 1000);
+    }
+    </script>
+    """, height=0)
 
-    profile = run_transcriber(st.session_state.notes)
-    st.session_state.profile = profile
+    profile_dict = run_transcriber(st.session_state.notes)
+    st.session_state.profile_dict = profile_dict
+    st.session_state.profile = profile_dict_to_text(profile_dict)
+    st.session_state.phase = "confirm_profile"
+    st.rerun()
+
+# ---- SEARCHING (scout + scorer with stepped progress) ----
+elif st.session_state.phase == "searching":
+    # Header
+    header_col1, header_col2 = st.columns([4, 1])
+    with header_col1:
+        st.markdown(f'<span style="font-family: Georgia, serif; font-size: 28px; font-weight: 600; color: {PURPLE};">Scout</span> <span style="font-size: 16px; color: #999;">grant prospecting co-pilot</span>', unsafe_allow_html=True)
+    with header_col2:
+        pass
+
+    on_thinking, on_scorer, on_status, on_step = make_thinking_ui()
 
     results = run_pipeline(
-        profile,
+        st.session_state.profile,
+        raw_notes=st.session_state.notes,
         thinking_callback=on_thinking,
         scorer_callback=on_scorer,
         status_callback=on_status,
+        step_callback=on_step,
     )
 
     if results.get("needs_follow_up"):
@@ -691,28 +920,21 @@ elif st.session_state.phase == "searching":
 elif st.session_state.phase == "searching_with_answers":
     header_col1, header_col2 = st.columns([4, 1])
     with header_col1:
-        st.title("Scout")
+        st.markdown(f'<span style="font-family: Georgia, serif; font-size: 28px; font-weight: 600; color: {PURPLE};">Scout</span> <span style="font-size: 16px; color: #999;">grant prospecting co-pilot</span>', unsafe_allow_html=True)
     with header_col2:
         st.write("")
         if st.button("\u2190 Back"):
             go_back_to_intake()
             st.rerun()
 
-    on_thinking, on_scorer, on_status = make_thinking_ui()
-    on_status("Updating recommendations with your answers...")
+    on_thinking, on_scorer, on_status, on_step = make_thinking_ui()
 
-    enriched_profile = (
-        st.session_state.profile
-        + "\n\nFollow-up answers from the user:\n"
-        + st.session_state.follow_up_answers
-    )
-
-    results = run_pipeline(
-        enriched_profile,
-        thinking_callback=on_thinking,
+    results = run_pipeline_with_answers(
+        profile_text=st.session_state.profile,
+        previous_scout_output=st.session_state.scout_context,
+        follow_up_answers=st.session_state.follow_up_answers,
         scorer_callback=on_scorer,
-        status_callback=on_status,
-        allow_follow_up=False,
+        step_callback=on_step,
     )
 
     st.session_state.results = results
@@ -724,17 +946,120 @@ else:
     # ---- HEADER ----
     header_col1, header_col2 = st.columns([4, 1])
     with header_col1:
-        st.title("Scout")
+        st.markdown(f'<span style="font-family: Georgia, serif; font-size: 28px; font-weight: 600; color: {PURPLE};">Scout</span> <span style="font-size: 16px; color: #999;">grant prospecting co-pilot</span>', unsafe_allow_html=True)
     with header_col2:
         st.write("")
-        if st.button("Clear chat"):
-            reset_all()
-            st.rerun()
+        if st.session_state.phase == "results":
+            if st.button("\u2190 Back"):
+                st.session_state.phase = "confirm_profile"
+                st.rerun()
+        else:
+            if st.button("Clear"):
+                reset_all()
+                st.rerun()
 
     page = st.empty()
 
+    # ---- PROFILE CONFIRMATION ----
+    if st.session_state.phase == "confirm_profile":
+        FIELD_HINTS = {
+            "organization": "What's the organization called?",
+            "location": "City, county, state?",
+            "mission": "What do they do?",
+            "who_they_serve": "Who do they serve?",
+            "budget": "Roughly how large is the org?",
+            "grant_experience": "First-time or experienced?",
+            "looking_for": "What kind of grants are they after?",
+            "sweet_spot": "What grant size range works?",
+            "fund_use": "How would they spend it?",
+            "renewability": "One-time OK, or need multi-year?",
+            "dealbreakers": "Anything they want to avoid?",
+            "urgency": "How soon do they need this?",
+        }
+        EMPTY_PATTERNS = {"", "not mentioned", "not discussed", "not specified", "unknown", "n/a", "none", "not provided"}
+        field_labels = [
+            ("organization", "Organization"),
+            ("location", "Location"),
+            ("mission", "Mission"),
+            ("who_they_serve", "Who they serve"),
+            ("budget", "Budget"),
+            ("grant_experience", "Grant experience"),
+            ("looking_for", "Looking for"),
+            ("sweet_spot", "Sweet spot"),
+            ("fund_use", "Fund use"),
+            ("renewability", "Renewability"),
+            ("dealbreakers", "Dealbreakers"),
+            ("urgency", "Urgency"),
+        ]
+
+        with page.container():
+            st.write("")
+            st.markdown(f'<p style="font-size: 12px; color: {TEXT_SUPPORTING}; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 2px;">Extracted Profile</p>', unsafe_allow_html=True)
+            st.markdown(f'<p style="font-size: 22px; font-weight: 500; color: {TEXT_PRIMARY}; margin: 0;">Here\'s what I understood.</p>', unsafe_allow_html=True)
+            st.markdown(f'<p style="font-size: 15px; font-weight: 400; color: {TEXT_SUPPORTING}; margin: 4px 0 20px 0;">Anything to correct before I search?</p>', unsafe_allow_html=True)
+
+            profile = st.session_state.profile_dict or {}
+
+            if st.session_state.editing_profile:
+                # Edit mode — all fields as text inputs
+                with st.container(border=True):
+                    edited = {}
+                    for key, label in field_labels:
+                        edited[key] = st.text_input(label, value=profile.get(key, ""), key=f"edit_{key}")
+                    st.write("")
+                    col1, col2 = st.columns(2)
+                    with col1:
+                        if st.button("Save and find grants", type="primary"):
+                            st.session_state.profile_dict = edited
+                            st.session_state.profile = profile_dict_to_text(edited)
+                            st.session_state.editing_profile = False
+                            st.session_state.phase = "searching"
+                            st.rerun()
+                    with col2:
+                        if st.button("Cancel"):
+                            st.session_state.editing_profile = False
+                            st.rerun()
+            else:
+                # Read-only card with flex rows
+                rows_html = ""
+                for idx, (key, label) in enumerate(field_labels):
+                    val = profile.get(key, "")
+                    is_empty = not val or val.strip().lower() in EMPTY_PATTERNS
+                    border = "" if idx == len(field_labels) - 1 else "border-bottom: 0.5px solid #E8E6E0;"
+
+                    if is_empty:
+                        hint = FIELD_HINTS.get(key, "")
+                        val_html = f'<span style="font-style: italic; color: {PLACEHOLDER_COLOR}; font-size: 14px;">Didn\'t come up — {hint}</span>'
+                    else:
+                        val_html = f'<span style="color: {TEXT_PRIMARY}; font-size: 14px; line-height: 1.5;">{escape_dollars(val)}</span>'
+
+                    rows_html += (
+                        f'<div style="display: flex; align-items: flex-start; padding: 16px 20px; {border}">'
+                        f'<div style="width: 140px; flex-shrink: 0; font-size: 13px; color: {TEXT_SUPPORTING};">{label}</div>'
+                        f'<div style="flex: 1;">{val_html}</div>'
+                        f'</div>'
+                    )
+
+                st.markdown(
+                    f'<div style="background: white; border: 0.5px solid #D4D2CC; border-radius: 12px; overflow: hidden;">'
+                    f'{rows_html}'
+                    f'</div>',
+                    unsafe_allow_html=True,
+                )
+
+                st.write("")
+                col1, col2, col3 = st.columns([1, 1, 4])
+                with col1:
+                    if st.button("Find grants", type="primary"):
+                        st.session_state.phase = "searching"
+                        st.rerun()
+                with col2:
+                    if st.button("Edit"):
+                        st.session_state.editing_profile = True
+                        st.rerun()
+
     # ---- FOLLOW-UP QUESTIONS ----
-    if st.session_state.phase == "follow_up":
+    elif st.session_state.phase == "follow_up":
         with page.container():
             st.write("")
             st.markdown("**Scout has a couple of questions before finalizing your recommendations:**")
@@ -763,73 +1088,130 @@ else:
         with page.container():
             st.write("")
 
-            # "See all results" option above recommendations
-            if st.button("See all results \u2192"):
-                st.session_state.explore_grants = GRANTS
-                st.session_state.phase = "explore"
-                st.rerun()
-
-            st.write("")
-
             grants = st.session_state.results.get("grants", [])
             near_misses = st.session_state.results.get("near_misses", [])
+            elimination = st.session_state.results.get("elimination_summary", {})
             message = st.session_state.results.get("message")
 
-            with st.container(border=True):
-                if grants:
-                    st.markdown("Based on everything you shared with me, here's what I found:")
-                    st.write("")
+            if grants:
+                # Header
+                st.markdown("## Here's what I found.")
+                total_reviewed = elimination.get("total_reviewed", "200+")
+                col_context, col_explore = st.columns([3, 1])
+                with col_context:
+                    st.markdown(f'<p style="font-size: 14px; color: {TEXT_SUPPORTING};">{len(grants)} grant{"s" if len(grants) != 1 else ""} from {total_reviewed} reviewed &middot; sorted by fit</p>', unsafe_allow_html=True)
+                with col_explore:
+                    if st.button("See all results \u2192", key="see_all"):
+                        st.session_state.explore_grants = GRANTS
+                        st.session_state.phase = "explore"
+                        st.rerun()
 
-                    for i, grant in enumerate(grants):
-                        title = grant.get("title", "Untitled Grant")
-                        amount_range = format_amount_range(grant)
-                        deadline = grant.get("deadline", "")
-                        rationale = grant.get("rationale", "")
-                        caveats = grant.get("caveats")
+                # Purple accent line
+                st.markdown(f'<hr style="border: none; height: 2px; background: {PURPLE}; margin: 8px 0 24px 0;">', unsafe_allow_html=True)
 
-                        st.markdown(f"**{escape_dollars(title)}**")
+                for i, grant in enumerate(grants):
+                    title = grant.get("title", "Untitled Grant")
+                    amount_range = format_amount_range(grant)
+                    deadline = grant.get("deadline", "")
+                    rationale = grant.get("rationale", "")
+                    caveats = grant.get("caveats")
+                    funder = grant.get("funder", "")
+                    fit_tags = grant.get("fit_tags", [])
+                    days_left = days_until(deadline)
+
+                    # Look up funder from grants.json if not in Scout output
+                    if not funder:
+                        grant_id = grant.get("id")
+                        full = next((g for g in GRANTS if g["id"] == grant_id), None)
+                        if full:
+                            funder = full.get("funder", "")
+
+                    is_top = (i == 0)
+                    num = f"{i + 1:02d}"
+
+                    # Section number + top match label
+                    if is_top:
+                        st.markdown(f'<p style="font-size: 14px; color: {PURPLE}; margin-bottom: 4px;"><strong>{num}</strong> &middot; TOP MATCH</p>', unsafe_allow_html=True)
+                    else:
+                        st.markdown(f'<p style="font-size: 14px; color: {TEXT_SUPPORTING}; margin-bottom: 4px;"><strong>{num}</strong></p>', unsafe_allow_html=True)
+
+                    # Grant name + funder
+                    st.markdown(f"### {escape_dollars(title)}")
+                    if funder:
+                        st.markdown(f'<p style="font-size: 13px; color: {TEXT_SUPPORTING}; margin-top: -8px;">{escape_dollars(funder)}</p>', unsafe_allow_html=True)
+
+                    # Metrics row
+                    met1, met2, met3 = st.columns(3)
+                    with met1:
+                        st.caption("Amount")
                         if amount_range:
-                            st.markdown(amount_range, unsafe_allow_html=True)
+                            st.markdown(f"**{amount_range}**", unsafe_allow_html=True)
+                    with met2:
+                        st.caption("Deadline")
                         if deadline:
-                            st.markdown(f"Deadline: {escape_dollars(deadline)}")
-                        st.write("")
-                        if rationale:
-                            st.markdown(escape_dollars(rationale), unsafe_allow_html=True)
-                        if caveats:
-                            st.caption(f"Note: {caveats}")
-                        st.write("")
-                        btn_col1, btn_col2, btn_col3 = st.columns([1, 1, 2])
-                        with btn_col1:
-                            if st.button("Apply \u2192", key=f"apply_{i}", type="primary"):
-                                st.session_state.apply_grant = grant
-                                st.session_state.phase = "apply"
-                                st.rerun()
-                        with btn_col2:
-                            if st.button("Learn more", key=f"detail_{i}"):
-                                # Find full grant data from grants.json by ID
-                                grant_id = grant.get("id")
-                                full_grant = next((g for g in GRANTS if g["id"] == grant_id), grant)
-                                st.session_state.detail_grant = full_grant
-                                st.session_state.phase = "grant_detail"
-                                st.rerun()
-                        st.write("")
+                            st.markdown(f"**{escape_dollars(deadline)}**")
+                    with met3:
+                        st.caption("Time left")
+                        if days_left is not None:
+                            if days_left < 30:
+                                dl_color = "#A32D2D"
+                            elif days_left < 90:
+                                dl_color = "#BA7517"
+                            else:
+                                dl_color = TEXT_PRIMARY
+                            st.markdown(f'<p style="font-weight: 500; color: {dl_color};">{days_left} days</p>', unsafe_allow_html=True)
 
-                elif message:
-                    st.markdown(escape_dollars(message), unsafe_allow_html=True)
+                    # Why this fits
+                    st.markdown(f'<p style="font-size: 13px; color: {TEXT_SUPPORTING}; margin: 12px 0 4px 0;">Why this fits</p>', unsafe_allow_html=True)
+                    if rationale:
+                        st.write(escape_dollars(rationale))
+                    if caveats:
+                        st.caption(f"Note: {caveats}")
 
-                if near_misses:
-                    st.write("---")
-                    st.markdown("**Worth keeping an eye on:**")
+                    # Match tags — plain text with dot separators
+                    if fit_tags:
+                        st.markdown(
+                            f'<p style="font-size: 13px; color: {TEXT_SUPPORTING};">'
+                            + ' &middot; '.join(escape_dollars(t) for t in fit_tags)
+                            + '</p>',
+                            unsafe_allow_html=True,
+                        )
+
+                    # Buttons
+                    btn1, btn2, btn3 = st.columns([1, 1, 3])
+                    with btn1:
+                        if st.button("Apply \u2192", key=f"apply_{i}", type="primary"):
+                            st.session_state.apply_grant = grant
+                            st.session_state.phase = "apply"
+                            st.rerun()
+                    with btn2:
+                        if st.button("Learn more", key=f"detail_{i}"):
+                            grant_id = grant.get("id")
+                            full_grant = next((g for g in GRANTS if g["id"] == grant_id), grant)
+                            st.session_state.detail_grant = full_grant
+                            st.session_state.phase = "grant_detail"
+                            st.rerun()
+
+                    # Divider between grants (not after last)
+                    if i < len(grants) - 1:
+                        st.divider()
+
+            elif message:
+                st.markdown(escape_dollars(message), unsafe_allow_html=True)
+
+            if near_misses:
+                st.divider()
+                st.markdown(f'<p style="font-size: 14px; color: {TEXT_SUPPORTING};"><strong>Worth keeping an eye on</strong></p>', unsafe_allow_html=True)
+                st.write("")
+                for nm in near_misses:
+                    st.markdown(f"**{escape_dollars(nm.get('title', ''))}**")
+                    if nm.get("what_aligns"):
+                        st.markdown(f"*What aligns:* {escape_dollars(nm['what_aligns'])}", unsafe_allow_html=True)
+                    if nm.get("the_issue"):
+                        st.markdown(f"*The gap:* {escape_dollars(nm['the_issue'])}", unsafe_allow_html=True)
+                    if nm.get("the_play"):
+                        st.markdown(f"*Next move:* {escape_dollars(nm['the_play'])}", unsafe_allow_html=True)
                     st.write("")
-                    for nm in near_misses:
-                        st.markdown(f"**{escape_dollars(nm.get('title', ''))}**")
-                        if nm.get("what_aligns"):
-                            st.markdown(f"*What aligns:* {escape_dollars(nm['what_aligns'])}", unsafe_allow_html=True)
-                        if nm.get("the_issue"):
-                            st.markdown(f"*The gap:* {escape_dollars(nm['the_issue'])}", unsafe_allow_html=True)
-                        if nm.get("the_play"):
-                            st.markdown(f"*Next move:* {escape_dollars(nm['the_play'])}", unsafe_allow_html=True)
-                        st.write("")
 
             # Chat history
             for msg in st.session_state.chat_history:
@@ -861,37 +1243,42 @@ else:
     # ---- INTAKE ----
     else:
         with page.container():
-            st.markdown('<p style="font-family: Inter, sans-serif; font-size: 16px; color: #666; margin-top: -8px;">Grant prospecting co-pilot</p>', unsafe_allow_html=True)
             st.write("")
-            st.markdown("**Fill in what you know from the call.** Leave blank anything you didn't cover.")
-            st.write("")
-            st.markdown("""Organization:
-Location (city, county, state):
-Mission (in their words):
-Who they serve:
-Team size:
-Annual budget:
-Grant experience (first-time, some, experienced):
-Current grants or funding (if any):
-Grant size sweet spot:
-How they'd use the funds (staffing, community partner, equipment, etc.):
-Renewability (one-time OK, or needs multi-year/renewable):
-Spending parameters they care about (indirect costs, FTE, restrictions):
-What they're looking for:
-What they want to avoid:
-How urgently they need this (now, planning ahead, browsing):""")
+            st.markdown(f'<p style="font-size: 18px; font-weight: 500; color: {TEXT_PRIMARY}; margin: 0;">Paste the call transcript or notes.</p>', unsafe_allow_html=True)
+            st.markdown(f'<p style="font-size: 14px; font-weight: 400; color: {TEXT_SUPPORTING}; margin: 6px 0 24px 0;">Messy is fine — Scout will pull out what matters.</p>', unsafe_allow_html=True)
 
             notes = st.text_area(
                 "Call notes",
-                height=300,
-                placeholder="Fill in the fields above in any format. Messy is fine, Scout will sort it out.",
+                height=200,
+                placeholder='e.g. "We\'re Raices del Valle, a small after-school tutoring program in south Austin. We serve first-generation Latino students in Travis County. Our budget is around $180K. We\'ve gotten a few small grants before — one from the local Rotary club — but nothing federal. We need something in the $2K–$10K range, and we can\'t handle complex reporting because it\'s basically just me and one volunteer."',
                 label_visibility="collapsed",
                 key=f"notes_{st.session_state.widget_key}",
             )
 
-            if st.button("Find Grants", type="primary"):
+            # Gentle hint for what to include
+            terms = ["organization", "location", "mission", "who they serve", "budget", "grant experience", "looking for", "grant size", "fund use", "renewability", "dealbreakers", "urgency"]
+            st.markdown(
+                f'<div style="margin-top: 20px;">'
+                f'<p style="font-size: 13px; color: {TEXT_SUPPORTING}; font-weight: 400; margin: 0 0 4px 0;">Helpful to cover:</p>'
+                f'<p style="font-size: 14px; color: {TEXT_TERMS}; font-weight: 500; line-height: 1.65; margin: 0;">'
+                + ' \u00b7 '.join(terms)
+                + '</p></div>',
+                unsafe_allow_html=True,
+            )
+
+            st.markdown('<div style="margin-top: 24px;"></div>', unsafe_allow_html=True)
+            if st.button("Find grants", type="primary"):
                 st.session_state.notes = notes
-                st.session_state.phase = "searching"
+                st.session_state.phase = "extracting"
+                st.rerun()
+
+            # DEBUG: skip to results with mock data
+            st.write("")
+            if st.button("DEBUG: Skip to matches", key="debug_skip"):
+                st.session_state.profile_dict = {"organization": "Raices del Valle", "location": "Austin, Travis County, Texas", "mission": "After-school tutoring and mentoring for first-generation Latino students in south Austin", "who_they_serve": "Latino youth, first-generation students, low-income families", "budget": "~$180K/year", "grant_experience": "Some — one prior Rotary club grant", "sweet_spot": "$2K – $10K", "dealbreakers": "Complex federal reporting, heavy compliance requirements", "urgency": "Ready to apply now", "looking_for": "Education grants for youth programs", "fund_use": "", "renewability": ""}
+                st.session_state.profile = profile_dict_to_text(st.session_state.profile_dict)
+                st.session_state.results = {"profile": st.session_state.profile, "scout_output": "{}", "grants": [{"id": "grant-tx-01", "title": "Travis County Youth Education Mini-Grants", "funder": "Austin Community Foundation — Vecinos Fund", "amount_min": 2000, "amount_max": 8000, "deadline": "June 15, 2026", "rationale": "Specifically designed for after-school tutoring and mentoring programs serving first-generation Latino students in Travis County. The $2K–$8K range fits your sweet spot, and the Vecinos Fund shows they understand your community.", "confidence": "High", "fit_tags": ["location match", "mission match", "budget fit", "simple application"]}, {"id": "grant-tx-02", "title": "Manos Unidas Education Grants", "funder": "Manos Unidas Foundation", "amount_min": 3000, "amount_max": 10000, "deadline": "July 1, 2026", "rationale": "National foundation specifically funding Latino youth education, mentoring, and college readiness for first-generation students.", "confidence": "High", "fit_tags": ["mission match", "budget fit", "simple application"]}, {"id": "grant-tx-03", "title": "Texas Community Impact Grants", "funder": "Texas Philanthropy Partners", "amount_min": 1500, "amount_max": 5000, "deadline": "August 30, 2026", "rationale": "Broad community impact fund for Texas-based nonprofits. Good fit for your budget and mission.", "confidence": "Medium", "fit_tags": ["location match", "budget fit"]}], "near_misses": [], "elimination_summary": {"total_reviewed": 214}}
+                st.session_state.phase = "results"
                 st.rerun()
 
             # Auto-focus the text area on page load

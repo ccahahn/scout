@@ -14,7 +14,7 @@ from braintrust import Eval, Score
 
 # Add parent dir so we can import pipeline
 sys.path.insert(0, os.path.dirname(__file__))
-from pipeline import run_transcriber, run_pipeline
+from pipeline import run_transcriber, run_pipeline, profile_dict_to_text
 
 
 def load_synthetic_users():
@@ -154,12 +154,14 @@ def run_eval_task(input, hooks=None):
     Run a single synthetic user through the full pipeline.
     Input is the call notes string. Returns the pipeline result dict.
     """
-    # Step 1: Transcriber extracts profile from call notes
-    profile = run_transcriber(input)
+    # Step 1: Transcriber extracts structured profile from call notes
+    profile_dict = run_transcriber(input)
+    profile_text = profile_dict_to_text(profile_dict)
 
     # Step 2: Pipeline runs Scout (+ conditional Scorer) on the profile
     # No streaming callbacks — evals run headless
-    result = run_pipeline(profile, allow_follow_up=False)
+    # Pass raw notes so Scout has full context beyond the structured fields
+    result = run_pipeline(profile_text, raw_notes=input, allow_follow_up=False)
 
     return result
 

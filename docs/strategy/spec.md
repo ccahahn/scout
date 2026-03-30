@@ -183,6 +183,16 @@ Each user has **correct grants** (what the agent should recommend) and **trap gr
 
 ## 5. Out of scope (and what I'd want to learn)
 
+### Priority ranking — what to build first after the prototype
+
+1. **Pipeline speed.** The pipeline takes 60-90 seconds end-to-end (Transcriber + Scout with extended thinking + conditional Scorer). The advisor is on a live call — every second of silence is awkward. This is the single biggest blocker to the experience feeling like the spec describes. Fixes range from mechanical (smaller thinking budgets, stripped payloads, cached prompts) to architectural (pre-computed embeddings, retrieval instead of full-context reasoning). Target: under 20 seconds.
+
+2. **Session continuity.** "It remembers me" is the emotional climax of the experience (Section 2, step 10). Without persistence, every session is a one-shot demo. With it, Scout becomes a relationship. The user opens Instrumentl on their own and their profile and recommendations are already there. Requires integration with Instrumentl's user model and tracker — no database, no continuity.
+
+3. **Browse while you wait (conditional on speed).** If speed can't get below 30 seconds, let the user browse geographically pre-filtered grants while the pipeline runs in the background. This is a mitigation for slow speed, not an independent feature. If #1 gets solved, this drops in priority. If it doesn't, this becomes essential to keep the experience from feeling broken.
+
+---
+
 **Access to Instrumentl's grant database**
 We simulate with representative public data. The quality of curation is only as good as the data feeding it — this is the first thing I'd want to understand: how grants are tagged, what metadata exists on funders, and where the gaps are.
 
@@ -202,6 +212,12 @@ I don't know how the scout would live inside Instrumentl's UI — sidebar, separ
 
 **Post-recommendation workflow**
 The prototype stops at curation. It doesn't cover what happens after the user says "yes, I'm interested" — pre-filling applications, pulling funder history, connecting to Apply. Getting the handoff to existing product surfaces right matters, and that requires understanding those surfaces first.
+
+**Saving recommendations and session continuity**
+When the user closes the tab or starts a new search, their current recommendations are gone. In production, users need to save grants to a shortlist, return to previous results, and start new searches without losing prior work. This is the "it remembers me" moment from the experience design (Section 2, step 10): the user opens Instrumentl on their own and their profile and recommendations are already there. The prototype resets on every session because there's no persistence layer — no database, no user accounts, no saved state. Building this requires integration with Instrumentl's existing tracker and user model, which is out of scope. But it's critical for the product to feel like a relationship, not a one-shot tool.
+
+**Browse-while-waiting during search**
+The pipeline takes 60-90 seconds to run (Transcriber + Scout with extended thinking + conditional Scorer). During that wait, the user stares at a loading screen. An obvious improvement: let the user browse geographically pre-filtered grants while the pipeline runs in the background, then auto-redirect to curated results when ready. This requires running the pipeline in a background thread and polling for completion — a real-time infrastructure pattern that adds complexity beyond the prototype's scope. The loading screen with stepped progress (Reading your profile → Scanning open grants → Scoring for fit) is the current mitigation: it shows the user something is happening and roughly where in the process we are.
 
 **Geographic precision beyond state level — and a question I can't answer yet**
 The prototype already pre-filters grants by state before Scout sees them (user's state + national-scope grants only). That mechanical step is built and working. The unsolved problem is finer-grained: county-level and regional geographic matching. A grant serving "Dallas County, TX" is in the right state but wrong county for a Travis County user. Scout handles this through reasoning, but at scale, geographic scope data is often ambiguous — "Southeast region," "greater metro area," "rural Appalachian communities" — and doesn't map cleanly to county-level filters.
