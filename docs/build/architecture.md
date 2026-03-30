@@ -49,9 +49,11 @@ Streamlit Web App (Python)
 **1. Streamlit app (`app.py`)**
 - Intake form: advisor pastes call notes into a structured template (org, location, mission, dealbreakers, etc.)
 - One-shot flow: paste notes → click "Find Grants" → pipeline runs → results appear
-- Session state holds: pipeline phase (intake / searching / follow_up / searching_with_answers / results / apply), confirmed profile, approved grants, chat history
+- Session state holds: pipeline phase (intake / searching / follow_up / searching_with_answers / results / grant_detail / explore / apply), confirmed profile, approved grants, chat history
 - Thinking box: shows Scout filtering, Scout drafting, and Scorer quality-checking in real time with color-coded sections
-- Results page: grant cards with rationale + "Apply" buttons + follow-up chat
+- Results page: grant cards with rationale + "Apply" and "Learn more" buttons + "See all results" link + follow-up chat
+- Learn More page: mock grant detail page showing full grant info from grants.json (funder, description, eligibility, focus areas, geographic scope, etc.)
+- Explore All page: mock search results page with all grants and filters (geographic match, grant size)
 - Apply page: mock application with profile fields pre-filled by Scout
 - No login, no auth, no database
 
@@ -73,7 +75,7 @@ Streamlit Web App (Python)
 - Scout streams thinking + text tokens; Scorer streams text tokens (both shown live in thinking box)
 
 **4. Grant data (`data/grants.json`)**
-- 100 grants (35 real from GrantWatch + 65 synthetic)
+- 125 grants (35 real from GrantWatch + 90 synthetic)
 - Loaded at startup, passed to Scout as context
 - Not passed to Transcriber or Scorer (they don't need it)
 
@@ -155,7 +157,7 @@ scout/
 │   └── .env                           # API keys (gitignored)
 │
 └── data/
-    ├── grants.json                    # 100 grants
+    ├── grants.json                    # 125 grants (35 real + 90 synthetic)
     └── synthetic-users.json           # 12 synthetic user profiles
 ```
 
@@ -182,9 +184,11 @@ Phase 2 — Pipeline (behind the scenes, shown in thinking box)
 
 Phase 3 — Results
 14. Approved recommendations displayed with full rationale
-15. Each grant has an "Apply" button leading to a mock application page with pre-filled fields
-16. Follow-up chat available — user can ask about grants, adjust criteria
-17. "Start new search" resets everything
+15. Each grant has "Apply" and "Learn more" buttons
+16. "Learn more" opens a mock grant detail page with full info from grants.json
+17. "See all results" opens a mock search page with all grants + geographic/size filters
+18. Follow-up chat available — user can ask about grants, adjust criteria
+19. "Start new search" resets everything
 ```
 
 **Eval flow (testing synthetic users):**
@@ -258,6 +262,9 @@ Three Claude calls per pipeline run (Transcriber + Scout + conditional Scorer). 
 | 10 | Polished UI: brand colors, grant card formatting, metadata line breaks | Done |
 | 11 | Created test plan: 25 manual scenarios across 12 synthetic users | Done |
 | 12 | Wire up Braintrust eval runner (`evals.py`) with Tier 1 scorers (trap avoidance, hit rate, overwhelm check) | Done |
-| 13 | Run evals → find failures → update prompts → re-run (the development loop) | Next |
-| 14 | Push to GitHub + deploy to Streamlit Cloud | Next |
-| 15 | Add live transcription (AssemblyAI or equivalent) for v2 intake flow | Next |
+| 13 | Added Learn More page: mock grant detail page with full grant info | Done |
+| 14 | Added Explore All page: mock search results with geographic/size filters | Done |
+| 15 | Added 25 San Diego County grants for higher ed / student affairs demo (125 total) | Done |
+| 16 | Run evals → manual error analysis → decide Tier 2 promotions → update prompts → re-run | Next |
+| 17 | Push to GitHub + deploy to Streamlit Cloud | Done |
+| 18 | Add live transcription (AssemblyAI or equivalent) for v2 intake flow | Future |
