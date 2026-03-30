@@ -25,10 +25,14 @@ Organization: [Name]
 Location: [City, County, State]
 Mission: [1-2 sentences in THEIR language]
 Serving: [Who — demographics, geography]
-Team: [Solo / small team]
+Team: [Solo / small team / number of FTE]
 Budget: [Range if shared, "not discussed" if not]
 Grant experience: [First-time / some / experienced — with specifics]
+Current funding: [Existing grants if mentioned, "not discussed" if not]
 Sweet spot: [Grant size range]
+How they'd use funds: [Staffing, community partner, equipment, etc. — "not discussed" if not]
+Renewability: [One-time OK / needs multi-year / needs renewable — "not discussed" if not]
+Spending parameters: [Indirect costs, FTE restrictions, etc. — "not discussed" if not]
 
 Looking for:
 - [In their words]
@@ -49,6 +53,9 @@ Mode: [Active hunting / planning ahead / browsing]
 - "We're not a school" → exclude school-only grants
 - "I need something now" → active hunting
 - "Just keeping an eye out" → planning ahead
+- "We want to hire someone" / "pay a community partner" → funds must allow staffing or subcontracting
+- "We don't want it to stop after one year" → needs renewable or multi-year
+- "We already have a federal grant" → note existing funding, likely wants something different
 
 ### If information is missing
 

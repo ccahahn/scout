@@ -833,7 +833,11 @@ Who they serve:
 Team size:
 Annual budget:
 Grant experience (first-time, some, experienced):
+Current grants or funding (if any):
 Grant size sweet spot:
+How they'd use the funds (staffing, community partner, equipment, etc.):
+Renewability (one-time OK, or needs multi-year/renewable):
+Spending parameters they care about (indirect costs, FTE, restrictions):
 What they're looking for:
 What they want to avoid:
 How urgently they need this (now, planning ahead, browsing):""")
