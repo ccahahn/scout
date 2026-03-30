@@ -358,6 +358,7 @@ THINKING_CSS = f"""
     color: #999;
     font-variant-numeric: tabular-nums;
     margin-top: -24px;
+    font-family: 'Inter', sans-serif;
 }}
 </style>
 """
@@ -367,41 +368,39 @@ def make_thinking_ui():
     """Create pulsing dot + elapsed timer UI while Scout thinks."""
     st.markdown(THINKING_CSS, unsafe_allow_html=True)
     status_display = st.empty()
-    timer_display = st.empty()
 
-    import time
-    start_time = [time.time()]
-    last_timer_update = [0]
+    status_display.markdown(
+        '<div class="thinking-container">'
+        '<div class="thinking-dot"></div>'
+        '<span class="thinking-text">Finding your best-fit grants. Back in two minutes.</span>'
+        '</div>'
+        '<div class="thinking-timer" id="scout-timer">0s</div>',
+        unsafe_allow_html=True,
+    )
 
-    def _render_status(msg):
-        status_display.markdown(
-            f'<div class="thinking-container">'
-            f'<div class="thinking-dot"></div>'
-            f'<span class="thinking-text">{msg}</span>'
-            f'</div>',
-            unsafe_allow_html=True,
-        )
-
-    def _update_timer():
-        elapsed = int(time.time() - start_time[0])
-        if elapsed != last_timer_update[0]:
-            timer_display.markdown(
-                f'<div class="thinking-timer">{elapsed}s</div>',
-                unsafe_allow_html=True,
-            )
-            last_timer_update[0] = elapsed
-
-    _render_status("Finding your best-fit grants. Back in two minutes.")
+    # Client-side timer — ticks every second in the browser, no LLM dependency
+    st.components.v1.html("""
+    <script>
+    const el = window.parent.document.getElementById('scout-timer');
+    if (el) {
+        let seconds = 0;
+        const tick = () => {
+            seconds++;
+            el.textContent = seconds + 's';
+        };
+        setInterval(tick, 1000);
+    }
+    </script>
+    """, height=0)
 
     def on_thinking(chunk):
-        _update_timer()
+        pass
 
     def on_scorer(chunk):
-        _update_timer()
+        pass
 
     def on_status(msg):
-        # Pipeline status updates just tick the timer, don't replace the main message
-        _update_timer()
+        pass
 
     return on_thinking, on_scorer, on_status
 
