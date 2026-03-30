@@ -129,6 +129,26 @@ These scorers are out of scope for the prototype because they require calibratio
 
 This is the right next step after completing Tier 1 error analysis: identify which subtle failure patterns actually occur, write the judge prompt, calibrate against manual scores, then promote.
 
+### Where the code-based scorers fall short (and why that's intentional)
+
+The Tier 1 scorers are deliberately simple. They catch the highest-stakes failures with binary checks: did a trap grant slip through? Did the agent find at least one hit? Did it recommend more than the user can handle? These are the right first scorers because they're cheap, fast, and unambiguous.
+
+But they're proxies for what actually matters to the user. Take overwhelm_check: it counts grants and compares against a capacity threshold (solo: 2, team: 3). That catches the obvious failure — Scout dumping 5 grants on a solo user. But overwhelm isn't really about count. A solo user who sees 2 grants with no rationale, no sense of "here's why this one is worth your limited time," is more overwhelmed than someone who sees 3 grants with clear reasoning for each. The real question isn't "how many" — it's "did the agent make the case that each recommendation is worth this user's time and capacity?"
+
+That's not a count check. That's a judgment call. And a judgment call means LLM-as-judge, which means calibration.
+
+The same pattern applies to the other scorers. Hit rate checks "did Scout find at least 1 correct grant" — but it doesn't check whether the rationale actually connects the grant to the user's specific situation. Trap avoidance checks "did Scout avoid known traps" — but it can't catch a recommendation that isn't in the trap list but still violates the user's needs in a way that wasn't anticipated.
+
+Each code-based scorer has a natural LLM-as-judge evolution:
+
+| Code-based scorer | What it checks | LLM-as-judge evolution | What it would check |
+|---|---|---|---|
+| Overwhelm Check | Grant count ≤ capacity | **Capacity Justification** | Did the agent explain why each recommendation is worth the user's limited time? |
+| Hit Rate | ≥1 correct grant found | **Rationale Quality** | Does the rationale connect the grant to this specific user's situation, or is it generic? |
+| Trap Avoidance | No known trap grants | **Reasoning Integrity** | Did the agent reason through eligibility and dealbreakers, or get lucky? |
+
+The code-based versions are the right starting point. They let us run the eval loop, catch failures, and improve prompts. The LLM-as-judge versions are what you build once the obvious failures are fixed and you're optimizing for the quality of the user's experience — not just the absence of errors.
+
 ### Synthetic users (12 profiles)
 
 Each user is designed to stress-test specific failure modes:
