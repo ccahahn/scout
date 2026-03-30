@@ -11,8 +11,14 @@
     "deadline": "2026-03-27",
     "geographic_scope": "Linn County, Iowa",
     "state": "IA",
-    "eligible_applicants": ["501(c)(3) nonprofits"],
-    "focus_areas": ["historic preservation", "cultural heritage", "education"],
+    "eligible_applicants": [
+      "501(c)(3) nonprofits"
+    ],
+    "focus_areas": [
+      "historic preservation",
+      "cultural heritage",
+      "education"
+    ],
     "application_type": "full_application",
     "requires_match": false,
     "match_strengthens": true,
@@ -33,8 +39,18 @@
     "deadline": "2026-03-27",
     "geographic_scope": "Travis and Williamson Counties, Texas",
     "state": "TX",
-    "eligible_applicants": ["501(c)(3) nonprofits"],
-    "focus_areas": ["education", "early childhood", "childcare", "family support", "mental health", "financial stability", "workforce development"],
+    "eligible_applicants": [
+      "501(c)(3) nonprofits"
+    ],
+    "focus_areas": [
+      "education",
+      "early childhood",
+      "childcare",
+      "family support",
+      "mental health",
+      "financial stability",
+      "workforce development"
+    ],
     "application_type": "LOI_then_full",
     "requires_match": false,
     "federal": false,
@@ -53,8 +69,16 @@
     "deadline": "2026-03-27",
     "geographic_scope": "Nevada",
     "state": "NV",
-    "eligible_applicants": ["501(c)(3) nonprofits with 2+ years school garden experience"],
-    "focus_areas": ["STEM education", "school gardens", "nutrition", "environmental education", "community engagement"],
+    "eligible_applicants": [
+      "501(c)(3) nonprofits with 2+ years school garden experience"
+    ],
+    "focus_areas": [
+      "STEM education",
+      "school gardens",
+      "nutrition",
+      "environmental education",
+      "community engagement"
+    ],
     "application_type": "full_application",
     "requires_match": false,
     "federal": false,
@@ -74,8 +98,20 @@
     "deadline": "2026-03-27",
     "geographic_scope": "USA (all 50 states)",
     "state": "national",
-    "eligible_applicants": ["501(c)(3) nonprofits"],
-    "focus_areas": ["historic preservation", "wildlife conservation", "animal welfare", "early childhood education", "teacher support", "mental health", "digital wellbeing", "outdoor engagement", "mentorship"],
+    "eligible_applicants": [
+      "501(c)(3) nonprofits"
+    ],
+    "focus_areas": [
+      "historic preservation",
+      "wildlife conservation",
+      "animal welfare",
+      "early childhood education",
+      "teacher support",
+      "mental health",
+      "digital wellbeing",
+      "outdoor engagement",
+      "mentorship"
+    ],
     "application_type": "full_application",
     "requires_match": false,
     "federal": false,
@@ -94,8 +130,15 @@
     "deadline": "2026-03-27",
     "geographic_scope": "97 eligible counties in Illinois",
     "state": "IL",
-    "eligible_applicants": ["public schools", "charter schools"],
-    "focus_areas": ["STEM education", "PreK-5 education", "teacher training"],
+    "eligible_applicants": [
+      "public schools",
+      "charter schools"
+    ],
+    "focus_areas": [
+      "STEM education",
+      "PreK-5 education",
+      "teacher training"
+    ],
     "application_type": "full_application",
     "requires_match": false,
     "federal": false,
@@ -114,8 +157,19 @@
     "deadline": "2026-03-27",
     "geographic_scope": "San Marcos, California",
     "state": "CA",
-    "eligible_applicants": ["501(c)(3) nonprofits", "fiscal sponsors accepted"],
-    "focus_areas": ["arts and culture", "youth programs", "civic engagement", "education", "health and wellness", "senior services", "wildlife conservation"],
+    "eligible_applicants": [
+      "501(c)(3) nonprofits",
+      "fiscal sponsors accepted"
+    ],
+    "focus_areas": [
+      "arts and culture",
+      "youth programs",
+      "civic engagement",
+      "education",
+      "health and wellness",
+      "senior services",
+      "wildlife conservation"
+    ],
     "application_type": "full_application",
     "requires_match": false,
     "federal": false,
@@ -135,8 +189,20 @@
     "deadline": "2026-03-27",
     "geographic_scope": "14-county region in central Minnesota",
     "state": "MN",
-    "eligible_applicants": ["501(c)(3) nonprofits with 3+ years continuous programming", "annual expenses under $2M"],
-    "focus_areas": ["basic needs", "economic programs", "crime victims support", "mental health", "substance use", "capacity building", "strategic planning", "board governance"],
+    "eligible_applicants": [
+      "501(c)(3) nonprofits with 3+ years continuous programming",
+      "annual expenses under $2M"
+    ],
+    "focus_areas": [
+      "basic needs",
+      "economic programs",
+      "crime victims support",
+      "mental health",
+      "substance use",
+      "capacity building",
+      "strategic planning",
+      "board governance"
+    ],
     "application_type": "full_application",
     "requires_match": false,
     "federal": false,
@@ -156,8 +222,17 @@
     "deadline": "2026-03-27",
     "geographic_scope": "Mathews County, Virginia",
     "state": "VA",
-    "eligible_applicants": ["501(c)(3) nonprofits", "government agencies"],
-    "focus_areas": ["arts and culture", "economic prosperity", "education", "health and wellness", "community vibrancy"],
+    "eligible_applicants": [
+      "501(c)(3) nonprofits",
+      "government agencies"
+    ],
+    "focus_areas": [
+      "arts and culture",
+      "economic prosperity",
+      "education",
+      "health and wellness",
+      "community vibrancy"
+    ],
     "application_type": "full_application",
     "requires_match": false,
     "federal": false,
@@ -177,8 +252,20 @@
     "deadline": "2026-03-27",
     "geographic_scope": "New York's Great Lakes basin",
     "state": "NY",
-    "eligible_applicants": ["501(c)(3) nonprofits", "county and local government", "Indian nations", "public agencies", "educational institutions K-12 and higher ed"],
-    "focus_areas": ["environmental protection", "watershed management", "floodplain restoration", "climate resilience", "shoreline studies"],
+    "eligible_applicants": [
+      "501(c)(3) nonprofits",
+      "county and local government",
+      "Indian nations",
+      "public agencies",
+      "educational institutions K-12 and higher ed"
+    ],
+    "focus_areas": [
+      "environmental protection",
+      "watershed management",
+      "floodplain restoration",
+      "climate resilience",
+      "shoreline studies"
+    ],
     "application_type": "full_application",
     "requires_match": false,
     "federal": false,
@@ -198,8 +285,16 @@
     "deadline": "2026-03-27",
     "geographic_scope": "San Luis Obispo County, California",
     "state": "CA",
-    "eligible_applicants": ["youth up to age 19 partnering with 501(c)(3) nonprofits, faith-based orgs, or schools"],
-    "focus_areas": ["youth development", "equity", "diversity", "inclusion", "community impact"],
+    "eligible_applicants": [
+      "youth up to age 19 partnering with 501(c)(3) nonprofits, faith-based orgs, or schools"
+    ],
+    "focus_areas": [
+      "youth development",
+      "equity",
+      "diversity",
+      "inclusion",
+      "community impact"
+    ],
     "application_type": "full_application",
     "requires_match": false,
     "federal": false,
@@ -219,8 +314,20 @@
     "deadline": "2026-03-27",
     "geographic_scope": "Eight-county region in western New York (Genesee, Livingston, Monroe, Ontario, Orleans, Seneca, Wayne, Yates)",
     "state": "NY",
-    "eligible_applicants": ["501(c)(3) nonprofits", "509(a)(1) public entities", "fiscal sponsors accepted"],
-    "focus_areas": ["arts education", "visual arts", "music", "dance", "performance", "arts access", "geographic arts equity"],
+    "eligible_applicants": [
+      "501(c)(3) nonprofits",
+      "509(a)(1) public entities",
+      "fiscal sponsors accepted"
+    ],
+    "focus_areas": [
+      "arts education",
+      "visual arts",
+      "music",
+      "dance",
+      "performance",
+      "arts access",
+      "geographic arts equity"
+    ],
     "application_type": "full_application",
     "requires_match": false,
     "federal": false,
@@ -240,8 +347,19 @@
     "deadline": "2026-03-27",
     "geographic_scope": "San Marcos, California",
     "state": "CA",
-    "eligible_applicants": ["501(c)(3) nonprofits", "fiscal sponsors accepted"],
-    "focus_areas": ["seniors", "health and wellness", "wildlife", "education", "civic life", "children and youth", "arts and culture"],
+    "eligible_applicants": [
+      "501(c)(3) nonprofits",
+      "fiscal sponsors accepted"
+    ],
+    "focus_areas": [
+      "seniors",
+      "health and wellness",
+      "wildlife",
+      "education",
+      "civic life",
+      "children and youth",
+      "arts and culture"
+    ],
     "application_type": "full_application",
     "requires_match": false,
     "federal": false,
@@ -261,8 +379,15 @@
     "deadline": "2026-03-27",
     "geographic_scope": "City of Orlando, Florida",
     "state": "FL",
-    "eligible_applicants": ["501(c)(3) nonprofits with 2+ years operating"],
-    "focus_areas": ["homelessness prevention", "rapid re-housing", "emergency shelter", "homeless services"],
+    "eligible_applicants": [
+      "501(c)(3) nonprofits with 2+ years operating"
+    ],
+    "focus_areas": [
+      "homelessness prevention",
+      "rapid re-housing",
+      "emergency shelter",
+      "homeless services"
+    ],
     "application_type": "full_application",
     "requires_match": true,
     "match_ratio": "1:1",
@@ -283,8 +408,17 @@
     "deadline": "2026-03-31",
     "geographic_scope": "Pensacola, Florida",
     "state": "FL",
-    "eligible_applicants": ["501(c)(3) nonprofits"],
-    "focus_areas": ["peace and conflict prevention", "disease prevention", "water and sanitation", "maternal and child health", "basic education and literacy", "economic and community development"],
+    "eligible_applicants": [
+      "501(c)(3) nonprofits"
+    ],
+    "focus_areas": [
+      "peace and conflict prevention",
+      "disease prevention",
+      "water and sanitation",
+      "maternal and child health",
+      "basic education and literacy",
+      "economic and community development"
+    ],
     "application_type": "written_submission",
     "requires_match": false,
     "federal": false,
@@ -304,8 +438,20 @@
     "deadline": "2026-03-30",
     "geographic_scope": "Oakland, California (OUSD schools)",
     "state": "CA",
-    "eligible_applicants": ["arts organizations", "teaching artists", "classroom teachers"],
-    "focus_areas": ["arts education", "visual arts", "music", "dance", "performance", "writing", "K-12 education"],
+    "eligible_applicants": [
+      "arts organizations",
+      "teaching artists",
+      "classroom teachers"
+    ],
+    "focus_areas": [
+      "arts education",
+      "visual arts",
+      "music",
+      "dance",
+      "performance",
+      "writing",
+      "K-12 education"
+    ],
     "application_type": "full_application",
     "requires_match": false,
     "federal": false,
@@ -325,8 +471,19 @@
     "deadline": "2026-03-27",
     "geographic_scope": "Northern Illinois (including Chicago Metro) and Southeastern Wisconsin",
     "state": "IL",
-    "eligible_applicants": ["501(c)(3) nonprofits", "fiscal sponsors accepted"],
-    "focus_areas": ["elderly services", "housing access", "aging in place", "healthcare access", "community engagement", "food security", "legal assistance"],
+    "eligible_applicants": [
+      "501(c)(3) nonprofits",
+      "fiscal sponsors accepted"
+    ],
+    "focus_areas": [
+      "elderly services",
+      "housing access",
+      "aging in place",
+      "healthcare access",
+      "community engagement",
+      "food security",
+      "legal assistance"
+    ],
     "application_type": "LOI",
     "requires_match": false,
     "federal": false,
@@ -346,8 +503,18 @@
     "deadline": "2026-03-27",
     "geographic_scope": "Lawrence, Methuen, Andover, North Andover, Massachusetts",
     "state": "MA",
-    "eligible_applicants": ["501(c)(3) nonprofits"],
-    "focus_areas": ["youth enrichment", "summer programs", "social-emotional learning", "academic enrichment", "mental health", "physical health", "racial and cultural identity"],
+    "eligible_applicants": [
+      "501(c)(3) nonprofits"
+    ],
+    "focus_areas": [
+      "youth enrichment",
+      "summer programs",
+      "social-emotional learning",
+      "academic enrichment",
+      "mental health",
+      "physical health",
+      "racial and cultural identity"
+    ],
     "application_type": "full_application",
     "requires_match": false,
     "federal": false,
@@ -367,8 +534,16 @@
     "deadline": "2026-04-01",
     "geographic_scope": "Oakland, California",
     "state": "CA",
-    "eligible_applicants": ["501(c)(3) nonprofits", "fiscal sponsors accepted"],
-    "focus_areas": ["gun violence prevention", "domestic violence support", "commercial sexual exploitation services", "crisis response"],
+    "eligible_applicants": [
+      "501(c)(3) nonprofits",
+      "fiscal sponsors accepted"
+    ],
+    "focus_areas": [
+      "gun violence prevention",
+      "domestic violence support",
+      "commercial sexual exploitation services",
+      "crisis response"
+    ],
     "application_type": "RFP",
     "requires_match": false,
     "federal": false,
@@ -388,8 +563,27 @@
     "deadline": "2026-04-01",
     "geographic_scope": "Lake County, Indiana",
     "state": "IN",
-    "eligible_applicants": ["501(c)(3) nonprofits", "faith-based organizations", "government units"],
-    "focus_areas": ["basic needs", "education", "food security", "housing", "health", "transportation", "entrepreneurship", "financial literacy", "workforce development", "animal welfare", "arts and culture", "disability services", "criminal justice", "diversity and equity"],
+    "eligible_applicants": [
+      "501(c)(3) nonprofits",
+      "faith-based organizations",
+      "government units"
+    ],
+    "focus_areas": [
+      "basic needs",
+      "education",
+      "food security",
+      "housing",
+      "health",
+      "transportation",
+      "entrepreneurship",
+      "financial literacy",
+      "workforce development",
+      "animal welfare",
+      "arts and culture",
+      "disability services",
+      "criminal justice",
+      "diversity and equity"
+    ],
     "application_type": "full_application",
     "requires_match": false,
     "federal": false,
@@ -409,8 +603,18 @@
     "deadline": "2026-03-27",
     "geographic_scope": "Bristol, Burlington, Plainville, Plymouth, Southington, Wolcott, Connecticut",
     "state": "CT",
-    "eligible_applicants": ["501(c)(3) nonprofits", "governmental/public units"],
-    "focus_areas": ["basic needs", "community vitality", "animal welfare", "sports", "education", "community projects"],
+    "eligible_applicants": [
+      "501(c)(3) nonprofits",
+      "governmental/public units"
+    ],
+    "focus_areas": [
+      "basic needs",
+      "community vitality",
+      "animal welfare",
+      "sports",
+      "education",
+      "community projects"
+    ],
     "application_type": "full_application",
     "requires_match": false,
     "federal": false,
@@ -430,8 +634,20 @@
     "deadline": "2026-03-30",
     "geographic_scope": "Russell County, Kansas",
     "state": "KS",
-    "eligible_applicants": ["501(c)(3) nonprofits", "educational institutions", "government agencies", "faith-based entities"],
-    "focus_areas": ["education", "public health", "community impact", "youth sports", "extracurricular activities", "disaster relief"],
+    "eligible_applicants": [
+      "501(c)(3) nonprofits",
+      "educational institutions",
+      "government agencies",
+      "faith-based entities"
+    ],
+    "focus_areas": [
+      "education",
+      "public health",
+      "community impact",
+      "youth sports",
+      "extracurricular activities",
+      "disaster relief"
+    ],
     "application_type": "full_application",
     "requires_match": false,
     "federal": false,
@@ -451,8 +667,15 @@
     "deadline": "2026-03-27",
     "geographic_scope": "Sunnyvale, California",
     "state": "CA",
-    "eligible_applicants": ["registered neighborhood groups and associations"],
-    "focus_areas": ["community building", "cultural bridge-building", "neighborhood improvement", "neighborhood pride"],
+    "eligible_applicants": [
+      "registered neighborhood groups and associations"
+    ],
+    "focus_areas": [
+      "community building",
+      "cultural bridge-building",
+      "neighborhood improvement",
+      "neighborhood pride"
+    ],
     "application_type": "manual_submission",
     "requires_match": false,
     "federal": false,
@@ -472,8 +695,13 @@
     "deadline": "2026-03-27",
     "geographic_scope": "Steuben County, Indiana",
     "state": "IN",
-    "eligible_applicants": ["501(c)(3) nonprofits"],
-    "focus_areas": ["health", "community wellbeing"],
+    "eligible_applicants": [
+      "501(c)(3) nonprofits"
+    ],
+    "focus_areas": [
+      "health",
+      "community wellbeing"
+    ],
     "application_type": "full_application",
     "requires_match": false,
     "federal": false,
@@ -493,8 +721,22 @@
     "deadline": "2026-03-30",
     "geographic_scope": "11 counties in southeastern Minnesota",
     "state": "MN",
-    "eligible_applicants": ["501(c)(3) nonprofits", "K-12 schools (non-religious)", "local government", "tribal entities", "colleges and universities"],
-    "focus_areas": ["arts access", "arts education", "cultural heritage", "visual arts", "music", "dance", "performance"],
+    "eligible_applicants": [
+      "501(c)(3) nonprofits",
+      "K-12 schools (non-religious)",
+      "local government",
+      "tribal entities",
+      "colleges and universities"
+    ],
+    "focus_areas": [
+      "arts access",
+      "arts education",
+      "cultural heritage",
+      "visual arts",
+      "music",
+      "dance",
+      "performance"
+    ],
     "application_type": "full_application",
     "requires_match": false,
     "federal": false,
@@ -514,8 +756,13 @@
     "deadline": "2026-03-30",
     "geographic_scope": "North Smithfield, Rhode Island",
     "state": "RI",
-    "eligible_applicants": ["501(c)(3) nonprofits"],
-    "focus_areas": ["health and wellness", "community wellbeing"],
+    "eligible_applicants": [
+      "501(c)(3) nonprofits"
+    ],
+    "focus_areas": [
+      "health and wellness",
+      "community wellbeing"
+    ],
     "application_type": "full_application",
     "requires_match": false,
     "federal": false,
@@ -535,8 +782,18 @@
     "deadline": "2026-03-27",
     "geographic_scope": "City of Utica, New York",
     "state": "NY",
-    "eligible_applicants": ["501(c)(3) nonprofits with 12+ months experience", "government entities"],
-    "focus_areas": ["senior services", "transportation", "after-school programs", "youth development", "tutoring and mentoring", "housing rehabilitation"],
+    "eligible_applicants": [
+      "501(c)(3) nonprofits with 12+ months experience",
+      "government entities"
+    ],
+    "focus_areas": [
+      "senior services",
+      "transportation",
+      "after-school programs",
+      "youth development",
+      "tutoring and mentoring",
+      "housing rehabilitation"
+    ],
     "application_type": "full_application",
     "requires_match": false,
     "federal": true,
@@ -556,8 +813,22 @@
     "deadline": "2026-03-27",
     "geographic_scope": "Middlesex County, Connecticut (15 communities)",
     "state": "CT",
-    "eligible_applicants": ["501(c)(3) nonprofits", "fiscal sponsors accepted"],
-    "focus_areas": ["youth opportunity", "healthy communities", "mental health", "food access", "financial security", "workforce development", "housing", "financial literacy", "community resiliency", "equity"],
+    "eligible_applicants": [
+      "501(c)(3) nonprofits",
+      "fiscal sponsors accepted"
+    ],
+    "focus_areas": [
+      "youth opportunity",
+      "healthy communities",
+      "mental health",
+      "food access",
+      "financial security",
+      "workforce development",
+      "housing",
+      "financial literacy",
+      "community resiliency",
+      "equity"
+    ],
     "application_type": "email_submission",
     "requires_match": false,
     "federal": false,
@@ -577,8 +848,26 @@
     "deadline": "2026-04-02",
     "geographic_scope": "Eight counties in southern Indiana",
     "state": "IN",
-    "eligible_applicants": ["501(c)(3) nonprofits", "government agencies", "schools"],
-    "focus_areas": ["healthcare access", "mental health", "substance use", "healthy living", "chronic disease prevention", "transportation", "early childhood", "family support", "housing", "economic stability", "civic engagement", "community safety", "violence prevention"],
+    "eligible_applicants": [
+      "501(c)(3) nonprofits",
+      "government agencies",
+      "schools"
+    ],
+    "focus_areas": [
+      "healthcare access",
+      "mental health",
+      "substance use",
+      "healthy living",
+      "chronic disease prevention",
+      "transportation",
+      "early childhood",
+      "family support",
+      "housing",
+      "economic stability",
+      "civic engagement",
+      "community safety",
+      "violence prevention"
+    ],
     "application_type": "full_application",
     "requires_match": false,
     "federal": false,
@@ -598,8 +887,25 @@
     "deadline": "2026-04-01",
     "geographic_scope": "Grundy, Marion, and Franklin counties, Tennessee",
     "state": "TN",
-    "eligible_applicants": ["501(c)(3) nonprofits", "government agencies", "schools", "churches"],
-    "focus_areas": ["health", "healthcare access", "nutrition", "education", "early childhood", "literacy", "adult learning", "job training", "housing", "transportation", "conservation"],
+    "eligible_applicants": [
+      "501(c)(3) nonprofits",
+      "government agencies",
+      "schools",
+      "churches"
+    ],
+    "focus_areas": [
+      "health",
+      "healthcare access",
+      "nutrition",
+      "education",
+      "early childhood",
+      "literacy",
+      "adult learning",
+      "job training",
+      "housing",
+      "transportation",
+      "conservation"
+    ],
     "application_type": "full_application",
     "requires_match": false,
     "federal": false,
@@ -619,8 +925,17 @@
     "deadline": "2026-03-29",
     "geographic_scope": "Washington State",
     "state": "WA",
-    "eligible_applicants": ["K-12 public or charter school educators certified in Washington"],
-    "focus_areas": ["academic enrichment", "professional learning", "innovative classroom programs", "STEM", "arts", "extracurricular"],
+    "eligible_applicants": [
+      "K-12 public or charter school educators certified in Washington"
+    ],
+    "focus_areas": [
+      "academic enrichment",
+      "professional learning",
+      "innovative classroom programs",
+      "STEM",
+      "arts",
+      "extracurricular"
+    ],
     "application_type": "full_application",
     "requires_match": false,
     "federal": false,
@@ -640,8 +955,17 @@
     "deadline": "2026-03-27",
     "geographic_scope": "Nebraska",
     "state": "NE",
-    "eligible_applicants": ["public/private nonprofit school food authorities", "local/municipal/county government", "private nonprofits", "must be SFSP-approved"],
-    "focus_areas": ["food security", "summer meals", "child nutrition"],
+    "eligible_applicants": [
+      "public/private nonprofit school food authorities",
+      "local/municipal/county government",
+      "private nonprofits",
+      "must be SFSP-approved"
+    ],
+    "focus_areas": [
+      "food security",
+      "summer meals",
+      "child nutrition"
+    ],
     "application_type": "full_application",
     "requires_match": false,
     "federal": false,
@@ -661,8 +985,19 @@
     "deadline": "2026-03-27",
     "geographic_scope": "Philadelphia, Pennsylvania",
     "state": "PA",
-    "eligible_applicants": ["501(c)(3) nonprofits", "fiscal sponsors accepted", "priority to budgets under $950K"],
-    "focus_areas": ["summer camps", "cycling programs", "swimming programs", "athletic programs", "anti-violence youth initiatives", "anti-drug youth initiatives"],
+    "eligible_applicants": [
+      "501(c)(3) nonprofits",
+      "fiscal sponsors accepted",
+      "priority to budgets under $950K"
+    ],
+    "focus_areas": [
+      "summer camps",
+      "cycling programs",
+      "swimming programs",
+      "athletic programs",
+      "anti-violence youth initiatives",
+      "anti-drug youth initiatives"
+    ],
     "application_type": "full_application",
     "requires_match": false,
     "federal": false,
@@ -682,8 +1017,16 @@
     "deadline": "2026-03-28",
     "geographic_scope": "Broome County, New York",
     "state": "NY",
-    "eligible_applicants": ["501(c)(3) nonprofits located in or serving Broome County"],
-    "focus_areas": ["health", "arts", "education", "humanities", "human services"],
+    "eligible_applicants": [
+      "501(c)(3) nonprofits located in or serving Broome County"
+    ],
+    "focus_areas": [
+      "health",
+      "arts",
+      "education",
+      "humanities",
+      "human services"
+    ],
     "application_type": "paper_application_with_pre_contact",
     "requires_match": false,
     "federal": false,
@@ -703,8 +1046,17 @@
     "deadline": "2026-01-31",
     "geographic_scope": "Toledo and Northwest Ohio (all Ohio eligible)",
     "state": "OH",
-    "eligible_applicants": ["501(c)(3) nonprofits"],
-    "focus_areas": ["community services", "disability services", "international services", "vocational services", "environmental services", "youth services"],
+    "eligible_applicants": [
+      "501(c)(3) nonprofits"
+    ],
+    "focus_areas": [
+      "community services",
+      "disability services",
+      "international services",
+      "vocational services",
+      "environmental services",
+      "youth services"
+    ],
     "application_type": "full_application",
     "requires_match": false,
     "federal": false,
@@ -724,8 +1076,22 @@
     "deadline": "2026-03-30",
     "geographic_scope": "Washington and eastern Ramsey County (MN); Polk, St. Croix, and Pierce counties (WI)",
     "state": "MN",
-    "eligible_applicants": ["501(c)(3) nonprofits"],
-    "focus_areas": ["healthcare", "medical research", "mental health", "chemical health", "affordable housing", "youth education", "basic needs", "food security", "employment", "civic projects", "environmental education"],
+    "eligible_applicants": [
+      "501(c)(3) nonprofits"
+    ],
+    "focus_areas": [
+      "healthcare",
+      "medical research",
+      "mental health",
+      "chemical health",
+      "affordable housing",
+      "youth education",
+      "basic needs",
+      "food security",
+      "employment",
+      "civic projects",
+      "environmental education"
+    ],
     "application_type": "full_application",
     "requires_match": false,
     "federal": false,
@@ -737,7 +1103,7 @@
     "id": "SYN-001",
     "source": "synthetic",
     "title": "Travis County Youth Education Mini-Grants",
-    "funder": "Austin Community Foundation — Vecinos Fund",
+    "funder": "Austin Community Foundation \u2014 Vecinos Fund",
     "funder_type": "community_foundation",
     "amount_min": 2000,
     "amount_max": 8000,
@@ -745,8 +1111,17 @@
     "deadline": "2026-06-15",
     "geographic_scope": "Travis County, Texas",
     "state": "TX",
-    "eligible_applicants": ["501(c)(3) nonprofits"],
-    "focus_areas": ["youth education", "tutoring", "mentoring", "Latino community", "first-generation students", "after-school programs"],
+    "eligible_applicants": [
+      "501(c)(3) nonprofits"
+    ],
+    "focus_areas": [
+      "youth education",
+      "tutoring",
+      "mentoring",
+      "Latino community",
+      "first-generation students",
+      "after-school programs"
+    ],
     "application_type": "full_application",
     "requires_match": false,
     "match_strengthens": false,
@@ -765,8 +1140,16 @@
     "deadline": "2026-07-01",
     "geographic_scope": "USA (all 50 states)",
     "state": "national",
-    "eligible_applicants": ["501(c)(3) nonprofits"],
-    "focus_areas": ["Latino youth education", "mentoring", "tutoring", "college readiness", "first-generation students"],
+    "eligible_applicants": [
+      "501(c)(3) nonprofits"
+    ],
+    "focus_areas": [
+      "Latino youth education",
+      "mentoring",
+      "tutoring",
+      "college readiness",
+      "first-generation students"
+    ],
     "application_type": "full_application",
     "requires_match": false,
     "match_strengthens": false,
@@ -785,8 +1168,15 @@
     "deadline": "2026-09-01",
     "geographic_scope": "Austin, Texas (Travis County)",
     "state": "TX",
-    "eligible_applicants": ["501(c)(3) nonprofits"],
-    "focus_areas": ["youth development", "education", "literacy", "community service"],
+    "eligible_applicants": [
+      "501(c)(3) nonprofits"
+    ],
+    "focus_areas": [
+      "youth development",
+      "education",
+      "literacy",
+      "community service"
+    ],
     "application_type": "full_application",
     "requires_match": false,
     "match_strengthens": false,
@@ -797,7 +1187,7 @@
     "id": "SYN-004",
     "source": "synthetic",
     "title": "Rhode Island Food Security Small Grants",
-    "funder": "Rhode Island Foundation — Fresh Start Fund",
+    "funder": "Rhode Island Foundation \u2014 Fresh Start Fund",
     "funder_type": "community_foundation",
     "amount_min": 500,
     "amount_max": 3000,
@@ -805,8 +1195,16 @@
     "deadline": "2026-05-15",
     "geographic_scope": "Providence County, Rhode Island",
     "state": "RI",
-    "eligible_applicants": ["501(c)(3) nonprofits", "fiscal sponsors accepted"],
-    "focus_areas": ["food security", "community gardens", "nutrition education", "food deserts"],
+    "eligible_applicants": [
+      "501(c)(3) nonprofits",
+      "fiscal sponsors accepted"
+    ],
+    "focus_areas": [
+      "food security",
+      "community gardens",
+      "nutrition education",
+      "food deserts"
+    ],
     "application_type": "full_application",
     "requires_match": false,
     "match_strengthens": false,
@@ -825,8 +1223,16 @@
     "deadline": "2026-06-01",
     "geographic_scope": "Northern Providence County, Rhode Island (including North Smithfield, Woonsocket, Cumberland, Lincoln)",
     "state": "RI",
-    "eligible_applicants": ["501(c)(3) nonprofits", "community groups with fiscal sponsor"],
-    "focus_areas": ["community gardens", "urban agriculture", "nutrition education", "food access"],
+    "eligible_applicants": [
+      "501(c)(3) nonprofits",
+      "community groups with fiscal sponsor"
+    ],
+    "focus_areas": [
+      "community gardens",
+      "urban agriculture",
+      "nutrition education",
+      "food access"
+    ],
     "application_type": "full_application",
     "requires_match": false,
     "match_strengthens": false,
@@ -837,7 +1243,7 @@
     "id": "SYN-006",
     "source": "synthetic",
     "title": "Steuben County Youth Opportunity Grants",
-    "funder": "Steuben County Community Foundation — Youth First Fund",
+    "funder": "Steuben County Community Foundation \u2014 Youth First Fund",
     "funder_type": "community_foundation",
     "amount_min": 1000,
     "amount_max": 5000,
@@ -845,8 +1251,16 @@
     "deadline": "2026-08-01",
     "geographic_scope": "Steuben County, Indiana",
     "state": "IN",
-    "eligible_applicants": ["501(c)(3) nonprofits", "organizations with 1+ year operating history"],
-    "focus_areas": ["youth mentoring", "youth development", "after-school programs", "life skills"],
+    "eligible_applicants": [
+      "501(c)(3) nonprofits",
+      "organizations with 1+ year operating history"
+    ],
+    "focus_areas": [
+      "youth mentoring",
+      "youth development",
+      "after-school programs",
+      "life skills"
+    ],
     "application_type": "full_application",
     "requires_match": false,
     "match_strengthens": false,
@@ -865,8 +1279,16 @@
     "deadline": "2026-07-15",
     "geographic_scope": "Rural Indiana counties (population under 50,000)",
     "state": "IN",
-    "eligible_applicants": ["501(c)(3) nonprofits", "new organizations with 1+ year welcome"],
-    "focus_areas": ["youth mentoring", "at-risk youth", "character development", "academic support"],
+    "eligible_applicants": [
+      "501(c)(3) nonprofits",
+      "new organizations with 1+ year welcome"
+    ],
+    "focus_areas": [
+      "youth mentoring",
+      "at-risk youth",
+      "character development",
+      "academic support"
+    ],
     "application_type": "full_application",
     "requires_match": false,
     "match_strengthens": false,
@@ -877,7 +1299,7 @@
     "id": "SYN-008",
     "source": "synthetic",
     "title": "Cook County Senior Services Enhancement Grants",
-    "funder": "Suburban Area Agency on Aging — Cook County",
+    "funder": "Suburban Area Agency on Aging \u2014 Cook County",
     "funder_type": "local_government",
     "amount_min": 5000,
     "amount_max": 25000,
@@ -885,8 +1307,17 @@
     "deadline": "2026-06-30",
     "geographic_scope": "Suburban Cook County, Illinois",
     "state": "IL",
-    "eligible_applicants": ["501(c)(3) nonprofits with 5+ years serving seniors"],
-    "focus_areas": ["senior services", "meal delivery", "aging in place", "elder care", "social isolation", "transportation for seniors"],
+    "eligible_applicants": [
+      "501(c)(3) nonprofits with 5+ years serving seniors"
+    ],
+    "focus_areas": [
+      "senior services",
+      "meal delivery",
+      "aging in place",
+      "elder care",
+      "social isolation",
+      "transportation for seniors"
+    ],
     "application_type": "full_application",
     "requires_match": false,
     "match_strengthens": true,
@@ -905,8 +1336,16 @@
     "deadline": "2026-09-15",
     "geographic_scope": "Oak Park and River Forest, Illinois (Cook County)",
     "state": "IL",
-    "eligible_applicants": ["501(c)(3) nonprofits"],
-    "focus_areas": ["senior services", "aging in place", "meal programs", "elder wellness", "caregiver support"],
+    "eligible_applicants": [
+      "501(c)(3) nonprofits"
+    ],
+    "focus_areas": [
+      "senior services",
+      "aging in place",
+      "meal programs",
+      "elder wellness",
+      "caregiver support"
+    ],
     "application_type": "LOI_then_full",
     "requires_match": false,
     "match_strengthens": false,
@@ -925,8 +1364,16 @@
     "deadline": "2026-08-15",
     "geographic_scope": "Escambia County, Florida",
     "state": "FL",
-    "eligible_applicants": ["501(c)(3) nonprofits"],
-    "focus_areas": ["adult education", "literacy", "GED preparation", "workforce readiness", "English language learning"],
+    "eligible_applicants": [
+      "501(c)(3) nonprofits"
+    ],
+    "focus_areas": [
+      "adult education",
+      "literacy",
+      "GED preparation",
+      "workforce readiness",
+      "English language learning"
+    ],
     "application_type": "full_application",
     "requires_match": false,
     "match_strengthens": false,
@@ -945,8 +1392,15 @@
     "deadline": "2026-07-01",
     "geographic_scope": "Northwest Florida (Escambia, Santa Rosa, Okaloosa, Walton counties)",
     "state": "FL",
-    "eligible_applicants": ["501(c)(3) nonprofits"],
-    "focus_areas": ["adult literacy", "digital literacy", "GED programs", "continuing education"],
+    "eligible_applicants": [
+      "501(c)(3) nonprofits"
+    ],
+    "focus_areas": [
+      "adult literacy",
+      "digital literacy",
+      "GED programs",
+      "continuing education"
+    ],
     "application_type": "full_application",
     "requires_match": false,
     "match_strengthens": true,
@@ -965,8 +1419,16 @@
     "deadline": "2026-06-15",
     "geographic_scope": "Lake County, Indiana",
     "state": "IN",
-    "eligible_applicants": ["501(c)(3) nonprofits"],
-    "focus_areas": ["workforce development", "reentry services", "job training", "economic mobility", "second chance employment"],
+    "eligible_applicants": [
+      "501(c)(3) nonprofits"
+    ],
+    "focus_areas": [
+      "workforce development",
+      "reentry services",
+      "job training",
+      "economic mobility",
+      "second chance employment"
+    ],
     "application_type": "full_application",
     "requires_match": false,
     "match_strengthens": false,
@@ -985,8 +1447,16 @@
     "deadline": "2026-05-30",
     "geographic_scope": "Tennessee",
     "state": "TN",
-    "eligible_applicants": ["501(c)(3) nonprofits"],
-    "focus_areas": ["conservation", "environmental education", "land stewardship", "water quality", "native species"],
+    "eligible_applicants": [
+      "501(c)(3) nonprofits"
+    ],
+    "focus_areas": [
+      "conservation",
+      "environmental education",
+      "land stewardship",
+      "water quality",
+      "native species"
+    ],
     "application_type": "full_application",
     "requires_match": false,
     "match_strengthens": true,
@@ -997,7 +1467,7 @@
     "id": "SYN-014",
     "source": "synthetic",
     "title": "Philadelphia Responsible Fatherhood Grants",
-    "funder": "William Penn Foundation — Family Strengthening Initiative",
+    "funder": "William Penn Foundation \u2014 Family Strengthening Initiative",
     "funder_type": "private_foundation",
     "amount_min": 10000,
     "amount_max": 40000,
@@ -1005,8 +1475,16 @@
     "deadline": "2026-06-01",
     "geographic_scope": "Philadelphia, Pennsylvania",
     "state": "PA",
-    "eligible_applicants": ["501(c)(3) nonprofits"],
-    "focus_areas": ["fatherhood programs", "responsible fatherhood", "parenting education", "family reunification", "co-parenting"],
+    "eligible_applicants": [
+      "501(c)(3) nonprofits"
+    ],
+    "focus_areas": [
+      "fatherhood programs",
+      "responsible fatherhood",
+      "parenting education",
+      "family reunification",
+      "co-parenting"
+    ],
     "application_type": "LOI_then_full",
     "requires_match": false,
     "match_strengthens": false,
@@ -1025,8 +1503,17 @@
     "deadline": "2026-07-15",
     "geographic_scope": "Oakland and East Bay, California",
     "state": "CA",
-    "eligible_applicants": ["501(c)(3) nonprofits"],
-    "focus_areas": ["STEM education", "tech equity", "girls in STEM", "students of color", "coding", "computer science"],
+    "eligible_applicants": [
+      "501(c)(3) nonprofits"
+    ],
+    "focus_areas": [
+      "STEM education",
+      "tech equity",
+      "girls in STEM",
+      "students of color",
+      "coding",
+      "computer science"
+    ],
     "application_type": "LOI_then_full",
     "requires_match": false,
     "match_strengthens": false,
@@ -1037,7 +1524,7 @@
     "id": "SYN-016",
     "source": "synthetic",
     "title": "Connecticut Arts Education Youth Grants",
-    "funder": "Connecticut Community Foundation — Arts for All Fund",
+    "funder": "Connecticut Community Foundation \u2014 Arts for All Fund",
     "funder_type": "community_foundation",
     "amount_min": 2000,
     "amount_max": 10000,
@@ -1045,8 +1532,18 @@
     "deadline": "2026-08-01",
     "geographic_scope": "Middlesex and New Haven Counties, Connecticut",
     "state": "CT",
-    "eligible_applicants": ["501(c)(3) nonprofits", "fiscal sponsors accepted"],
-    "focus_areas": ["arts education", "youth arts", "music education", "visual arts", "theater", "creative writing"],
+    "eligible_applicants": [
+      "501(c)(3) nonprofits",
+      "fiscal sponsors accepted"
+    ],
+    "focus_areas": [
+      "arts education",
+      "youth arts",
+      "music education",
+      "visual arts",
+      "theater",
+      "creative writing"
+    ],
     "application_type": "full_application",
     "requires_match": false,
     "match_strengthens": false,
@@ -1057,7 +1554,7 @@
     "id": "SYN-017",
     "source": "synthetic",
     "title": "San Diego County Veteran Wellness Grants",
-    "funder": "San Diego Foundation — Veterans Initiative",
+    "funder": "San Diego Foundation \u2014 Veterans Initiative",
     "funder_type": "community_foundation",
     "amount_min": 5000,
     "amount_max": 20000,
@@ -1065,8 +1562,16 @@
     "deadline": "2026-09-01",
     "geographic_scope": "San Diego County, California",
     "state": "CA",
-    "eligible_applicants": ["501(c)(3) nonprofits"],
-    "focus_areas": ["veteran services", "mental health", "animal-assisted therapy", "PTSD treatment", "peer support"],
+    "eligible_applicants": [
+      "501(c)(3) nonprofits"
+    ],
+    "focus_areas": [
+      "veteran services",
+      "mental health",
+      "animal-assisted therapy",
+      "PTSD treatment",
+      "peer support"
+    ],
     "application_type": "full_application",
     "requires_match": false,
     "match_strengthens": false,
@@ -1077,7 +1582,7 @@
     "id": "SYN-018",
     "source": "synthetic",
     "title": "Cass County Indigenous Heritage Grants",
-    "funder": "Northwest Minnesota Foundation — Native Voices Fund",
+    "funder": "Northwest Minnesota Foundation \u2014 Native Voices Fund",
     "funder_type": "community_foundation",
     "amount_min": 2000,
     "amount_max": 15000,
@@ -1085,8 +1590,17 @@
     "deadline": "2026-07-01",
     "geographic_scope": "Cass, Beltrami, Hubbard, and Itasca Counties, Minnesota",
     "state": "MN",
-    "eligible_applicants": ["501(c)(3) nonprofits", "tribal organizations"],
-    "focus_areas": ["indigenous cultural preservation", "environmental stewardship", "traditional ecological knowledge", "language revitalization", "youth cultural programs"],
+    "eligible_applicants": [
+      "501(c)(3) nonprofits",
+      "tribal organizations"
+    ],
+    "focus_areas": [
+      "indigenous cultural preservation",
+      "environmental stewardship",
+      "traditional ecological knowledge",
+      "language revitalization",
+      "youth cultural programs"
+    ],
     "application_type": "full_application",
     "requires_match": false,
     "match_strengthens": false,
@@ -1097,7 +1611,7 @@
     "id": "SYN-019",
     "source": "synthetic",
     "title": "Federal Adult Education and Family Literacy Grants",
-    "funder": "U.S. Department of Education — Office of Career, Technical, and Adult Education",
+    "funder": "U.S. Department of Education \u2014 Office of Career, Technical, and Adult Education",
     "funder_type": "national_foundation",
     "amount_min": 50000,
     "amount_max": 200000,
@@ -1105,8 +1619,18 @@
     "deadline": "2026-08-01",
     "geographic_scope": "USA (all 50 states)",
     "state": "national",
-    "eligible_applicants": ["501(c)(3) nonprofits with 5+ years adult education experience", "state agencies", "school districts"],
-    "focus_areas": ["adult education", "family literacy", "GED preparation", "English language acquisition", "workforce literacy"],
+    "eligible_applicants": [
+      "501(c)(3) nonprofits with 5+ years adult education experience",
+      "state agencies",
+      "school districts"
+    ],
+    "focus_areas": [
+      "adult education",
+      "family literacy",
+      "GED preparation",
+      "English language acquisition",
+      "workforce literacy"
+    ],
     "application_type": "full_application",
     "requires_match": true,
     "match_strengthens": false,
@@ -1125,8 +1649,15 @@
     "deadline": "2026-06-15",
     "geographic_scope": "Williamson County, Texas",
     "state": "TX",
-    "eligible_applicants": ["501(c)(3) nonprofits with 5+ years operating history"],
-    "focus_areas": ["youth education", "mentoring", "after-school programs", "college readiness"],
+    "eligible_applicants": [
+      "501(c)(3) nonprofits with 5+ years operating history"
+    ],
+    "focus_areas": [
+      "youth education",
+      "mentoring",
+      "after-school programs",
+      "college readiness"
+    ],
     "application_type": "LOI_then_full",
     "requires_match": false,
     "match_strengthens": false,
@@ -1137,7 +1668,7 @@
     "id": "SYN-021",
     "source": "synthetic",
     "title": "Federal Youth Mentoring Initiative",
-    "funder": "U.S. Department of Justice — Office of Juvenile Justice",
+    "funder": "U.S. Department of Justice \u2014 Office of Juvenile Justice",
     "funder_type": "national_foundation",
     "amount_min": 100000,
     "amount_max": 500000,
@@ -1145,8 +1676,15 @@
     "deadline": "2026-07-30",
     "geographic_scope": "USA (all 50 states)",
     "state": "national",
-    "eligible_applicants": ["501(c)(3) nonprofits with 3+ years mentoring experience"],
-    "focus_areas": ["youth mentoring", "juvenile justice prevention", "at-risk youth", "evidence-based mentoring"],
+    "eligible_applicants": [
+      "501(c)(3) nonprofits with 3+ years mentoring experience"
+    ],
+    "focus_areas": [
+      "youth mentoring",
+      "juvenile justice prevention",
+      "at-risk youth",
+      "evidence-based mentoring"
+    ],
     "application_type": "full_application",
     "requires_match": true,
     "match_strengthens": false,
@@ -1165,8 +1703,15 @@
     "deadline": "2026-06-15",
     "geographic_scope": "USA (all 50 states)",
     "state": "national",
-    "eligible_applicants": ["501(c)(3) nonprofits with 5+ years food security experience"],
-    "focus_areas": ["community food projects", "food security", "community gardens", "nutrition education"],
+    "eligible_applicants": [
+      "501(c)(3) nonprofits with 5+ years food security experience"
+    ],
+    "focus_areas": [
+      "community food projects",
+      "food security",
+      "community gardens",
+      "nutrition education"
+    ],
     "application_type": "full_application",
     "requires_match": true,
     "match_strengthens": false,
@@ -1177,7 +1722,7 @@
     "id": "SYN-023",
     "source": "synthetic",
     "title": "Cook County Senior Nutrition Federal Grant",
-    "funder": "Administration for Community Living — Older Americans Act",
+    "funder": "Administration for Community Living \u2014 Older Americans Act",
     "funder_type": "national_foundation",
     "amount_min": 50000,
     "amount_max": 150000,
@@ -1185,8 +1730,16 @@
     "deadline": "2026-07-15",
     "geographic_scope": "USA (all 50 states)",
     "state": "national",
-    "eligible_applicants": ["501(c)(3) nonprofits", "area agencies on aging"],
-    "focus_areas": ["senior nutrition", "meal delivery", "congregate meals", "senior services"],
+    "eligible_applicants": [
+      "501(c)(3) nonprofits",
+      "area agencies on aging"
+    ],
+    "focus_areas": [
+      "senior nutrition",
+      "meal delivery",
+      "congregate meals",
+      "senior services"
+    ],
     "application_type": "full_application",
     "requires_match": true,
     "match_strengthens": false,
@@ -1205,8 +1758,15 @@
     "deadline": "2026-08-15",
     "geographic_scope": "Allen County, Indiana",
     "state": "IN",
-    "eligible_applicants": ["501(c)(3) nonprofits with 3+ years continuous programming"],
-    "focus_areas": ["youth development", "mentoring", "education", "character building"],
+    "eligible_applicants": [
+      "501(c)(3) nonprofits with 3+ years continuous programming"
+    ],
+    "focus_areas": [
+      "youth development",
+      "mentoring",
+      "education",
+      "character building"
+    ],
     "application_type": "full_application",
     "requires_match": true,
     "match_strengthens": false,
@@ -1217,7 +1777,7 @@
     "id": "SYN-025",
     "source": "synthetic",
     "title": "Dallas County Latino Education Fund",
-    "funder": "Dallas Foundation — Adelante Fund",
+    "funder": "Dallas Foundation \u2014 Adelante Fund",
     "funder_type": "community_foundation",
     "amount_min": 10000,
     "amount_max": 30000,
@@ -1225,13 +1785,21 @@
     "deadline": "2026-05-15",
     "geographic_scope": "Dallas County, Texas",
     "state": "TX",
-    "eligible_applicants": ["501(c)(3) nonprofits"],
-    "focus_areas": ["Latino youth education", "college access", "mentoring", "STEM", "after-school programs"],
+    "eligible_applicants": [
+      "501(c)(3) nonprofits"
+    ],
+    "focus_areas": [
+      "Latino youth education",
+      "college access",
+      "mentoring",
+      "STEM",
+      "after-school programs"
+    ],
     "application_type": "LOI_then_full",
     "requires_match": false,
     "match_strengthens": false,
     "federal": false,
-    "description": "Supports education programs for Latino youth in Dallas County. Awards $10K-$30K for tutoring, college prep, STEM enrichment, and mentoring. Strong program but limited to Dallas County — not available for Travis County organizations."
+    "description": "Supports education programs for Latino youth in Dallas County. Awards $10K-$30K for tutoring, college prep, STEM enrichment, and mentoring. Strong program but limited to Dallas County \u2014 not available for Travis County organizations."
   },
   {
     "id": "SYN-026",
@@ -1245,8 +1813,14 @@
     "deadline": "2026-07-15",
     "geographic_scope": "Escambia County, Florida",
     "state": "FL",
-    "eligible_applicants": ["501(c)(3) nonprofits partnered with K-12 schools"],
-    "focus_areas": ["K-12 STEM education", "youth programs", "school partnerships"],
+    "eligible_applicants": [
+      "501(c)(3) nonprofits partnered with K-12 schools"
+    ],
+    "focus_areas": [
+      "K-12 STEM education",
+      "youth programs",
+      "school partnerships"
+    ],
     "application_type": "full_application",
     "requires_match": false,
     "match_strengthens": false,
@@ -1257,7 +1831,7 @@
     "id": "SYN-027",
     "source": "synthetic",
     "title": "Greater Milwaukee Senior Meal Program Grants",
-    "funder": "Greater Milwaukee Foundation — Elder Care Fund",
+    "funder": "Greater Milwaukee Foundation \u2014 Elder Care Fund",
     "funder_type": "community_foundation",
     "amount_min": 10000,
     "amount_max": 30000,
@@ -1265,8 +1839,15 @@
     "deadline": "2026-06-30",
     "geographic_scope": "Milwaukee County, Wisconsin",
     "state": "WI",
-    "eligible_applicants": ["501(c)(3) nonprofits"],
-    "focus_areas": ["senior services", "meal delivery", "nutrition", "aging in place"],
+    "eligible_applicants": [
+      "501(c)(3) nonprofits"
+    ],
+    "focus_areas": [
+      "senior services",
+      "meal delivery",
+      "nutrition",
+      "aging in place"
+    ],
     "application_type": "full_application",
     "requires_match": false,
     "match_strengthens": false,
@@ -1277,7 +1858,7 @@
     "id": "SYN-028",
     "source": "synthetic",
     "title": "Appalachian Environmental Education Grants",
-    "funder": "Appalachian Regional Commission — Environmental Programs",
+    "funder": "Appalachian Regional Commission \u2014 Environmental Programs",
     "funder_type": "national_foundation",
     "amount_min": 15000,
     "amount_max": 75000,
@@ -1285,8 +1866,16 @@
     "deadline": "2026-09-30",
     "geographic_scope": "Appalachian region (13 states)",
     "state": "national",
-    "eligible_applicants": ["501(c)(3) nonprofits in Appalachian counties"],
-    "focus_areas": ["environmental education", "conservation", "sustainable development", "outdoor recreation", "eco-tourism"],
+    "eligible_applicants": [
+      "501(c)(3) nonprofits in Appalachian counties"
+    ],
+    "focus_areas": [
+      "environmental education",
+      "conservation",
+      "sustainable development",
+      "outdoor recreation",
+      "eco-tourism"
+    ],
     "application_type": "full_application",
     "requires_match": false,
     "match_strengthens": true,
@@ -1305,8 +1894,16 @@
     "deadline": "2026-08-15",
     "geographic_scope": "USA (all 50 states)",
     "state": "national",
-    "eligible_applicants": ["501(c)(3) nonprofits"],
-    "focus_areas": ["fatherhood", "responsible parenting", "father engagement", "co-parenting", "family strengthening"],
+    "eligible_applicants": [
+      "501(c)(3) nonprofits"
+    ],
+    "focus_areas": [
+      "fatherhood",
+      "responsible parenting",
+      "father engagement",
+      "co-parenting",
+      "family strengthening"
+    ],
     "application_type": "full_application",
     "requires_match": false,
     "match_strengthens": false,
@@ -1325,8 +1922,15 @@
     "deadline": "2026-06-15",
     "geographic_scope": "Oregon",
     "state": "OR",
-    "eligible_applicants": ["501(c)(3) nonprofits"],
-    "focus_areas": ["STEM education", "girls in STEM", "racial equity", "tech education"],
+    "eligible_applicants": [
+      "501(c)(3) nonprofits"
+    ],
+    "focus_areas": [
+      "STEM education",
+      "girls in STEM",
+      "racial equity",
+      "tech education"
+    ],
     "application_type": "LOI_then_full",
     "requires_match": false,
     "match_strengthens": false,
@@ -1345,8 +1949,15 @@
     "deadline": "2026-05-30",
     "geographic_scope": "Clark, Floyd, Harrison, and Washington Counties, Indiana",
     "state": "IN",
-    "eligible_applicants": ["501(c)(3) nonprofits"],
-    "focus_areas": ["reentry services", "workforce development", "formerly incarcerated", "second chance"],
+    "eligible_applicants": [
+      "501(c)(3) nonprofits"
+    ],
+    "focus_areas": [
+      "reentry services",
+      "workforce development",
+      "formerly incarcerated",
+      "second chance"
+    ],
     "application_type": "full_application",
     "requires_match": false,
     "match_strengthens": false,
@@ -1365,8 +1976,15 @@
     "deadline": "2026-06-30",
     "geographic_scope": "Florida",
     "state": "FL",
-    "eligible_applicants": ["501(c)(3) nonprofits partnered with K-12 schools"],
-    "focus_areas": ["K-12 education", "STEM", "literacy", "school innovation"],
+    "eligible_applicants": [
+      "501(c)(3) nonprofits partnered with K-12 schools"
+    ],
+    "focus_areas": [
+      "K-12 education",
+      "STEM",
+      "literacy",
+      "school innovation"
+    ],
     "application_type": "full_application",
     "requires_match": false,
     "match_strengthens": false,
@@ -1377,7 +1995,7 @@
     "id": "SYN-033",
     "source": "synthetic",
     "title": "Hennepin County Indigenous Environmental Stewardship",
-    "funder": "Minneapolis Foundation — Indigenous Futures Fund",
+    "funder": "Minneapolis Foundation \u2014 Indigenous Futures Fund",
     "funder_type": "community_foundation",
     "amount_min": 5000,
     "amount_max": 20000,
@@ -1385,8 +2003,16 @@
     "deadline": "2026-07-15",
     "geographic_scope": "Hennepin County, Minnesota",
     "state": "MN",
-    "eligible_applicants": ["501(c)(3) nonprofits", "tribal organizations"],
-    "focus_areas": ["indigenous programs", "environmental stewardship", "cultural preservation", "urban indigenous community"],
+    "eligible_applicants": [
+      "501(c)(3) nonprofits",
+      "tribal organizations"
+    ],
+    "focus_areas": [
+      "indigenous programs",
+      "environmental stewardship",
+      "cultural preservation",
+      "urban indigenous community"
+    ],
     "application_type": "full_application",
     "requires_match": false,
     "match_strengthens": false,
@@ -1405,8 +2031,15 @@
     "deadline": "2026-08-01",
     "geographic_scope": "Arizona",
     "state": "AZ",
-    "eligible_applicants": ["501(c)(3) nonprofits"],
-    "focus_areas": ["animal-assisted therapy", "mental health", "veteran services", "therapeutic riding"],
+    "eligible_applicants": [
+      "501(c)(3) nonprofits"
+    ],
+    "focus_areas": [
+      "animal-assisted therapy",
+      "mental health",
+      "veteran services",
+      "therapeutic riding"
+    ],
     "application_type": "full_application",
     "requires_match": false,
     "match_strengthens": false,
@@ -1425,13 +2058,22 @@
     "deadline": "2026-06-15",
     "geographic_scope": "Greater Hartford region, Connecticut (Hartford County)",
     "state": "CT",
-    "eligible_applicants": ["501(c)(3) nonprofits with 5+ years arts programming"],
-    "focus_areas": ["arts education", "youth arts", "music", "theater", "visual arts", "creative youth development"],
+    "eligible_applicants": [
+      "501(c)(3) nonprofits with 5+ years arts programming"
+    ],
+    "focus_areas": [
+      "arts education",
+      "youth arts",
+      "music",
+      "theater",
+      "visual arts",
+      "creative youth development"
+    ],
     "application_type": "full_application",
     "requires_match": false,
     "match_strengthens": false,
     "federal": false,
-    "description": "Supports youth arts education in Greater Hartford. Requires 5+ years of arts programming experience. Serves Hartford County communities only — not available to Middlesex County organizations."
+    "description": "Supports youth arts education in Greater Hartford. Requires 5+ years of arts programming experience. Serves Hartford County communities only \u2014 not available to Middlesex County organizations."
   },
   {
     "id": "SYN-036",
@@ -1445,8 +2087,18 @@
     "deadline": "2026-10-15",
     "geographic_scope": "USA (all 50 states)",
     "state": "national",
-    "eligible_applicants": ["501(c)(3) nonprofits", "tribal organizations", "state agencies"],
-    "focus_areas": ["conservation", "habitat restoration", "wildlife management", "environmental education", "watershed protection"],
+    "eligible_applicants": [
+      "501(c)(3) nonprofits",
+      "tribal organizations",
+      "state agencies"
+    ],
+    "focus_areas": [
+      "conservation",
+      "habitat restoration",
+      "wildlife management",
+      "environmental education",
+      "watershed protection"
+    ],
     "application_type": "full_application",
     "requires_match": true,
     "match_strengthens": false,
@@ -1465,8 +2117,15 @@
     "deadline": "2026-07-01",
     "geographic_scope": "Duval County, Florida",
     "state": "FL",
-    "eligible_applicants": ["501(c)(3) nonprofits"],
-    "focus_areas": ["workforce development", "reentry services", "job training", "formerly incarcerated"],
+    "eligible_applicants": [
+      "501(c)(3) nonprofits"
+    ],
+    "focus_areas": [
+      "workforce development",
+      "reentry services",
+      "job training",
+      "formerly incarcerated"
+    ],
     "application_type": "full_application",
     "requires_match": false,
     "match_strengthens": false,
@@ -1485,8 +2144,16 @@
     "deadline": "2026-05-15",
     "geographic_scope": "Grundy, Sequatchie, Marion, and Bledsoe Counties, Tennessee",
     "state": "TN",
-    "eligible_applicants": ["501(c)(3) nonprofits", "community organizations"],
-    "focus_areas": ["community health", "wellness", "recreation", "basic needs"],
+    "eligible_applicants": [
+      "501(c)(3) nonprofits",
+      "community organizations"
+    ],
+    "focus_areas": [
+      "community health",
+      "wellness",
+      "recreation",
+      "basic needs"
+    ],
     "application_type": "full_application",
     "requires_match": false,
     "match_strengthens": false,
@@ -1505,8 +2172,17 @@
     "deadline": "2026-04-30",
     "geographic_scope": "New England states (CT, MA, ME, NH, RI, VT)",
     "state": "RI",
-    "eligible_applicants": ["501(c)(3) nonprofits", "unincorporated community groups", "fiscal sponsors accepted"],
-    "focus_areas": ["community gardens", "environmental justice", "food access", "grassroots organizing"],
+    "eligible_applicants": [
+      "501(c)(3) nonprofits",
+      "unincorporated community groups",
+      "fiscal sponsors accepted"
+    ],
+    "focus_areas": [
+      "community gardens",
+      "environmental justice",
+      "food access",
+      "grassroots organizing"
+    ],
     "application_type": "full_application",
     "requires_match": false,
     "match_strengthens": false,
@@ -1525,8 +2201,16 @@
     "deadline": "2026-06-15",
     "geographic_scope": "El Paso County, Colorado",
     "state": "CO",
-    "eligible_applicants": ["501(c)(3) nonprofits"],
-    "focus_areas": ["veteran services", "equine therapy", "animal-assisted therapy", "PTSD", "mental health"],
+    "eligible_applicants": [
+      "501(c)(3) nonprofits"
+    ],
+    "focus_areas": [
+      "veteran services",
+      "equine therapy",
+      "animal-assisted therapy",
+      "PTSD",
+      "mental health"
+    ],
     "application_type": "full_application",
     "requires_match": false,
     "match_strengthens": false,
@@ -1545,8 +2229,15 @@
     "deadline": "2026-07-01",
     "geographic_scope": "Mississippi Delta region",
     "state": "MS",
-    "eligible_applicants": ["501(c)(3) nonprofits"],
-    "focus_areas": ["adult literacy", "GED programs", "workforce literacy", "digital literacy"],
+    "eligible_applicants": [
+      "501(c)(3) nonprofits"
+    ],
+    "focus_areas": [
+      "adult literacy",
+      "GED programs",
+      "workforce literacy",
+      "digital literacy"
+    ],
     "application_type": "full_application",
     "requires_match": false,
     "match_strengthens": false,
@@ -1565,8 +2256,15 @@
     "deadline": "2026-06-01",
     "geographic_scope": "Kern County, California",
     "state": "CA",
-    "eligible_applicants": ["501(c)(3) nonprofits"],
-    "focus_areas": ["farmworker services", "health", "education", "community development"],
+    "eligible_applicants": [
+      "501(c)(3) nonprofits"
+    ],
+    "focus_areas": [
+      "farmworker services",
+      "health",
+      "education",
+      "community development"
+    ],
     "application_type": "full_application",
     "requires_match": false,
     "match_strengthens": false,
@@ -1585,8 +2283,16 @@
     "deadline": "2026-05-01",
     "geographic_scope": "Douglas County, Nebraska",
     "state": "NE",
-    "eligible_applicants": ["501(c)(3) nonprofits"],
-    "focus_areas": ["community development", "arts", "education", "health", "social services"],
+    "eligible_applicants": [
+      "501(c)(3) nonprofits"
+    ],
+    "focus_areas": [
+      "community development",
+      "arts",
+      "education",
+      "health",
+      "social services"
+    ],
     "application_type": "full_application",
     "requires_match": false,
     "match_strengthens": false,
@@ -1605,8 +2311,16 @@
     "deadline": "2026-08-30",
     "geographic_scope": "Alaska",
     "state": "AK",
-    "eligible_applicants": ["501(c)(3) nonprofits", "tribal organizations"],
-    "focus_areas": ["indigenous culture", "youth programs", "language preservation", "traditional arts"],
+    "eligible_applicants": [
+      "501(c)(3) nonprofits",
+      "tribal organizations"
+    ],
+    "focus_areas": [
+      "indigenous culture",
+      "youth programs",
+      "language preservation",
+      "traditional arts"
+    ],
     "application_type": "full_application",
     "requires_match": false,
     "match_strengthens": false,
@@ -1625,8 +2339,16 @@
     "deadline": "2026-06-15",
     "geographic_scope": "Wayne County, Michigan",
     "state": "MI",
-    "eligible_applicants": ["501(c)(3) nonprofits", "neighborhood associations"],
-    "focus_areas": ["community development", "neighborhood beautification", "youth programs", "safety"],
+    "eligible_applicants": [
+      "501(c)(3) nonprofits",
+      "neighborhood associations"
+    ],
+    "focus_areas": [
+      "community development",
+      "neighborhood beautification",
+      "youth programs",
+      "safety"
+    ],
     "application_type": "full_application",
     "requires_match": false,
     "match_strengthens": false,
@@ -1645,8 +2367,16 @@
     "deadline": "2026-09-15",
     "geographic_scope": "South Carolina",
     "state": "SC",
-    "eligible_applicants": ["501(c)(3) nonprofits"],
-    "focus_areas": ["rural health", "chronic disease prevention", "health education", "mental health", "telehealth"],
+    "eligible_applicants": [
+      "501(c)(3) nonprofits"
+    ],
+    "focus_areas": [
+      "rural health",
+      "chronic disease prevention",
+      "health education",
+      "mental health",
+      "telehealth"
+    ],
     "application_type": "LOI_then_full",
     "requires_match": false,
     "match_strengthens": false,
@@ -1665,8 +2395,16 @@
     "deadline": "2026-07-15",
     "geographic_scope": "Greater Boston, Massachusetts",
     "state": "MA",
-    "eligible_applicants": ["501(c)(3) nonprofits"],
-    "focus_areas": ["immigrant services", "ESL", "legal assistance", "workforce integration", "cultural navigation"],
+    "eligible_applicants": [
+      "501(c)(3) nonprofits"
+    ],
+    "focus_areas": [
+      "immigrant services",
+      "ESL",
+      "legal assistance",
+      "workforce integration",
+      "cultural navigation"
+    ],
     "application_type": "LOI_then_full",
     "requires_match": false,
     "match_strengthens": false,
@@ -1685,8 +2423,15 @@
     "deadline": "2026-08-01",
     "geographic_scope": "Metro Atlanta, Georgia",
     "state": "GA",
-    "eligible_applicants": ["501(c)(3) nonprofits"],
-    "focus_areas": ["youth sports", "recreation", "physical fitness", "character development"],
+    "eligible_applicants": [
+      "501(c)(3) nonprofits"
+    ],
+    "focus_areas": [
+      "youth sports",
+      "recreation",
+      "physical fitness",
+      "character development"
+    ],
     "application_type": "full_application",
     "requires_match": false,
     "match_strengthens": false,
@@ -1705,8 +2450,16 @@
     "deadline": "2026-06-30",
     "geographic_scope": "Montana",
     "state": "MT",
-    "eligible_applicants": ["501(c)(3) nonprofits", "tribal organizations"],
-    "focus_areas": ["indigenous language", "cultural preservation", "education", "oral history"],
+    "eligible_applicants": [
+      "501(c)(3) nonprofits",
+      "tribal organizations"
+    ],
+    "focus_areas": [
+      "indigenous language",
+      "cultural preservation",
+      "education",
+      "oral history"
+    ],
     "application_type": "full_application",
     "requires_match": false,
     "match_strengthens": false,
@@ -1725,8 +2478,15 @@
     "deadline": "2026-07-30",
     "geographic_scope": "North Carolina",
     "state": "NC",
-    "eligible_applicants": ["501(c)(3) nonprofits"],
-    "focus_areas": ["after-school programs", "youth development", "academic enrichment", "STEM"],
+    "eligible_applicants": [
+      "501(c)(3) nonprofits"
+    ],
+    "focus_areas": [
+      "after-school programs",
+      "youth development",
+      "academic enrichment",
+      "STEM"
+    ],
     "application_type": "LOI_then_full",
     "requires_match": false,
     "match_strengthens": false,
@@ -1745,8 +2505,15 @@
     "deadline": "2026-10-01",
     "geographic_scope": "Hawaii",
     "state": "HI",
-    "eligible_applicants": ["501(c)(3) nonprofits"],
-    "focus_areas": ["ocean conservation", "marine education", "coral reef restoration", "coastal resilience"],
+    "eligible_applicants": [
+      "501(c)(3) nonprofits"
+    ],
+    "focus_areas": [
+      "ocean conservation",
+      "marine education",
+      "coral reef restoration",
+      "coastal resilience"
+    ],
     "application_type": "LOI_then_full",
     "requires_match": false,
     "match_strengthens": true,
@@ -1765,8 +2532,15 @@
     "deadline": "2026-05-30",
     "geographic_scope": "Sedgwick County, Kansas",
     "state": "KS",
-    "eligible_applicants": ["501(c)(3) nonprofits"],
-    "focus_areas": ["workforce development", "small business support", "financial literacy", "job training"],
+    "eligible_applicants": [
+      "501(c)(3) nonprofits"
+    ],
+    "focus_areas": [
+      "workforce development",
+      "small business support",
+      "financial literacy",
+      "job training"
+    ],
     "application_type": "full_application",
     "requires_match": false,
     "match_strengthens": false,
@@ -1785,8 +2559,17 @@
     "deadline": "2026-06-01",
     "geographic_scope": "West Virginia",
     "state": "WV",
-    "eligible_applicants": ["501(c)(3) nonprofits", "community groups"],
-    "focus_areas": ["arts", "Appalachian culture", "folk arts", "music", "storytelling"],
+    "eligible_applicants": [
+      "501(c)(3) nonprofits",
+      "community groups"
+    ],
+    "focus_areas": [
+      "arts",
+      "Appalachian culture",
+      "folk arts",
+      "music",
+      "storytelling"
+    ],
     "application_type": "full_application",
     "requires_match": false,
     "match_strengthens": false,
@@ -1805,8 +2588,16 @@
     "deadline": "2026-07-15",
     "geographic_scope": "Jefferson County, Kentucky",
     "state": "KY",
-    "eligible_applicants": ["501(c)(3) nonprofits"],
-    "focus_areas": ["reentry services", "workforce development", "housing", "mental health", "formerly incarcerated"],
+    "eligible_applicants": [
+      "501(c)(3) nonprofits"
+    ],
+    "focus_areas": [
+      "reentry services",
+      "workforce development",
+      "housing",
+      "mental health",
+      "formerly incarcerated"
+    ],
     "application_type": "full_application",
     "requires_match": false,
     "match_strengthens": false,
@@ -1825,8 +2616,15 @@
     "deadline": "2026-08-15",
     "geographic_scope": "New Mexico",
     "state": "NM",
-    "eligible_applicants": ["501(c)(3) nonprofits"],
-    "focus_areas": ["renewable energy education", "STEM", "environmental education", "workforce development"],
+    "eligible_applicants": [
+      "501(c)(3) nonprofits"
+    ],
+    "focus_areas": [
+      "renewable energy education",
+      "STEM",
+      "environmental education",
+      "workforce development"
+    ],
     "application_type": "full_application",
     "requires_match": false,
     "match_strengthens": false,
@@ -1845,8 +2643,15 @@
     "deadline": "2026-06-30",
     "geographic_scope": "Hillsborough and Pinellas Counties, Florida",
     "state": "FL",
-    "eligible_applicants": ["501(c)(3) nonprofits"],
-    "focus_areas": ["homelessness prevention", "housing", "case management", "basic needs"],
+    "eligible_applicants": [
+      "501(c)(3) nonprofits"
+    ],
+    "focus_areas": [
+      "homelessness prevention",
+      "housing",
+      "case management",
+      "basic needs"
+    ],
     "application_type": "LOI_then_full",
     "requires_match": false,
     "match_strengthens": false,
@@ -1865,8 +2670,16 @@
     "deadline": "2026-05-15",
     "geographic_scope": "Vermont",
     "state": "VT",
-    "eligible_applicants": ["501(c)(3) nonprofits", "schools"],
-    "focus_areas": ["farm to school", "nutrition education", "school gardens", "local food systems"],
+    "eligible_applicants": [
+      "501(c)(3) nonprofits",
+      "schools"
+    ],
+    "focus_areas": [
+      "farm to school",
+      "nutrition education",
+      "school gardens",
+      "local food systems"
+    ],
     "application_type": "full_application",
     "requires_match": false,
     "match_strengthens": false,
@@ -1885,8 +2698,15 @@
     "deadline": "2026-09-01",
     "geographic_scope": "Allegheny County, Pennsylvania",
     "state": "PA",
-    "eligible_applicants": ["501(c)(3) nonprofits"],
-    "focus_areas": ["youth violence prevention", "mentoring", "conflict resolution", "community safety"],
+    "eligible_applicants": [
+      "501(c)(3) nonprofits"
+    ],
+    "focus_areas": [
+      "youth violence prevention",
+      "mentoring",
+      "conflict resolution",
+      "community safety"
+    ],
     "application_type": "LOI_then_full",
     "requires_match": false,
     "match_strengthens": false,
@@ -1905,8 +2725,16 @@
     "deadline": "2026-08-01",
     "geographic_scope": "Oklahoma",
     "state": "OK",
-    "eligible_applicants": ["501(c)(3) nonprofits", "tribal organizations"],
-    "focus_areas": ["indigenous language", "cultural preservation", "education", "community programs"],
+    "eligible_applicants": [
+      "501(c)(3) nonprofits",
+      "tribal organizations"
+    ],
+    "focus_areas": [
+      "indigenous language",
+      "cultural preservation",
+      "education",
+      "community programs"
+    ],
     "application_type": "full_application",
     "requires_match": false,
     "match_strengthens": false,
@@ -1917,7 +2745,7 @@
     "id": "SYN-060",
     "source": "synthetic",
     "title": "Central Texas Federal Education Block Grant",
-    "funder": "U.S. Department of Education — Title IV-A",
+    "funder": "U.S. Department of Education \u2014 Title IV-A",
     "funder_type": "national_foundation",
     "amount_min": 25000,
     "amount_max": 75000,
@@ -1925,8 +2753,16 @@
     "deadline": "2026-06-30",
     "geographic_scope": "USA (all 50 states)",
     "state": "national",
-    "eligible_applicants": ["school districts", "501(c)(3) nonprofits in partnership with school districts"],
-    "focus_areas": ["education", "after-school programs", "safe schools", "technology in education"],
+    "eligible_applicants": [
+      "school districts",
+      "501(c)(3) nonprofits in partnership with school districts"
+    ],
+    "focus_areas": [
+      "education",
+      "after-school programs",
+      "safe schools",
+      "technology in education"
+    ],
     "application_type": "full_application",
     "requires_match": true,
     "match_strengthens": false,
@@ -1945,19 +2781,26 @@
     "deadline": "2026-07-15",
     "geographic_scope": "Bexar County, Texas",
     "state": "TX",
-    "eligible_applicants": ["501(c)(3) nonprofits"],
-    "focus_areas": ["youth mentoring", "education", "Latino community", "college readiness"],
+    "eligible_applicants": [
+      "501(c)(3) nonprofits"
+    ],
+    "focus_areas": [
+      "youth mentoring",
+      "education",
+      "Latino community",
+      "college readiness"
+    ],
     "application_type": "full_application",
     "requires_match": false,
     "match_strengthens": false,
     "federal": false,
-    "description": "Supports youth mentoring and education programs in Bexar County (San Antonio area). Focus on Latino youth and college readiness. Strong program but limited to Bexar County — not available to Travis County organizations."
+    "description": "Supports youth mentoring and education programs in Bexar County (San Antonio area). Focus on Latino youth and college readiness. Strong program but limited to Bexar County \u2014 not available to Travis County organizations."
   },
   {
     "id": "SYN-062",
     "source": "synthetic",
     "title": "Pennsylvania Family Strengthening Grants",
-    "funder": "Pew Charitable Trusts — Philadelphia Program",
+    "funder": "Pew Charitable Trusts \u2014 Philadelphia Program",
     "funder_type": "private_foundation",
     "amount_min": 15000,
     "amount_max": 50000,
@@ -1965,13 +2808,20 @@
     "deadline": "2026-10-15",
     "geographic_scope": "Philadelphia, Pennsylvania",
     "state": "PA",
-    "eligible_applicants": ["501(c)(3) nonprofits"],
-    "focus_areas": ["family services", "child welfare", "parent education", "family stability"],
+    "eligible_applicants": [
+      "501(c)(3) nonprofits"
+    ],
+    "focus_areas": [
+      "family services",
+      "child welfare",
+      "parent education",
+      "family stability"
+    ],
     "application_type": "LOI_then_full",
     "requires_match": false,
     "match_strengthens": false,
     "federal": false,
-    "description": "Supports family strengthening programs in Philadelphia. Broad family services focus including parent education, child welfare prevention, and family stability. General family programming — does not prioritize father-specific or fatherhood initiatives."
+    "description": "Supports family strengthening programs in Philadelphia. Broad family services focus including parent education, child welfare prevention, and family stability. General family programming \u2014 does not prioritize father-specific or fatherhood initiatives."
   },
   {
     "id": "SYN-063",
@@ -1985,8 +2835,17 @@
     "deadline": "2026-06-01",
     "geographic_scope": "Rural Idaho communities (population under 25,000)",
     "state": "ID",
-    "eligible_applicants": ["501(c)(3) nonprofits", "local government"],
-    "focus_areas": ["community development", "education", "health", "arts", "environment"],
+    "eligible_applicants": [
+      "501(c)(3) nonprofits",
+      "local government"
+    ],
+    "focus_areas": [
+      "community development",
+      "education",
+      "health",
+      "arts",
+      "environment"
+    ],
     "application_type": "full_application",
     "requires_match": false,
     "match_strengthens": true,
@@ -2005,8 +2864,15 @@
     "deadline": "2026-06-15",
     "geographic_scope": "USA (all 50 states)",
     "state": "national",
-    "eligible_applicants": ["501(c)(3) nonprofits with 5+ years nutrition education experience"],
-    "focus_areas": ["nutrition education", "food security", "SNAP outreach", "healthy eating"],
+    "eligible_applicants": [
+      "501(c)(3) nonprofits with 5+ years nutrition education experience"
+    ],
+    "focus_areas": [
+      "nutrition education",
+      "food security",
+      "SNAP outreach",
+      "healthy eating"
+    ],
     "application_type": "full_application",
     "requires_match": true,
     "match_strengthens": false,
@@ -2025,12 +2891,738 @@
     "deadline": "2026-09-30",
     "geographic_scope": "Shelby County, Tennessee",
     "state": "TN",
-    "eligible_applicants": ["501(c)(3) nonprofits"],
-    "focus_areas": ["fatherhood programs", "family reunification", "parenting", "workforce readiness"],
+    "eligible_applicants": [
+      "501(c)(3) nonprofits"
+    ],
+    "focus_areas": [
+      "fatherhood programs",
+      "family reunification",
+      "parenting",
+      "workforce readiness"
+    ],
     "application_type": "full_application",
     "requires_match": false,
     "match_strengthens": false,
     "federal": false,
-    "description": "Supports fatherhood and family reunification programs in Shelby County. Strong father-focused programming but restricted to Memphis/Shelby County area — not available to Philadelphia organizations."
+    "description": "Supports fatherhood and family reunification programs in Shelby County. Strong father-focused programming but restricted to Memphis/Shelby County area \u2014 not available to Philadelphia organizations."
+  },
+  {
+    "id": "SYN-066",
+    "source": "synthetic",
+    "title": "San Diego County Student Mental Health Initiative",
+    "funder": "San Diego Foundation",
+    "funder_type": "community_foundation",
+    "amount_min": 10000,
+    "amount_max": 50000,
+    "total_funding": 300000,
+    "deadline": "2026-07-15",
+    "geographic_scope": "San Diego County, California",
+    "state": "CA",
+    "eligible_applicants": [
+      "501(c)(3) nonprofits",
+      "public universities",
+      "private universities"
+    ],
+    "focus_areas": [
+      "mental health",
+      "student services",
+      "higher education",
+      "wellness",
+      "college students"
+    ],
+    "application_type": "LOI_then_full",
+    "requires_match": false,
+    "match_strengthens": false,
+    "federal": false,
+    "description": "Supports innovative mental health and wellness programs serving college and university students in San Diego County. Priority given to programs addressing anxiety, depression, and isolation among undergraduates. Collaborative proposals between institutions encouraged."
+  },
+  {
+    "id": "SYN-067",
+    "source": "synthetic",
+    "title": "Student Success and Retention Grants",
+    "funder": "The Parker Foundation",
+    "funder_type": "private_foundation",
+    "amount_min": 15000,
+    "amount_max": 40000,
+    "total_funding": 200000,
+    "deadline": "2026-08-01",
+    "geographic_scope": "San Diego County, California",
+    "state": "CA",
+    "eligible_applicants": [
+      "accredited colleges and universities",
+      "501(c)(3) nonprofits partnered with institutions of higher education"
+    ],
+    "focus_areas": [
+      "student retention",
+      "academic support",
+      "first-generation students",
+      "higher education",
+      "equity"
+    ],
+    "application_type": "full_application",
+    "requires_match": false,
+    "match_strengthens": true,
+    "federal": false,
+    "description": "Funds programs that improve student retention and graduation rates at San Diego County colleges and universities, with emphasis on first-generation and underrepresented students. Programs may include peer mentoring, academic coaching, emergency aid funds, and wraparound student services."
+  },
+  {
+    "id": "SYN-068",
+    "source": "synthetic",
+    "title": "Campus Community Building Mini-Grants",
+    "funder": "Price Philanthropies",
+    "funder_type": "private_foundation",
+    "amount_min": 2000,
+    "amount_max": 10000,
+    "total_funding": 75000,
+    "deadline": "2026-06-30",
+    "geographic_scope": "San Diego County, California",
+    "state": "CA",
+    "eligible_applicants": [
+      "colleges and universities",
+      "501(c)(3) nonprofits"
+    ],
+    "focus_areas": [
+      "community building",
+      "student services",
+      "diversity",
+      "inclusion",
+      "campus life"
+    ],
+    "application_type": "full_application",
+    "requires_match": false,
+    "match_strengthens": false,
+    "federal": false,
+    "description": "Small grants for campus-based programs that foster belonging, cross-cultural connection, and community among students. Open to all San Diego County institutions of higher education. Simple application, no match required. Priority for programs designed by or with students."
+  },
+  {
+    "id": "SYN-069",
+    "source": "synthetic",
+    "title": "Undergraduate Research and Leadership Fund",
+    "funder": "Prebys Foundation",
+    "funder_type": "private_foundation",
+    "amount_min": 5000,
+    "amount_max": 25000,
+    "total_funding": 150000,
+    "deadline": "2026-09-15",
+    "geographic_scope": "San Diego County, California",
+    "state": "CA",
+    "eligible_applicants": [
+      "accredited universities"
+    ],
+    "focus_areas": [
+      "undergraduate research",
+      "student leadership",
+      "higher education",
+      "academic enrichment"
+    ],
+    "application_type": "full_application",
+    "requires_match": false,
+    "match_strengthens": true,
+    "federal": false,
+    "description": "Supports programs that create undergraduate research opportunities and develop student leadership capacity at San Diego County universities. Preference for programs that serve students who would not otherwise have access to research experiences."
+  },
+  {
+    "id": "SYN-070",
+    "source": "synthetic",
+    "title": "Basic Needs Security for College Students",
+    "funder": "California Community Foundation \u2014 San Diego",
+    "funder_type": "community_foundation",
+    "amount_min": 10000,
+    "amount_max": 30000,
+    "total_funding": 180000,
+    "deadline": "2026-07-01",
+    "geographic_scope": "San Diego County, California",
+    "state": "CA",
+    "eligible_applicants": [
+      "501(c)(3) nonprofits",
+      "public universities",
+      "private universities"
+    ],
+    "focus_areas": [
+      "food security",
+      "housing access",
+      "basic needs",
+      "college students",
+      "student services"
+    ],
+    "application_type": "full_application",
+    "requires_match": false,
+    "match_strengthens": false,
+    "federal": false,
+    "description": "Addresses food insecurity, housing instability, and emergency financial needs among college and university students in San Diego County. Funds may support campus food pantries, emergency housing assistance, textbook lending programs, and basic needs navigation services."
+  },
+  {
+    "id": "SYN-071",
+    "source": "synthetic",
+    "title": "San Diego Higher Education Equity Collaborative",
+    "funder": "Legler Benbough Foundation",
+    "funder_type": "private_foundation",
+    "amount_min": 20000,
+    "amount_max": 75000,
+    "total_funding": 400000,
+    "deadline": "2026-10-01",
+    "geographic_scope": "San Diego County, California",
+    "state": "CA",
+    "eligible_applicants": [
+      "accredited colleges and universities",
+      "501(c)(3) education nonprofits"
+    ],
+    "focus_areas": [
+      "equity",
+      "higher education",
+      "students of color",
+      "college access",
+      "college readiness"
+    ],
+    "application_type": "LOI_then_full",
+    "requires_match": false,
+    "match_strengthens": false,
+    "federal": false,
+    "description": "Multi-year grants for programs that close equity gaps in higher education access, persistence, and completion for students of color and low-income students in San Diego County. Cross-institutional collaborations strongly encouraged."
+  },
+  {
+    "id": "SYN-072",
+    "source": "synthetic",
+    "title": "Career Readiness and Workforce Pathways",
+    "funder": "San Diego Workforce Partnership Foundation",
+    "funder_type": "community_foundation",
+    "amount_min": 10000,
+    "amount_max": 35000,
+    "total_funding": 250000,
+    "deadline": "2026-08-15",
+    "geographic_scope": "San Diego County, California",
+    "state": "CA",
+    "eligible_applicants": [
+      "501(c)(3) nonprofits",
+      "colleges and universities"
+    ],
+    "focus_areas": [
+      "workforce development",
+      "career readiness",
+      "internships",
+      "student services",
+      "economic mobility"
+    ],
+    "application_type": "full_application",
+    "requires_match": false,
+    "match_strengthens": true,
+    "federal": false,
+    "description": "Supports career development, internship placement, and workforce readiness programs for college students and recent graduates in San Diego County. Priority for programs connecting students to San Diego's biotech, healthcare, and technology sectors."
+  },
+  {
+    "id": "SYN-073",
+    "source": "synthetic",
+    "title": "Student Wellness and Recreation Grants",
+    "funder": "Hervey Family Fund",
+    "funder_type": "private_foundation",
+    "amount_min": 5000,
+    "amount_max": 15000,
+    "total_funding": 90000,
+    "deadline": "2026-06-15",
+    "geographic_scope": "San Diego County, California",
+    "state": "CA",
+    "eligible_applicants": [
+      "501(c)(3) nonprofits",
+      "colleges and universities"
+    ],
+    "focus_areas": [
+      "wellness",
+      "recreation",
+      "physical health",
+      "mental health",
+      "student services"
+    ],
+    "application_type": "full_application",
+    "requires_match": false,
+    "match_strengthens": false,
+    "federal": false,
+    "description": "Funds wellness and recreation programs for college students in San Diego County, including outdoor recreation, fitness initiatives, mindfulness programs, and stress reduction. Priority for programs that reach students who don't typically engage with campus recreation."
+  },
+  {
+    "id": "SYN-074",
+    "source": "synthetic",
+    "title": "Diversity in Higher Education Leadership Pipeline",
+    "funder": "James Irvine Foundation",
+    "funder_type": "private_foundation",
+    "amount_min": 25000,
+    "amount_max": 100000,
+    "total_funding": 500000,
+    "deadline": "2026-11-01",
+    "geographic_scope": "California",
+    "state": "CA",
+    "eligible_applicants": [
+      "accredited colleges and universities"
+    ],
+    "focus_areas": [
+      "diversity",
+      "higher education",
+      "student leadership",
+      "equity",
+      "professional development"
+    ],
+    "application_type": "LOI_then_full",
+    "requires_match": false,
+    "match_strengthens": false,
+    "federal": false,
+    "description": "Statewide initiative supporting programs that develop diverse student leaders into future higher education professionals. Funds mentorship, graduate school preparation, and professional development for underrepresented students interested in student affairs and higher education careers."
+  },
+  {
+    "id": "SYN-075",
+    "source": "synthetic",
+    "title": "Transfer Student Success Initiative",
+    "funder": "San Diego Grantmakers",
+    "funder_type": "community_foundation",
+    "amount_min": 8000,
+    "amount_max": 20000,
+    "total_funding": 120000,
+    "deadline": "2026-07-30",
+    "geographic_scope": "San Diego County, California",
+    "state": "CA",
+    "eligible_applicants": [
+      "accredited colleges and universities",
+      "501(c)(3) nonprofits"
+    ],
+    "focus_areas": [
+      "transfer students",
+      "student retention",
+      "higher education",
+      "academic support",
+      "first-generation students"
+    ],
+    "application_type": "full_application",
+    "requires_match": false,
+    "match_strengthens": false,
+    "federal": false,
+    "description": "Supports programs that ease the transition for community college transfer students at four-year institutions in San Diego County. Funds orientation programs, peer mentoring, academic advising, and social integration activities specifically designed for transfer students."
+  },
+  {
+    "id": "SYN-076",
+    "source": "synthetic",
+    "title": "Campus Sexual Assault Prevention and Response",
+    "funder": "Blue Shield of California Foundation",
+    "funder_type": "private_foundation",
+    "amount_min": 15000,
+    "amount_max": 50000,
+    "total_funding": 350000,
+    "deadline": "2026-09-01",
+    "geographic_scope": "California",
+    "state": "CA",
+    "eligible_applicants": [
+      "accredited colleges and universities",
+      "501(c)(3) nonprofits"
+    ],
+    "focus_areas": [
+      "violence prevention",
+      "student services",
+      "health education",
+      "safety",
+      "higher education"
+    ],
+    "application_type": "LOI_then_full",
+    "requires_match": false,
+    "match_strengthens": false,
+    "federal": false,
+    "description": "Funds evidence-based sexual assault prevention education and survivor support programs at California colleges and universities. Priority for programs that integrate bystander intervention training, culturally responsive support services, and campus climate assessment."
+  },
+  {
+    "id": "SYN-077",
+    "source": "synthetic",
+    "title": "International Student Integration Program Grants",
+    "funder": "Mingei International Museum Foundation",
+    "funder_type": "private_foundation",
+    "amount_min": 5000,
+    "amount_max": 15000,
+    "total_funding": 60000,
+    "deadline": "2026-08-01",
+    "geographic_scope": "San Diego County, California",
+    "state": "CA",
+    "eligible_applicants": [
+      "accredited colleges and universities"
+    ],
+    "focus_areas": [
+      "international students",
+      "cultural bridge-building",
+      "student services",
+      "inclusion",
+      "community building"
+    ],
+    "application_type": "full_application",
+    "requires_match": false,
+    "match_strengthens": false,
+    "federal": false,
+    "description": "Supports programs that help international students integrate into campus life and the San Diego community. Funds cultural exchange events, buddy programs, off-campus community engagement, and programs addressing social isolation among international students."
+  },
+  {
+    "id": "SYN-078",
+    "source": "synthetic",
+    "title": "Student Parent Support Initiative",
+    "funder": "Women's Foundation of California",
+    "funder_type": "private_foundation",
+    "amount_min": 10000,
+    "amount_max": 30000,
+    "total_funding": 200000,
+    "deadline": "2026-10-15",
+    "geographic_scope": "California",
+    "state": "CA",
+    "eligible_applicants": [
+      "501(c)(3) nonprofits",
+      "colleges and universities"
+    ],
+    "focus_areas": [
+      "student parents",
+      "childcare",
+      "student retention",
+      "equity",
+      "family support"
+    ],
+    "application_type": "full_application",
+    "requires_match": false,
+    "match_strengthens": false,
+    "federal": false,
+    "description": "Supports programs serving student parents at California colleges and universities, including campus childcare, parenting student resource centers, emergency financial assistance, and flexible academic support. Priority for programs at institutions with high enrollment of student parents."
+  },
+  {
+    "id": "SYN-079",
+    "source": "synthetic",
+    "title": "San Diego County Youth STEM Pipeline",
+    "funder": "Qualcomm Foundation",
+    "funder_type": "corporate_foundation",
+    "amount_min": 25000,
+    "amount_max": 75000,
+    "total_funding": 500000,
+    "deadline": "2026-08-30",
+    "geographic_scope": "San Diego County, California",
+    "state": "CA",
+    "eligible_applicants": [
+      "501(c)(3) nonprofits",
+      "K-12 schools",
+      "colleges and universities"
+    ],
+    "focus_areas": [
+      "STEM education",
+      "K-12 education",
+      "college readiness",
+      "youth development",
+      "tech education"
+    ],
+    "application_type": "full_application",
+    "requires_match": false,
+    "match_strengthens": true,
+    "federal": false,
+    "description": "Funds K-12 STEM pipeline programs that prepare San Diego County youth for college and STEM careers. Priority for programs serving Title I schools and underrepresented students. University partnerships for mentoring and lab access encouraged but primary beneficiaries must be K-12 students."
+  },
+  {
+    "id": "SYN-080",
+    "source": "synthetic",
+    "title": "Graduate Student Research in Public Health",
+    "funder": "San Diego Health Foundation",
+    "funder_type": "community_foundation",
+    "amount_min": 5000,
+    "amount_max": 20000,
+    "total_funding": 100000,
+    "deadline": "2026-07-15",
+    "geographic_scope": "San Diego County, California",
+    "state": "CA",
+    "eligible_applicants": [
+      "accredited universities with public health programs"
+    ],
+    "focus_areas": [
+      "public health",
+      "medical research",
+      "graduate education",
+      "community health"
+    ],
+    "application_type": "full_application",
+    "requires_match": false,
+    "match_strengthens": false,
+    "federal": false,
+    "description": "Supports graduate student research projects addressing public health challenges in San Diego County. Must be conducted through an accredited university public health or school of medicine program. Not available for undergraduate programs or student affairs initiatives."
+  },
+  {
+    "id": "SYN-081",
+    "source": "synthetic",
+    "title": "Los Angeles County Student Success Grants",
+    "funder": "Weingart Foundation",
+    "funder_type": "private_foundation",
+    "amount_min": 15000,
+    "amount_max": 50000,
+    "total_funding": 300000,
+    "deadline": "2026-08-01",
+    "geographic_scope": "Los Angeles County, California",
+    "state": "CA",
+    "eligible_applicants": [
+      "accredited colleges and universities",
+      "501(c)(3) nonprofits"
+    ],
+    "focus_areas": [
+      "student retention",
+      "higher education",
+      "equity",
+      "first-generation students",
+      "student services"
+    ],
+    "application_type": "full_application",
+    "requires_match": false,
+    "match_strengthens": false,
+    "federal": false,
+    "description": "Supports student success and retention programs at colleges and universities in Los Angeles County. Priority for programs serving first-generation and low-income students. Applicant institutions must be physically located in Los Angeles County."
+  },
+  {
+    "id": "SYN-082",
+    "source": "synthetic",
+    "title": "Federal Title III Strengthening Institutions Program",
+    "funder": "U.S. Department of Education",
+    "funder_type": "federal_government",
+    "amount_min": 200000,
+    "amount_max": 500000,
+    "total_funding": 15000000,
+    "deadline": "2026-06-15",
+    "geographic_scope": "USA (all 50 states)",
+    "state": "national",
+    "eligible_applicants": [
+      "accredited institutions of higher education with high percentage of financially needy students"
+    ],
+    "focus_areas": [
+      "higher education",
+      "institutional capacity",
+      "student services",
+      "academic support",
+      "fiscal stability"
+    ],
+    "application_type": "full_application",
+    "requires_match": true,
+    "match_strengthens": false,
+    "federal": true,
+    "description": "Strengthens institutional capacity at eligible institutions of higher education. Funds academic quality, institutional management, and fiscal stability improvements. Requires institutional matching funds and extensive federal reporting. Multi-year award with annual performance reporting."
+  },
+  {
+    "id": "SYN-083",
+    "source": "synthetic",
+    "title": "Orange County Campus Wellness Initiative",
+    "funder": "Orange County Community Foundation",
+    "funder_type": "community_foundation",
+    "amount_min": 10000,
+    "amount_max": 30000,
+    "total_funding": 150000,
+    "deadline": "2026-07-30",
+    "geographic_scope": "Orange County, California",
+    "state": "CA",
+    "eligible_applicants": [
+      "colleges and universities in Orange County",
+      "501(c)(3) nonprofits"
+    ],
+    "focus_areas": [
+      "mental health",
+      "wellness",
+      "student services",
+      "higher education",
+      "college students"
+    ],
+    "application_type": "full_application",
+    "requires_match": false,
+    "match_strengthens": false,
+    "federal": false,
+    "description": "Funds campus mental health and wellness programs at Orange County colleges and universities. Applicant institutions must be physically located in Orange County. Programs must primarily serve enrolled students."
+  },
+  {
+    "id": "SYN-084",
+    "source": "synthetic",
+    "title": "Bay Area Higher Education Innovation Fund",
+    "funder": "Silicon Valley Community Foundation",
+    "funder_type": "community_foundation",
+    "amount_min": 20000,
+    "amount_max": 60000,
+    "total_funding": 250000,
+    "deadline": "2026-09-01",
+    "geographic_scope": "San Francisco Bay Area, California",
+    "state": "CA",
+    "eligible_applicants": [
+      "accredited colleges and universities in the Bay Area"
+    ],
+    "focus_areas": [
+      "higher education",
+      "innovation",
+      "student services",
+      "technology in education",
+      "equity"
+    ],
+    "application_type": "LOI_then_full",
+    "requires_match": false,
+    "match_strengthens": false,
+    "federal": false,
+    "description": "Funds innovative student services and educational technology programs at Bay Area colleges and universities. Applicant institutions must be located in San Francisco, San Mateo, Santa Clara, Alameda, or Contra Costa counties."
+  },
+  {
+    "id": "SYN-085",
+    "source": "synthetic",
+    "title": "San Diego K-12 After-School Excellence Grants",
+    "funder": "Con Alma Health Foundation",
+    "funder_type": "private_foundation",
+    "amount_min": 5000,
+    "amount_max": 20000,
+    "total_funding": 120000,
+    "deadline": "2026-07-01",
+    "geographic_scope": "San Diego County, California",
+    "state": "CA",
+    "eligible_applicants": [
+      "K-12 schools",
+      "501(c)(3) nonprofits serving K-12 students"
+    ],
+    "focus_areas": [
+      "after-school programs",
+      "K-12 education",
+      "youth development",
+      "academic enrichment",
+      "tutoring"
+    ],
+    "application_type": "full_application",
+    "requires_match": false,
+    "match_strengthens": false,
+    "federal": false,
+    "description": "Supports after-school academic enrichment and tutoring programs for K-12 students in San Diego County. Programs must serve students in grades K-12. Not available for higher education or college-level programs."
+  },
+  {
+    "id": "SYN-086",
+    "source": "synthetic",
+    "title": "Undocumented Student Support Fund",
+    "funder": "Mission Edge San Diego",
+    "funder_type": "community_foundation",
+    "amount_min": 5000,
+    "amount_max": 15000,
+    "total_funding": 80000,
+    "deadline": "2026-08-15",
+    "geographic_scope": "San Diego County, California",
+    "state": "CA",
+    "eligible_applicants": [
+      "501(c)(3) nonprofits",
+      "colleges and universities"
+    ],
+    "focus_areas": [
+      "immigrant services",
+      "student services",
+      "equity",
+      "higher education",
+      "legal assistance"
+    ],
+    "application_type": "full_application",
+    "requires_match": false,
+    "match_strengthens": false,
+    "federal": false,
+    "description": "Supports programs serving undocumented and DACA students at San Diego County colleges and universities, including legal navigation, financial aid advising, mental health support, and emergency assistance. Must be provided through an established campus resource center or equivalent."
+  },
+  {
+    "id": "SYN-087",
+    "source": "synthetic",
+    "title": "Student Housing Stability Grants",
+    "funder": "San Diego Housing Commission Foundation",
+    "funder_type": "community_foundation",
+    "amount_min": 10000,
+    "amount_max": 40000,
+    "total_funding": 200000,
+    "deadline": "2026-09-30",
+    "geographic_scope": "San Diego County, California",
+    "state": "CA",
+    "eligible_applicants": [
+      "501(c)(3) nonprofits",
+      "colleges and universities"
+    ],
+    "focus_areas": [
+      "housing access",
+      "homelessness prevention",
+      "student services",
+      "basic needs",
+      "higher education"
+    ],
+    "application_type": "full_application",
+    "requires_match": false,
+    "match_strengthens": true,
+    "federal": false,
+    "description": "Addresses housing insecurity and homelessness among college students in San Diego County. Funds emergency housing assistance, housing navigation services, rapid rehousing for students, and partnerships between institutions and local housing providers."
+  },
+  {
+    "id": "SYN-088",
+    "source": "synthetic",
+    "title": "Veterans on Campus Support Program",
+    "funder": "Bob Hope USO Foundation \u2014 San Diego",
+    "funder_type": "private_foundation",
+    "amount_min": 5000,
+    "amount_max": 25000,
+    "total_funding": 100000,
+    "deadline": "2026-08-01",
+    "geographic_scope": "San Diego County, California",
+    "state": "CA",
+    "eligible_applicants": [
+      "accredited colleges and universities"
+    ],
+    "focus_areas": [
+      "veteran services",
+      "student services",
+      "higher education",
+      "mental health",
+      "student retention"
+    ],
+    "application_type": "full_application",
+    "requires_match": false,
+    "match_strengthens": false,
+    "federal": false,
+    "description": "Supports programs serving student veterans at San Diego County colleges and universities, including transition support, peer mentoring, mental health services, and academic advising tailored to veteran students. San Diego has one of the largest veteran populations in the country."
+  },
+  {
+    "id": "SYN-089",
+    "source": "synthetic",
+    "title": "San Diego Interfaith Campus Dialogue Initiative",
+    "funder": "National Conference for Community and Justice \u2014 San Diego",
+    "funder_type": "private_foundation",
+    "amount_min": 3000,
+    "amount_max": 10000,
+    "total_funding": 50000,
+    "deadline": "2026-07-15",
+    "geographic_scope": "San Diego County, California",
+    "state": "CA",
+    "eligible_applicants": [
+      "colleges and universities",
+      "501(c)(3) nonprofits"
+    ],
+    "focus_areas": [
+      "diversity",
+      "inclusion",
+      "community building",
+      "student services",
+      "civic engagement"
+    ],
+    "application_type": "full_application",
+    "requires_match": false,
+    "match_strengthens": false,
+    "federal": false,
+    "description": "Small grants for interfaith and intercultural dialogue programs on San Diego County college and university campuses. Funds facilitated dialogues, community meals, collaborative service projects, and programs that build understanding across religious and cultural differences."
+  },
+  {
+    "id": "SYN-090",
+    "source": "synthetic",
+    "title": "Riverside County Student Mental Health Collaborative",
+    "funder": "Inland Empire Community Foundation",
+    "funder_type": "community_foundation",
+    "amount_min": 10000,
+    "amount_max": 35000,
+    "total_funding": 175000,
+    "deadline": "2026-08-30",
+    "geographic_scope": "Riverside County, California",
+    "state": "CA",
+    "eligible_applicants": [
+      "accredited colleges and universities in Riverside County",
+      "501(c)(3) nonprofits"
+    ],
+    "focus_areas": [
+      "mental health",
+      "student services",
+      "higher education",
+      "wellness",
+      "college students"
+    ],
+    "application_type": "full_application",
+    "requires_match": false,
+    "match_strengthens": false,
+    "federal": false,
+    "description": "Funds campus mental health programs at Riverside County colleges and universities. Applicant institutions must be physically located in Riverside County. Collaborative proposals between institutions encouraged."
   }
 ]
