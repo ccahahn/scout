@@ -72,13 +72,11 @@ def get_recommended_ids(output):
 
 def max_grants_for_user(user):
     """
-    Determine max top recommendations based on user capacity.
-    Solo (team_size 1) → max 2
-    Small team (team_size 2+) → max 3
+    Max top recommendations: 3 for everyone.
+    Users compare and choose — 3 gives options without overwhelm.
+    Near-misses ("worth considering") add 0-2 more, capped at 5 total.
     """
-    if user.get("team_size", 1) >= 2:
-        return 3
-    return 2
+    return 3
 
 
 # ---------------------------------------------------------------------------
@@ -119,18 +117,30 @@ def hit_rate(output, expected):
 
 
 def overwhelm_check(output, expected):
-    """Score 1.0 if grant count is within user's capacity, 0.0 if over."""
+    """Score 1.0 if grant count is within limits, 0.0 if over.
+    Max 3 top recommendations. Max 2 near-misses. Max 5 total."""
     grants = output.get("grants", [])
-    count = len(grants)
-    max_allowed = max_grants_for_user(expected)
+    near_misses = output.get("near_misses", [])
+    grant_count = len(grants)
+    near_miss_count = len(near_misses)
+    total = grant_count + near_miss_count
+
+    max_grants = 3
+    max_near_misses = 2
+    max_total = 5
+
+    passed = grant_count <= max_grants and near_miss_count <= max_near_misses and total <= max_total
 
     return Score(
         name="overwhelm_check",
-        score=1.0 if count <= max_allowed else 0.0,
+        score=1.0 if passed else 0.0,
         metadata={
-            "grant_count": count,
-            "max_allowed": max_allowed,
-            "team_size": expected.get("team_size"),
+            "grant_count": grant_count,
+            "near_miss_count": near_miss_count,
+            "total": total,
+            "max_grants": max_grants,
+            "max_near_misses": max_near_misses,
+            "max_total": max_total,
         },
     )
 

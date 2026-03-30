@@ -20,7 +20,7 @@ User (browser)
 
 **Transcriber** — Receives call notes from the advisor (pasted into the intake form after or during the 1:1 call). Extracts a structured profile. If critical fields are missing, asks only the specific questions needed. Does not recommend grants.
 
-**Scout** — Receives the confirmed profile. Searches the grant database (pre-filtered to user's state + national). Filters out dealbreakers, geographic mismatches, eligibility failures. Ranks what remains. Produces draft recommendations based on user capacity (solo first-timer: 1-2, experienced team: up to 3) with full rationale. Does not present to the user.
+**Scout** — Receives the confirmed profile. Searches the grant database (pre-filtered to user's state + national). Filters out dealbreakers, geographic mismatches, eligibility failures. Ranks what remains. Produces up to 3 draft recommendations with full rationale, plus up to 2 near-misses (5 total max). Does not present to the user.
 
 **Scorer** — Receives the profile AND Scout's draft recommendations. Runs every recommendation through a checklist: geographic check, eligibility check, dealbreaker check, nuance check, language check, overwhelm check. If all pass → approved, presented to user. If any fail → rejected, Scout tries again.
 
@@ -202,7 +202,7 @@ Phase 3 — Results
    e. Tier 1 scorers check pipeline output:
       - Trap Avoidance: did Scout recommend any trap_grants? (0 allowed)
       - Hit Rate: did Scout recommend at least 1 correct_grant?
-      - Overwhelm Check: grant count ≤ user capacity (solo: 2, team: 3)
+      - Overwhelm Check: max 3 recommendations + max 2 near-misses (5 total)
    f. Logs scores to Braintrust via braintrust.Eval()
 3. Results visible in Braintrust dashboard: per-scorer scores, per-user pass rates
 4. Tier 2 scorers (geographic precision, dealbreaker violation, nuance flattening,

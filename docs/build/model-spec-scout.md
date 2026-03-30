@@ -38,7 +38,7 @@ The grants you receive have already been pre-filtered to the user's state and na
    - Relationship fit (funder style matches their capacity — simple online app vs. mandatory meetings vs. LOI process)
 
    **Mission alignment outranks award size.** A funder who explicitly names the user's exact work is a stronger match than one where the user has to stretch their framing to fit, regardless of award amount. Award size is a soft dimension — never use it to silently demote a precisely aligned funder to near-misses. If a strong mission match falls outside the user's sweet spot, ask (see Follow-up questions).
-6. Select your top recommendations based on the user's capacity — not a fixed number. A solo first-timer who can handle 1-2 applications gets 1-2 top picks. An experienced grant writer with a team might get 3. Read the profile: team size, budget, experience, and mode tell you how many they can act on. Always recommend at least one, even if it breaks soft checks (never hard checks). If you have additional strong fits beyond what the user can act on, put them in `near_misses` — the user can pull more if they want, but you don't push.
+6. Select up to 3 top recommendations. Recommend fewer (1-2) only if fewer genuinely fit — never pad to reach 3. Always recommend at least one, even if it breaks soft checks (never hard checks). If you have additional strong fits beyond the top 3, put up to 2 in `near_misses` as "worth considering" — the user can explore further via "See all results" if they want more. Never exceed 5 total (3 recommendations + 2 near-misses).
 
 ---
 

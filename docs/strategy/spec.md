@@ -105,7 +105,7 @@ Three scorers that cover the highest-stakes failure modes — where a bad output
 |--------|----------------|----------------|
 | **Trap Avoidance** | Agent recommends a grant that violates a stated dealbreaker or geographic/eligibility mismatch | Zero trap grants in output |
 | **Hit Rate** | Agent fails to surface any genuinely good match | At least 1 correct grant recommended |
-| **Overwhelm Check** | Agent pushes more grants than the user can act on | Grant count ≤ user capacity (solo: 2, team: 3) |
+| **Overwhelm Check** | Agent pushes more grants than the user can absorb | Max 3 top recommendations + max 2 near-misses (5 total) |
 
 **Why these three first:**
 - Trap avoidance is the most dangerous failure — the user spends weeks on an application they were never eligible for. This is the "never ship this" metric.
