@@ -304,7 +304,7 @@ def _recover_from_thinking(thinking_text, original_params):
         system=original_params["system"],
         messages=[
             original_params["messages"][0],  # original user message with profile + grants
-            {"role": "assistant", "content": [{"type": "thinking", "thinking": thinking_text, "signature": ""}, {"type": "text", "text": "Let me now submit my recommendations."}]},
+            {"role": "assistant", "content": f"Here is my analysis:\n\n{thinking_text}\n\nLet me now submit my recommendations."},
             {"role": "user", "content": "Please call submit_recommendations now based on your analysis above."},
         ],
     )

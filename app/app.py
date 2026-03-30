@@ -12,9 +12,58 @@ LIGHT_PURPLE = "#7b77c9"
 # ---- Global styles ----
 st.markdown(f"""
 <style>
-/* Scout title */
+/* Base type scale — font loaded via .streamlit/config.toml */
+html, body {{
+    font-size: 16px !important;
+    line-height: 1.6 !important;
+    color: #262624 !important;
+}}
+
+/* Page title: 28px */
 h1 {{
     color: {PURPLE} !important;
+    font-size: 28px !important;
+    font-weight: 600 !important;
+    line-height: 1.3 !important;
+}}
+
+/* Section headers: 20px */
+h2, h3, h4 {{
+    font-size: 20px !important;
+    font-weight: 600 !important;
+    line-height: 1.4 !important;
+}}
+
+/* Body text (paragraphs, list items, markdown): 16px */
+p, li, .stMarkdown {{
+    font-size: 16px !important;
+    line-height: 1.6 !important;
+}}
+
+/* Grant titles in results: 18px */
+.stMarkdown strong {{
+    font-size: 18px;
+    font-weight: 600;
+}}
+
+/* Metadata (amounts, deadlines): 13px */
+.stCaption, [data-testid="stCaptionContainer"], [data-testid="stCaptionContainer"] p {{
+    font-family: 'Inter', sans-serif !important;
+    font-size: 13px !important;
+    line-height: 1.5 !important;
+}}
+
+/* Buttons: 15px */
+.stButton > button {{
+    font-size: 15px !important;
+    font-weight: 500 !important;
+}}
+
+/* Text inputs and areas: 16px */
+.stTextArea textarea, .stTextInput input,
+[data-testid="stChatInput"] textarea {{
+    font-size: 16px !important;
+    line-height: 1.6 !important;
 }}
 
 /* Primary buttons: coral */
@@ -76,7 +125,7 @@ textarea:focus, input:focus {{
 .back-link {{
     color: {LIGHT_PURPLE};
     text-decoration: none;
-    font-size: 14px;
+    font-size: 15px;
     cursor: pointer;
 }}
 .back-link:hover {{
@@ -98,7 +147,7 @@ textarea:focus, input:focus {{
 .apply-header p {{
     color: rgba(255,255,255,0.85);
     margin: 4px 0 0 0;
-    font-size: 14px;
+    font-size: 15px;
 }}
 
 /* Pre-filled field styling */
@@ -108,12 +157,12 @@ textarea:focus, input:focus {{
     border-radius: 6px;
     padding: 10px 14px;
     margin: 4px 0 16px 0;
-    font-size: 14px;
-    color: #333;
+    font-size: 15px;
+    color: #262624;
 }}
 .prefilled-label {{
-    font-size: 12px;
-    font-weight: 600;
+    font-size: 13px;
+    font-weight: 500;
     color: #666;
     margin-bottom: 2px;
     text-transform: uppercase;
@@ -123,7 +172,7 @@ textarea:focus, input:focus {{
     display: inline-block;
     background: {LIGHT_PURPLE};
     color: white;
-    font-size: 10px;
+    font-size: 11px;
     padding: 2px 6px;
     border-radius: 3px;
     margin-left: 6px;
@@ -138,7 +187,7 @@ textarea:focus, input:focus {{
     padding: 6px 16px;
     border-radius: 6px;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 500;
     cursor: pointer;
     border: none;
@@ -162,7 +211,7 @@ textarea:focus, input:focus {{
 .detail-header p {{
     color: rgba(255,255,255,0.85);
     margin: 4px 0 0 0;
-    font-size: 14px;
+    font-size: 15px;
 }}
 
 /* Detail field styling */
@@ -170,17 +219,17 @@ textarea:focus, input:focus {{
     margin: 12px 0;
 }}
 .detail-label {{
-    font-size: 12px;
-    font-weight: 600;
+    font-size: 13px;
+    font-weight: 500;
     color: #666;
     text-transform: uppercase;
     letter-spacing: 0.03em;
     margin-bottom: 2px;
 }}
 .detail-value {{
-    font-size: 14px;
-    color: #333;
-    line-height: 1.5;
+    font-size: 15px;
+    color: #262624;
+    line-height: 1.6;
 }}
 
 /* Mock banner */
@@ -207,7 +256,7 @@ textarea:focus, input:focus {{
     display: inline-block;
     background: #f0eef9;
     color: {PURPLE};
-    font-size: 11px;
+    font-size: 12px;
     padding: 2px 8px;
     border-radius: 12px;
     margin: 2px 2px 2px 0;
@@ -281,110 +330,79 @@ def go_back_to_intake():
 
 
 # ---- Progress UI ----
-PROGRESS_CSS = f"""
+THINKING_CSS = f"""
 <style>
-.progress-container {{
-    margin: 24px 0;
+.thinking-container {{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 32px 0;
 }}
-.progress-bar-bg {{
-    background: #e8e8ec;
-    border-radius: 8px;
-    height: 6px;
-    overflow: hidden;
-    margin: 12px 0;
+.thinking-dot {{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: {PURPLE};
+    animation: pulse 1.5s ease-in-out infinite;
 }}
-.progress-bar-fill {{
-    background: linear-gradient(90deg, {LIGHT_PURPLE}, {PURPLE});
-    height: 100%;
-    border-radius: 8px;
-    transition: width 0.5s ease;
+@keyframes pulse {{
+    0%, 100% {{ opacity: 0.3; transform: scale(0.9); }}
+    50% {{ opacity: 1; transform: scale(1.1); }}
 }}
-.progress-snippet {{
-    font-size: 14px;
+.thinking-text {{
+    font-size: 15px;
     color: #666;
-    min-height: 24px;
-    transition: opacity 0.3s ease;
 }}
-.progress-step {{
-    font-size: 12px;
+.thinking-timer {{
+    font-size: 13px;
     color: #999;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
+    font-variant-numeric: tabular-nums;
+    margin-top: -24px;
 }}
 </style>
 """
 
-MAX_SNIPPET_LEN = 80
 
 def make_thinking_ui():
-    """Create progress bar UI with single-line snippets from Scout's thinking."""
-    st.markdown(PROGRESS_CSS, unsafe_allow_html=True)
-    status_label = st.empty()
-    status_label.caption("Reading your notes...")
-    progress_bar = st.empty()
-    snippet_display = st.empty()
+    """Create pulsing dot + elapsed timer UI while Scout thinks."""
+    st.markdown(THINKING_CSS, unsafe_allow_html=True)
+    status_display = st.empty()
+    timer_display = st.empty()
 
-    thinking_buffer = []
     import time
-    last_snippet_time = [0]
+    start_time = [time.time()]
+    last_timer_update = [0]
 
-    steps = {
-        "transcriber": 15,
-        "filtering": 25,
-        "scout": 70,
-        "scorer": 90,
-        "done": 100,
-    }
-    current_step = ["transcriber"]
-
-    def render_progress(pct):
-        progress_bar.markdown(
-            f'<div class="progress-bar-bg"><div class="progress-bar-fill" style="width: {pct}%"></div></div>',
+    def _render_status(msg):
+        status_display.markdown(
+            f'<div class="thinking-container">'
+            f'<div class="thinking-dot"></div>'
+            f'<span class="thinking-text">{msg}</span>'
+            f'</div>',
             unsafe_allow_html=True,
         )
 
+    def _update_timer():
+        elapsed = int(time.time() - start_time[0])
+        if elapsed != last_timer_update[0]:
+            timer_display.markdown(
+                f'<div class="thinking-timer">{elapsed}s</div>',
+                unsafe_allow_html=True,
+            )
+            last_timer_update[0] = elapsed
+
+    _render_status("Finding your best-fit grants so you can spend your time on the work, not the search. Back in two minutes.")
+
     def on_thinking(chunk):
-        thinking_buffer.append(chunk)
-        now = time.time()
-        # Update snippet every 2.5 seconds
-        if now - last_snippet_time[0] < 2.5:
-            return
-        # Join recent buffer and find the latest complete sentence
-        text = "".join(thinking_buffer)
-        # Find sentences by splitting on period + space or newline
-        sentences = [s.strip() for s in text.replace("\n", ". ").split(". ") if s.strip()]
-        if not sentences:
-            return
-        # Take the last sentence that fits the character limit
-        for s in reversed(sentences):
-            clean = s.rstrip(".")
-            if len(clean) <= MAX_SNIPPET_LEN and len(clean) > 15 and "{" not in clean and "}" not in clean and ":" not in clean[:5]:
-                snippet_display.markdown(f'<div class="progress-snippet">{clean}</div>', unsafe_allow_html=True)
-                last_snippet_time[0] = now
-                break
-        # Keep only recent buffer to avoid memory growth
-        if len(thinking_buffer) > 50:
-            thinking_buffer.clear()
-            thinking_buffer.append(text[-500:])
+        _update_timer()
 
     def on_scorer(chunk):
-        # Scorer thinking — just keep progress bar moving, no snippets
-        pass
+        _update_timer()
 
     def on_status(msg):
-        status_label.caption(msg)
-        # Advance progress bar based on known pipeline steps
-        if "match your area" in msg:
-            current_step[0] = "filtering"
-        elif "quality check" in msg.lower() or "Re-checking" in msg:
-            current_step[0] = "scorer"
-        elif "High confidence" in msg or "presenting" in msg.lower():
-            current_step[0] = "done"
-        elif "Refining" in msg or "Scout is" in msg or "better fit" in msg:
-            current_step[0] = "scout"
-        render_progress(steps.get(current_step[0], 50))
+        # Pipeline status updates just tick the timer, don't replace the main message
+        _update_timer()
 
-    render_progress(steps["transcriber"])
     return on_thinking, on_scorer, on_status
 
 
@@ -621,14 +639,14 @@ elif st.session_state.phase == "explore":
             geo = g.get("geographic_scope", "")
             focus = g.get("focus_areas", [])
 
-            st.markdown(f"**{title}**")
+            st.markdown(f"**{escape_dollars(title)}**")
             meta_parts = []
             if funder:
-                meta_parts.append(funder)
+                meta_parts.append(escape_dollars(funder))
             if amount_range:
                 meta_parts.append(amount_range)
             if deadline:
-                meta_parts.append(f"Deadline: {deadline}")
+                meta_parts.append(f"Deadline: {escape_dollars(deadline)}")
             if meta_parts:
                 st.markdown(" | ".join(meta_parts), unsafe_allow_html=True)
             if geo:
@@ -726,9 +744,9 @@ else:
                 questions = st.session_state.follow_up
                 if isinstance(questions, list):
                     for q in questions:
-                        st.markdown(f"- {q}")
+                        st.markdown(f"- {escape_dollars(q)}", unsafe_allow_html=True)
                 else:
-                    st.markdown(str(questions))
+                    st.markdown(escape_dollars(str(questions)), unsafe_allow_html=True)
             st.write("")
             answers = st.text_area(
                 "Your answers",
@@ -770,11 +788,11 @@ else:
                         rationale = grant.get("rationale", "")
                         caveats = grant.get("caveats")
 
-                        st.markdown(f"**{title}**")
+                        st.markdown(f"**{escape_dollars(title)}**")
                         if amount_range:
                             st.markdown(amount_range, unsafe_allow_html=True)
                         if deadline:
-                            st.markdown(f"Deadline: {deadline}")
+                            st.markdown(f"Deadline: {escape_dollars(deadline)}")
                         st.write("")
                         if rationale:
                             st.markdown(escape_dollars(rationale), unsafe_allow_html=True)
@@ -798,14 +816,14 @@ else:
                         st.write("")
 
                 elif message:
-                    st.markdown(message)
+                    st.markdown(escape_dollars(message), unsafe_allow_html=True)
 
                 if near_misses:
                     st.write("---")
                     st.markdown("**Worth keeping an eye on:**")
                     st.write("")
                     for nm in near_misses:
-                        st.markdown(f"**{nm.get('title', '')}**")
+                        st.markdown(f"**{escape_dollars(nm.get('title', ''))}**")
                         if nm.get("what_aligns"):
                             st.markdown(f"*What aligns:* {escape_dollars(nm['what_aligns'])}", unsafe_allow_html=True)
                         if nm.get("the_issue"):
@@ -817,13 +835,13 @@ else:
             # Chat history
             for msg in st.session_state.chat_history:
                 with st.chat_message(msg["role"]):
-                    st.markdown(msg["content"], unsafe_allow_html=True)
+                    st.markdown(escape_dollars(msg["content"]), unsafe_allow_html=True)
 
             # Chat input
             if prompt := st.chat_input("Ask about these grants, or tell me what to look for next..."):
                 st.session_state.chat_history.append({"role": "user", "content": prompt})
                 with st.chat_message("user"):
-                    st.markdown(prompt)
+                    st.markdown(escape_dollars(prompt))
                 with st.chat_message("assistant"):
                     with st.spinner("Thinking..."):
                         response = run_chat_followup(
@@ -844,10 +862,11 @@ else:
     # ---- INTAKE ----
     else:
         with page.container():
-            st.caption("Grant prospecting co-pilot")
+            st.markdown('<p style="font-family: Inter, sans-serif; font-size: 16px; color: #666; margin-top: -8px;">Grant prospecting co-pilot</p>', unsafe_allow_html=True)
             st.write("")
             st.markdown("**Fill in what you know from the call.** Leave blank anything you didn't cover.")
-            st.text("""Organization:
+            st.write("")
+            st.markdown("""Organization:
 Location (city, county, state):
 Mission (in their words):
 Who they serve:
