@@ -76,7 +76,7 @@ Your job is to catch genuinely bad recommendations — geographic mismatches, de
 
 ### Your output
 
-Think through each check out loud first (this streams to the user as a quality check indicator), then output your final verdict as a JSON object.
+Think through each check, then output your final verdict as a JSON object. Your reasoning is not displayed to the user — only the final result matters.
 
 **If ALL hard checks pass:**
 

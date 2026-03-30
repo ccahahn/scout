@@ -468,10 +468,24 @@ def run_pipeline(profile_text, thinking_callback=None, scorer_callback=None, sta
 
     # Retry loop if Scorer rejects
     retries = 0
+    retry_messages = [
+        "Quality check caught an issue — Scout is finding a better fit...",
+        "Not quite right yet — Scout is trying a different angle...",
+    ]
     while is_rejected(scorer_output) and retries < MAX_SCORER_RETRIES:
+        # Try to extract what failed from Scorer output
+        retry_reason = ""
+        try:
+            scorer_data_check = parse_json_output(scorer_output)
+            failed = scorer_data_check.get("failed_checks", [])
+            if failed:
+                retry_reason = f" ({failed[0][:60]})"
+        except ValueError:
+            pass
+
         retries += 1
-        log.info("Scorer rejected — retry %d of %d", retries, MAX_SCORER_RETRIES)
-        update_status(f"Refining recommendations (attempt {retries + 1})...")
+        log.info("Scorer rejected — retry %d of %d%s", retries, MAX_SCORER_RETRIES, retry_reason)
+        update_status(retry_messages[retries - 1] if retries <= len(retry_messages) else "Scout is refining...")
         scout_data = run_scout(
             f"{profile_text}\n\nPrevious recommendation was rejected by quality check:\n{scorer_output}\n\nPlease try again with this feedback.",
             grants=filtered_grants,

@@ -280,79 +280,111 @@ def go_back_to_intake():
 
 
 
-# ---- Shared CSS for thinking box ----
-THINKING_CSS = f"""
+# ---- Progress UI ----
+PROGRESS_CSS = f"""
 <style>
-.thinking-scroll {{
-    height: 60vh;
-    overflow-y: auto;
-    display: flex;
-    flex-direction: column-reverse;
+.progress-container {{
+    margin: 24px 0;
 }}
-.thinking-box {{
-    background: #f7f7f8;
-    border: 1px solid #e0e0e0;
+.progress-bar-bg {{
+    background: #e8e8ec;
     border-radius: 8px;
-    padding: 16px;
-    font-family: monospace;
-    font-size: 13px;
-    line-height: 1.6;
-    color: #555;
-    white-space: pre-wrap;
-    word-wrap: break-word;
+    height: 6px;
+    overflow: hidden;
+    margin: 12px 0;
 }}
-.thinking-section {{ color: #555; }}
-.scorer-section {{ color: #2e7d32; }}
-.section-label {{
-    display: inline-block;
-    font-weight: 600;
+.progress-bar-fill {{
+    background: linear-gradient(90deg, {LIGHT_PURPLE}, {PURPLE});
+    height: 100%;
+    border-radius: 8px;
+    transition: width 0.5s ease;
+}}
+.progress-snippet {{
+    font-size: 14px;
+    color: #666;
+    min-height: 24px;
+    transition: opacity 0.3s ease;
+}}
+.progress-step {{
     font-size: 12px;
+    color: #999;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    margin: 16px 0 8px 0;
-    padding: 2px 8px;
-    border-radius: 4px;
 }}
-.label-scout {{ background: #e8eaf6; color: #3949ab; }}
-.label-scorer {{ background: #e8f5e9; color: #2e7d32; }}
 </style>
 """
 
+MAX_SNIPPET_LEN = 80
+
 def make_thinking_ui():
-    """Create the thinking box UI elements and return callbacks."""
-    st.markdown(THINKING_CSS, unsafe_allow_html=True)
+    """Create progress bar UI with single-line snippets from Scout's thinking."""
+    st.markdown(PROGRESS_CSS, unsafe_allow_html=True)
     status_label = st.empty()
     status_label.caption("Reading your notes...")
-    thinking_container = st.empty()
+    progress_bar = st.empty()
+    snippet_display = st.empty()
 
-    current_thinking = []
-    current_scorer = []
+    thinking_buffer = []
+    import time
+    last_snippet_time = [0]
 
-    def render_box():
-        parts = []
-        if current_thinking:
-            parts.append('<div class="section-label label-scout">Scout - filtering</div>')
-            parts.append(f'<div class="thinking-section">{"".join(current_thinking)}</div>')
-        if current_scorer:
-            parts.append('<div class="section-label label-scorer">Scorer - quality check</div>')
-            parts.append(f'<div class="scorer-section">{"".join(current_scorer)}</div>')
-        html = "".join(parts)
-        thinking_container.markdown(
-            f'<div class="thinking-scroll"><div><div class="thinking-box">{html}</div></div></div>',
+    steps = {
+        "transcriber": 15,
+        "filtering": 25,
+        "scout": 70,
+        "scorer": 90,
+        "done": 100,
+    }
+    current_step = ["transcriber"]
+
+    def render_progress(pct):
+        progress_bar.markdown(
+            f'<div class="progress-bar-bg"><div class="progress-bar-fill" style="width: {pct}%"></div></div>',
             unsafe_allow_html=True,
         )
 
     def on_thinking(chunk):
-        current_thinking.append(chunk)
-        render_box()
+        thinking_buffer.append(chunk)
+        now = time.time()
+        # Update snippet every 2.5 seconds
+        if now - last_snippet_time[0] < 2.5:
+            return
+        # Join recent buffer and find the latest complete sentence
+        text = "".join(thinking_buffer)
+        # Find sentences by splitting on period + space or newline
+        sentences = [s.strip() for s in text.replace("\n", ". ").split(". ") if s.strip()]
+        if not sentences:
+            return
+        # Take the last sentence that fits the character limit
+        for s in reversed(sentences):
+            clean = s.rstrip(".")
+            if len(clean) <= MAX_SNIPPET_LEN and len(clean) > 15 and "{" not in clean and "}" not in clean and ":" not in clean[:5]:
+                snippet_display.markdown(f'<div class="progress-snippet">{clean}</div>', unsafe_allow_html=True)
+                last_snippet_time[0] = now
+                break
+        # Keep only recent buffer to avoid memory growth
+        if len(thinking_buffer) > 50:
+            thinking_buffer.clear()
+            thinking_buffer.append(text[-500:])
 
     def on_scorer(chunk):
-        current_scorer.append(chunk)
-        render_box()
+        # Scorer thinking — just keep progress bar moving, no snippets
+        pass
 
     def on_status(msg):
-        status_label.caption(f"{msg}")
+        status_label.caption(msg)
+        # Advance progress bar based on known pipeline steps
+        if "match your area" in msg:
+            current_step[0] = "filtering"
+        elif "quality check" in msg.lower() or "Re-checking" in msg:
+            current_step[0] = "scorer"
+        elif "High confidence" in msg or "presenting" in msg.lower():
+            current_step[0] = "done"
+        elif "Refining" in msg or "Scout is" in msg or "better fit" in msg:
+            current_step[0] = "scout"
+        render_progress(steps.get(current_step[0], 50))
 
+    render_progress(steps["transcriber"])
     return on_thinking, on_scorer, on_status
 
 

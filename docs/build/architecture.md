@@ -50,7 +50,7 @@ Streamlit Web App (Python)
 - Intake form: advisor pastes call notes into a structured template (org, location, mission, dealbreakers, etc.)
 - One-shot flow: paste notes → click "Find Grants" → pipeline runs → results appear
 - Session state holds: pipeline phase (intake / searching / follow_up / searching_with_answers / results / grant_detail / explore / apply), confirmed profile, approved grants, chat history
-- Thinking box: shows Scout filtering, Scout drafting, and Scorer quality-checking in real time with color-coded sections
+- Progress bar with single-line snippets: shows pipeline stage (transcriber → filter → scout → scorer → done) and samples short insights from Scout's thinking every few seconds
 - Results page: grant cards with rationale + "Apply" and "Learn more" buttons + "See all results" link + follow-up chat
 - Learn More page: mock grant detail page showing full grant info from grants.json (funder, description, eligibility, focus areas, geographic scope, etc.)
 - Explore All page: mock search results page with all grants and filters (geographic match, grant size)
@@ -72,7 +72,7 @@ Streamlit Web App (Python)
   2. Scout: system prompt + confirmed profile + grants.json → draft recommendations (with extended thinking, 15K token budget)
   3. Scorer: system prompt + confirmed profile + draft recommendations → approve/reject
 - If Scorer rejects, Scout is called again with feedback (max 2 retries)
-- Scout streams thinking + text tokens; Scorer streams text tokens (both shown live in thinking box)
+- Scout streams thinking tokens; app samples short snippets for the progress display. Scorer streams text tokens (not shown to user, used for verdict parsing only)
 
 **4. Grant data (`data/grants.json`)**
 - 125 grants (35 real from GrantWatch + 90 synthetic)
@@ -170,7 +170,7 @@ Phase 1 — Intake
 2. Advisor pastes call notes into the intake template
 3. Clicks "Find Grants"
 
-Phase 2 — Pipeline (behind the scenes, shown in thinking box)
+Phase 2 — Pipeline (behind the scenes, shown via progress bar + snippets)
 4. App fetches transcriber-prompt from Braintrust
 5. Transcriber receives call notes, extracts structured profile
 6. App fetches scout-prompt, loads grants.json (pre-filtered to user's state + national)
@@ -253,8 +253,8 @@ Three Claude calls per pipeline run (Transcriber + Scout + conditional Scorer). 
 | 1 | Set up accounts (Anthropic, Braintrust) + repo + `.env` | Done |
 | 2 | Wrote 3 prompts in Braintrust (transcriber, scout, scorer) | Done |
 | 3 | Built `pipeline.py` — all three agents + orchestration in one file | Done |
-| 4 | Built `app.py` — Streamlit UI with intake form, thinking box, results page | Done |
-| 5 | Added streaming: Scout extended thinking + Scorer text stream live in thinking box | Done |
+| 4 | Built `app.py` — Streamlit UI with intake form, progress bar, results page | Done |
+| 5 | Added streaming: Scout thinking sampled as progress snippets, Scorer streams for parsing | Done |
 | 6 | Added conditional Scorer: high confidence skips Scorer, medium/low triggers quality check | Done |
 | 7 | Added follow-up questions: Scout can ask before committing to recommendations | Done |
 | 8 | Added follow-up chat: user can ask about grants after results are shown | Done |
