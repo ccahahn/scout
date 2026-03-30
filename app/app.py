@@ -391,7 +391,7 @@ def make_thinking_ui():
             )
             last_timer_update[0] = elapsed
 
-    _render_status("Finding your best-fit grants so you can spend your time on the work, not the search. Back in two minutes.")
+    _render_status("Searching so you don't have to. Back in two minutes.")
 
     def on_thinking(chunk):
         _update_timer()
