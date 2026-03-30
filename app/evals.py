@@ -40,6 +40,11 @@ def build_call_notes(user):
     dealbreakers = ", ".join(user.get("dealbreakers", []))
     preferences = ", ".join(user.get("preferences", []))
 
+    current_funding = user.get("current_funding", "not discussed")
+    fund_use = user.get("fund_use", "not discussed")
+    renewability = user.get("renewability_preference", "not discussed")
+    spending = user.get("spending_parameters", "not discussed")
+
     notes = f"""Organization: {user["org_name"]}
 Location: {user["location"]} ({user["county"]})
 Mission: {says_first}
@@ -48,6 +53,10 @@ Team size: {user["team_size"]}
 Annual budget: ${user["annual_budget"]:,}
 Years operating: {user["years_operating"]}
 Grant experience: {user["grant_experience"]}
+Current grants or funding: {current_funding}
+How they'd use the funds: {fund_use}
+Renewability: {renewability}
+Spending parameters: {spending}
 Looking for: {preferences}
 Avoid: {dealbreakers}
 Mode: {user["browsing_mode"].replace("_", " ")}"""

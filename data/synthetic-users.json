@@ -12,20 +12,54 @@
     "annual_budget": 180000,
     "team_size": 1,
     "mission": "After-school tutoring and mentoring for first-generation Latino students in south Austin",
-    "populations_served": ["Latino youth", "first-generation students", "low-income families"],
+    "populations_served": [
+      "Latino youth",
+      "first-generation students",
+      "low-income families"
+    ],
     "grant_experience": "Has applied for 3 grants, won 1 ($3,000 from a local Rotary club)",
     "communication_style": "Warm, talks fast, gets excited about her students, uses Spanglish occasionally, says 'our kids' a lot",
     "what_she_says_first": "We're a small org in south Austin, we do tutoring and mentoring for kids whose parents didn't go to college. It's mostly me running everything but the kids are incredible.",
     "hidden_context": "She doesn't know what an LOI is. She's overwhelmed by Instrumentl results. She tried filtering by 'education' and got 200+ results and gave up.",
-    "dealbreakers": ["federal grants", "matching fund requirements", "mandatory in-person meetings outside Austin"],
-    "preferences": ["local funders", "simple applications", "grants under $15K"],
+    "dealbreakers": [
+      "federal grants",
+      "matching fund requirements",
+      "mandatory in-person meetings outside Austin"
+    ],
+    "preferences": [
+      "local funders",
+      "simple applications",
+      "grants under $15K"
+    ],
     "browsing_mode": "active_hunting",
-    "correct_grants": ["SYN-001", "SYN-002", "SYN-003", "GW-208315"],
-    "near_miss_grants": ["GW-166764"],
-    "near_miss_reason": "GW-166764 (United Way Austin $50K) is strong mission fit but 3x her ceiling — perfect near-miss candidate for follow-up question.",
-    "trap_grants": ["GW-227240", "GW-201598", "SYN-025", "SYN-060", "SYN-061"],
+    "correct_grants": [
+      "SYN-001",
+      "SYN-002",
+      "SYN-003",
+      "GW-208315"
+    ],
+    "near_miss_grants": [
+      "GW-166764"
+    ],
+    "near_miss_reason": "GW-166764 (United Way Austin $50K) is strong mission fit but 3x her ceiling \u2014 perfect near-miss candidate for follow-up question.",
+    "trap_grants": [
+      "GW-227240",
+      "GW-201598",
+      "SYN-025",
+      "SYN-060",
+      "SYN-061"
+    ],
     "trap_reason": "GW-227240 is federal with 1:1 match. GW-201598 is federal CDBG. SYN-025 is Dallas County (wrong county in TX). SYN-060 is federal. SYN-061 is Bexar County (wrong county in TX).",
-    "tests_eval_criteria": ["jargon_mirroring", "capacity_inference", "dealbreaker_detection", "no_overwhelm"]
+    "tests_eval_criteria": [
+      "jargon_mirroring",
+      "capacity_inference",
+      "dealbreaker_detection",
+      "no_overwhelm"
+    ],
+    "current_funding": "One $3,000 Rotary club grant (completed)",
+    "fund_use": "Program supplies, snacks for students, maybe a part-time tutor",
+    "renewability_preference": "one-time is fine, she's not thinking that far ahead",
+    "spending_parameters": "needs simple \u2014 no indirect cost tracking, no match"
   },
   {
     "id": "user-02",
@@ -40,18 +74,47 @@
     "annual_budget": 45000,
     "team_size": 1,
     "mission": "Community gardens in food deserts providing fresh produce and nutrition education to low-income residents",
-    "populations_served": ["low-income residents", "food desert communities", "seniors"],
+    "populations_served": [
+      "low-income residents",
+      "food desert communities",
+      "seniors"
+    ],
     "grant_experience": "Never applied for a grant. Entirely donor-funded so far.",
     "communication_style": "Terse. Gives short answers. Doesn't volunteer information. Says 'yeah' and 'I guess' a lot. Not unfriendly, just efficient.",
     "what_he_says_first": "We run community gardens. Looking for funding.",
     "hidden_context": "He's a software engineer by day. He's not intimidated by technology but he IS intimidated by grant writing jargon. He doesn't know what 'capacity building' means in the nonprofit context.",
-    "dealbreakers": ["anything requiring more than 5 pages of writing", "multi-year commitments"],
-    "preferences": ["local Rhode Island funders", "micro and small grants", "online applications"],
+    "dealbreakers": [
+      "anything requiring more than 5 pages of writing",
+      "multi-year commitments"
+    ],
+    "preferences": [
+      "local Rhode Island funders",
+      "micro and small grants",
+      "online applications"
+    ],
     "browsing_mode": "active_hunting",
-    "correct_grants": ["GW-178186", "SYN-004", "SYN-005", "SYN-039"],
-    "trap_grants": ["GW-219825", "SYN-022", "SYN-064"],
+    "correct_grants": [
+      "GW-178186",
+      "SYN-004",
+      "SYN-005",
+      "SYN-039"
+    ],
+    "trap_grants": [
+      "GW-219825",
+      "SYN-022",
+      "SYN-064"
+    ],
     "trap_reason": "GW-219825 is NY Great Lakes basin. SYN-022 is federal with 25+ page app and dollar-for-dollar match. SYN-064 is federal SNAP-Ed with match requirement.",
-    "tests_eval_criteria": ["handles_terse_user", "doesnt_over_ask", "no_jargon", "first_time_applicant_sensitivity"]
+    "tests_eval_criteria": [
+      "handles_terse_user",
+      "doesnt_over_ask",
+      "no_jargon",
+      "first_time_applicant_sensitivity"
+    ],
+    "current_funding": "None. Entirely donor-funded.",
+    "fund_use": "Raised beds, soil, seeds, tools, maybe a storage shed",
+    "renewability_preference": "one-time only \u2014 he explicitly doesn't want multi-year commitments",
+    "spending_parameters": "no restrictions awareness \u2014 first-time applicant"
   },
   {
     "id": "user-03",
@@ -66,18 +129,47 @@
     "annual_budget": 450000,
     "team_size": 2,
     "mission": "Workforce development and financial literacy for formerly incarcerated adults re-entering the community",
-    "populations_served": ["formerly incarcerated adults", "re-entry population", "low-income adults"],
+    "populations_served": [
+      "formerly incarcerated adults",
+      "re-entry population",
+      "low-income adults"
+    ],
     "grant_experience": "Experienced. Has managed 8-10 grants over 5 years, including one federal pass-through.",
-    "communication_style": "Professional, organized, knows grant terminology. But she rambles — gives long backstories before getting to the point. Will tell you about a funder's board member she met at a conference before telling you what she's looking for.",
+    "communication_style": "Professional, organized, knows grant terminology. But she rambles \u2014 gives long backstories before getting to the point. Will tell you about a funder's board member she met at a conference before telling you what she's looking for.",
     "what_she_says_first": "So we've been around for twelve years now, and I actually used to work at the county workforce office before I came over, which is how I know the landscape pretty well, and we've had some success with grants but I feel like there's more out there that I'm missing, especially with the way things have shifted post-COVID with the re-entry space...",
-    "hidden_context": "She can handle federal grants but prefers private foundations because the reporting is simpler. She won't say this directly — she'll say 'the government stuff is fine but it's a lot of paperwork for the amount you get.'",
-    "dealbreakers": ["grants specifically for youth only", "arts-focused grants"],
-    "preferences": ["workforce development", "criminal justice", "economic mobility", "prefers private foundations but can handle federal"],
+    "hidden_context": "She can handle federal grants but prefers private foundations because the reporting is simpler. She won't say this directly \u2014 she'll say 'the government stuff is fine but it's a lot of paperwork for the amount you get.'",
+    "dealbreakers": [
+      "grants specifically for youth only",
+      "arts-focused grants"
+    ],
+    "preferences": [
+      "workforce development",
+      "criminal justice",
+      "economic mobility",
+      "prefers private foundations but can handle federal"
+    ],
     "browsing_mode": "always_browsing",
-    "correct_grants": ["GW-175634", "GW-220579", "SYN-012"],
-    "trap_grants": ["GW-207003", "GW-203257", "SYN-031"],
-    "trap_reason": "GW-207003 is youth-only summer programming. GW-203257 is Philadelphia, not Indiana. SYN-031 is southern Indiana (wrong part of state — Clark/Floyd counties, not Lake County).",
-    "tests_eval_criteria": ["follows_energy_not_agenda", "handles_rambling_user", "extracts_signal_from_noise", "distinguishes_dealbreakers_from_preferences"]
+    "correct_grants": [
+      "GW-175634",
+      "GW-220579",
+      "SYN-012"
+    ],
+    "trap_grants": [
+      "GW-207003",
+      "GW-203257",
+      "SYN-031"
+    ],
+    "trap_reason": "GW-207003 is youth-only summer programming. GW-203257 is Philadelphia, not Indiana. SYN-031 is southern Indiana (wrong part of state \u2014 Clark/Floyd counties, not Lake County).",
+    "tests_eval_criteria": [
+      "follows_energy_not_agenda",
+      "handles_rambling_user",
+      "extracts_signal_from_noise",
+      "distinguishes_dealbreakers_from_preferences"
+    ],
+    "current_funding": "Managing 3-4 active grants including one federal pass-through",
+    "fund_use": "Staff salaries, job training materials, employer partnerships, case management",
+    "renewability_preference": "strongly prefers multi-year \u2014 workforce programs take time to show results",
+    "spending_parameters": "comfortable with indirect costs and federal reporting, prefers foundations for simpler compliance"
   },
   {
     "id": "user-04",
@@ -92,18 +184,48 @@
     "annual_budget": 95000,
     "team_size": 1,
     "mission": "One-on-one mentoring for at-risk youth in rural Steuben County, pairing them with adult mentors for academic and life skills support",
-    "populations_served": ["at-risk youth", "rural youth", "low-income families"],
+    "populations_served": [
+      "at-risk youth",
+      "rural youth",
+      "low-income families"
+    ],
     "grant_experience": "Applied once, didn't get it. Discouraged but trying again.",
-    "communication_style": "Earnest, slightly nervous. Apologizes for not knowing things. Says 'I'm not sure if this is the right way to say it but...' Uses non-standard language — says 'grant letter' instead of 'LOI', 'the money people' instead of 'funders.'",
+    "communication_style": "Earnest, slightly nervous. Apologizes for not knowing things. Says 'I'm not sure if this is the right way to say it but...' Uses non-standard language \u2014 says 'grant letter' instead of 'LOI', 'the money people' instead of 'funders.'",
     "what_he_says_first": "So I'm not really a grant writer, I just kind of fell into this role. We do mentoring for kids in the county, like one-on-one stuff, and I'm trying to find some of those, you know, grant letters or whatever to get some funding because we're running on fumes.",
     "hidden_context": "His org is only 2 years old, which disqualifies him from grants requiring 3+ years. He doesn't know this is a common requirement. He'd be devastated to apply and get rejected on a technicality.",
-    "dealbreakers": ["anything requiring 3+ years operating history", "matching funds", "federal"],
-    "preferences": ["local Indiana funders", "youth-focused", "simple applications", "small grants"],
+    "dealbreakers": [
+      "anything requiring 3+ years operating history",
+      "matching funds",
+      "federal"
+    ],
+    "preferences": [
+      "local Indiana funders",
+      "youth-focused",
+      "simple applications",
+      "small grants"
+    ],
     "browsing_mode": "active_hunting",
-    "correct_grants": ["GW-217494", "SYN-006", "SYN-007"],
-    "trap_grants": ["GW-219236", "SYN-021", "SYN-024"],
+    "correct_grants": [
+      "GW-217494",
+      "SYN-006",
+      "SYN-007"
+    ],
+    "trap_grants": [
+      "GW-219236",
+      "SYN-021",
+      "SYN-024"
+    ],
     "trap_reason": "GW-219236 requires 3 years continuous programming. SYN-021 is federal with match and 3-year commitment. SYN-024 is Allen County (wrong county) and requires match and 3+ years.",
-    "tests_eval_criteria": ["language_mirroring", "protects_from_false_hope", "never_makes_client_feel_stupid", "catches_hidden_disqualifiers"]
+    "tests_eval_criteria": [
+      "language_mirroring",
+      "protects_from_false_hope",
+      "never_makes_client_feel_stupid",
+      "catches_hidden_disqualifiers"
+    ],
+    "current_funding": "None currently. Applied once and was rejected.",
+    "fund_use": "Stipends for volunteer mentors, activity supplies, background check costs",
+    "renewability_preference": "not discussed \u2014 too early to think about renewal",
+    "spending_parameters": "needs simple \u2014 no capacity for complex compliance"
   },
   {
     "id": "user-05",
@@ -118,18 +240,48 @@
     "annual_budget": 320000,
     "team_size": 2,
     "mission": "Teaching coding, AI literacy, and digital skills to girls of color in Oakland through after-school and weekend programs at OUSD schools",
-    "populations_served": ["girls of color", "K-12 students", "underserved communities in Oakland"],
+    "populations_served": [
+      "girls of color",
+      "K-12 students",
+      "underserved communities in Oakland"
+    ],
     "grant_experience": "Moderate. Has won 4 grants ranging from $2K to $25K. Comfortable with online applications.",
     "communication_style": "Confident, direct, passionate about equity. Gets animated when talking about her students' projects. Uses 'our girls' constantly. Will push back if the agent makes assumptions.",
-    "what_she_says_first": "We teach coding and AI to girls of color in Oakland. We're in six OUSD schools right now. I need grants that actually understand what we do — not just 'STEM education' but specifically serving Black and Latina girls in tech.",
+    "what_she_says_first": "We teach coding and AI to girls of color in Oakland. We're in six OUSD schools right now. I need grants that actually understand what we do \u2014 not just 'STEM education' but specifically serving Black and Latina girls in tech.",
     "hidden_context": "She's frustrated with Instrumentl because searching 'STEM education' returns grants for white suburban schools that don't fit her model. She wants funders who explicitly prioritize equity and serving underrepresented populations.",
-    "dealbreakers": ["grants that don't prioritize equity/diversity", "rural-only grants", "grants requiring she serve all genders equally"],
-    "preferences": ["Bay Area funders", "equity-focused", "STEM and tech education", "arts + tech intersection"],
+    "dealbreakers": [
+      "grants that don't prioritize equity/diversity",
+      "rural-only grants",
+      "grants requiring she serve all genders equally"
+    ],
+    "preferences": [
+      "Bay Area funders",
+      "equity-focused",
+      "STEM and tech education",
+      "arts + tech intersection"
+    ],
     "browsing_mode": "active_hunting",
-    "correct_grants": ["GW-170752", "GW-208315", "GW-185157", "SYN-015"],
-    "trap_grants": ["GW-211587", "SYN-030"],
-    "trap_reason": "GW-211587 (PLTW Launch) is Illinois-only. SYN-030 is Oregon STEM Girls of Color — perfect focus but wrong state.",
-    "tests_eval_criteria": ["doesnt_flatten_nuance", "follows_client_energy", "handles_pushback", "distinguishes_similar_focus_areas"]
+    "correct_grants": [
+      "GW-170752",
+      "GW-208315",
+      "GW-185157",
+      "SYN-015"
+    ],
+    "trap_grants": [
+      "GW-211587",
+      "SYN-030"
+    ],
+    "trap_reason": "GW-211587 (PLTW Launch) is Illinois-only. SYN-030 is Oregon STEM Girls of Color \u2014 perfect focus but wrong state.",
+    "tests_eval_criteria": [
+      "doesnt_flatten_nuance",
+      "follows_client_energy",
+      "handles_pushback",
+      "distinguishes_similar_focus_areas"
+    ],
+    "current_funding": "4 active grants ranging from $2K to $25K",
+    "fund_use": "Laptops, software licenses, instructor stipends, curriculum development",
+    "renewability_preference": "prefers renewable \u2014 building a pipeline takes years",
+    "spending_parameters": "needs to fund equipment and staffing, familiar with indirect costs"
   },
   {
     "id": "user-06",
@@ -144,18 +296,47 @@
     "annual_budget": 120000,
     "team_size": 1,
     "mission": "Land conservation, trail maintenance, and environmental education on the Cumberland Plateau",
-    "populations_served": ["rural communities", "hikers and outdoor enthusiasts", "local schools"],
+    "populations_served": [
+      "rural communities",
+      "hikers and outdoor enthusiasts",
+      "local schools"
+    ],
     "grant_experience": "Has applied for 6 grants, won 3. Comfortable with applications but hates long narratives.",
     "communication_style": "Laconic. Dry humor. Says exactly what he means in few words. Will answer a question with one sentence when most people would use a paragraph.",
     "what_he_says_first": "We do conservation and trails on the Plateau. Need money for a new environmental ed program for schools.",
     "hidden_context": "He contradicts himself. He says he doesn't want federal grants but then mentions he loved a TVA partnership. He says 'no big grants' but his ideal project would cost $40K. The agent needs to navigate these contradictions gently.",
-    "dealbreakers": ["mandatory quarterly meetings", "grants requiring a development team"],
-    "preferences": ["Tennessee funders", "conservation and environment", "education", "simple processes"],
+    "dealbreakers": [
+      "mandatory quarterly meetings",
+      "grants requiring a development team"
+    ],
+    "preferences": [
+      "Tennessee funders",
+      "conservation and environment",
+      "education",
+      "simple processes"
+    ],
     "browsing_mode": "planning_ahead",
-    "correct_grants": ["GW-143383", "GW-208315", "SYN-013", "SYN-038"],
-    "trap_grants": ["GW-219825", "SYN-036"],
+    "correct_grants": [
+      "GW-143383",
+      "GW-208315",
+      "SYN-013",
+      "SYN-038"
+    ],
+    "trap_grants": [
+      "GW-219825",
+      "SYN-036"
+    ],
     "trap_reason": "GW-219825 is Great Lakes basin in NY. SYN-036 is national rural conservation but requires match.",
-    "tests_eval_criteria": ["handles_terse_user", "navigates_contradictions", "asks_clarifying_not_interrogating", "knows_when_to_stop"]
+    "tests_eval_criteria": [
+      "handles_terse_user",
+      "navigates_contradictions",
+      "asks_clarifying_not_interrogating",
+      "knows_when_to_stop"
+    ],
+    "current_funding": "3 active grants for trail work and education programs",
+    "fund_use": "Trail maintenance equipment, educational signage, seasonal staff",
+    "renewability_preference": "open to either \u2014 some projects are one-time, some ongoing",
+    "spending_parameters": "can handle moderate reporting, no match"
   },
   {
     "id": "user-07",
@@ -170,18 +351,46 @@
     "annual_budget": 210000,
     "team_size": 1,
     "mission": "Providing free visual arts, music, and theater programming for underserved youth in Middlesex County",
-    "populations_served": ["underserved youth", "K-12 students", "low-income families in Middlesex County"],
+    "populations_served": [
+      "underserved youth",
+      "K-12 students",
+      "low-income families in Middlesex County"
+    ],
     "grant_experience": "Professional grant writer. Has written 30+ applications for various clients. This is one of her clients.",
     "communication_style": "Efficient, knowledgeable, uses grant terminology fluently. She knows what she wants. She'll say 'LOI' and 'CFDA' and expect the agent to keep up. Gets impatient with basic questions.",
     "what_she_says_first": "I'm writing for the Middlesex Youth Arts Collective. They need arts education funding, PreK through 12, serving low-income youth in Middlesex County, Connecticut. Budget's around $210K. What do you have?",
-    "hidden_context": "She's the opposite of most users — she's an expert who wants speed, not hand-holding. The agent should match her pace and not explain things she already knows. If the agent says 'an LOI is a letter of inquiry' she'll lose trust immediately.",
-    "dealbreakers": ["grants outside Connecticut or New England", "federal grants for this particular client"],
-    "preferences": ["arts education", "youth programming", "Connecticut funders", "private foundations"],
+    "hidden_context": "She's the opposite of most users \u2014 she's an expert who wants speed, not hand-holding. The agent should match her pace and not explain things she already knows. If the agent says 'an LOI is a letter of inquiry' she'll lose trust immediately.",
+    "dealbreakers": [
+      "grants outside Connecticut or New England",
+      "federal grants for this particular client"
+    ],
+    "preferences": [
+      "arts education",
+      "youth programming",
+      "Connecticut funders",
+      "private foundations"
+    ],
     "browsing_mode": "active_hunting",
-    "correct_grants": ["GW-207525", "GW-180808", "SYN-016"],
-    "trap_grants": ["GW-219013", "SYN-035"],
-    "trap_reason": "GW-219013 is western New York. SYN-035 is Greater Hartford (wrong county in CT — Hartford, not Middlesex) and requires 5+ years.",
-    "tests_eval_criteria": ["matches_expert_pace", "doesnt_over_explain", "mirrors_professional_language", "respects_efficiency"]
+    "correct_grants": [
+      "GW-207525",
+      "GW-180808",
+      "SYN-016"
+    ],
+    "trap_grants": [
+      "GW-219013",
+      "SYN-035"
+    ],
+    "trap_reason": "GW-219013 is western New York. SYN-035 is Greater Hartford (wrong county in CT \u2014 Hartford, not Middlesex) and requires 5+ years.",
+    "tests_eval_criteria": [
+      "matches_expert_pace",
+      "doesnt_over_explain",
+      "mirrors_professional_language",
+      "respects_efficiency"
+    ],
+    "current_funding": "Writes for multiple clients \u2014 this client has 2 active arts grants",
+    "fund_use": "Teaching artists, studio supplies, exhibition costs, youth stipends",
+    "renewability_preference": "multi-year preferred for arts programming continuity",
+    "spending_parameters": "sophisticated \u2014 knows indirect cost rates, can handle any reporting level"
   },
   {
     "id": "user-08",
@@ -196,18 +405,52 @@
     "annual_budget": 280000,
     "team_size": 2,
     "mission": "Supporting fathers in re-engaging with their children through parenting workshops, job readiness programs, and family reunification services",
-    "populations_served": ["fathers", "non-custodial parents", "families in poverty", "formerly incarcerated fathers"],
+    "populations_served": [
+      "fathers",
+      "non-custodial parents",
+      "families in poverty",
+      "formerly incarcerated fathers"
+    ],
     "grant_experience": "Moderate. Has won 5 grants, mostly from local foundations. Comfortable with applications.",
     "communication_style": "Passionate, articulate, gets frustrated when people don't understand what she does. Her work doesn't fit neatly into categories. She's used to people saying 'oh, so you do family services' and having to correct them.",
-    "what_she_says_first": "We run a fatherhood initiative. And before you say 'family services' — it's specifically about dads. Fathers who want to be in their kids' lives but the system makes it really hard. We do parenting workshops, job readiness, help them navigate the courts.",
-    "hidden_context": "This is the 'fatherhood initiative doesn't fit in a dropdown' user from the spec. She's been burned by Instrumentl's filtering — searching 'family services' returns grants for domestic violence shelters and childcare, not fatherhood programs. She needs the agent to understand the SPECIFICITY of her work.",
-    "dealbreakers": ["grants exclusively for women and children", "grants that would require her to broaden her mission to 'family services'"],
-    "preferences": ["Philadelphia funders", "workforce development", "family reunification", "criminal justice adjacent", "parenting support"],
+    "what_she_says_first": "We run a fatherhood initiative. And before you say 'family services' \u2014 it's specifically about dads. Fathers who want to be in their kids' lives but the system makes it really hard. We do parenting workshops, job readiness, help them navigate the courts.",
+    "hidden_context": "This is the 'fatherhood initiative doesn't fit in a dropdown' user from the spec. She's been burned by Instrumentl's filtering \u2014 searching 'family services' returns grants for domestic violence shelters and childcare, not fatherhood programs. She needs the agent to understand the SPECIFICITY of her work.",
+    "dealbreakers": [
+      "grants exclusively for women and children",
+      "grants that would require her to broaden her mission to 'family services'"
+    ],
+    "preferences": [
+      "Philadelphia funders",
+      "workforce development",
+      "family reunification",
+      "criminal justice adjacent",
+      "parenting support"
+    ],
     "browsing_mode": "active_hunting",
-    "correct_grants": ["GW-203257", "GW-175634", "SYN-014", "SYN-029"],
-    "trap_grants": ["GW-227429", "GW-213053", "SYN-062", "SYN-065"],
+    "correct_grants": [
+      "GW-203257",
+      "GW-175634",
+      "SYN-014",
+      "SYN-029"
+    ],
+    "trap_grants": [
+      "GW-227429",
+      "GW-213053",
+      "SYN-062",
+      "SYN-065"
+    ],
     "trap_reason": "GW-227429 is women/children only. GW-213053 is rural PA, not Philadelphia. SYN-062 is general family strengthening (not father-specific). SYN-065 is Memphis fatherhood (right focus, wrong city/state).",
-    "tests_eval_criteria": ["doesnt_flatten_nuance", "respects_specificity", "doesnt_recategorize", "the_fatherhood_initiative_test", "same_state_wrong_county"]
+    "tests_eval_criteria": [
+      "doesnt_flatten_nuance",
+      "respects_specificity",
+      "doesnt_recategorize",
+      "the_fatherhood_initiative_test",
+      "same_state_wrong_county"
+    ],
+    "current_funding": "5 grants from local foundations, mostly $5K-$15K",
+    "fund_use": "Program facilitators, parenting curriculum, meeting space rental, participant support",
+    "renewability_preference": "renewable preferred \u2014 fatherhood programs need sustained relationship building",
+    "spending_parameters": "needs funds that allow staffing and direct participant support"
   },
   {
     "id": "user-09",
@@ -222,18 +465,48 @@
     "annual_budget": 380000,
     "team_size": 1,
     "mission": "Meal delivery, companionship visits, and aging-in-place support for isolated seniors in Oak Park and River Forest",
-    "populations_served": ["isolated seniors", "homebound elderly", "aging-in-place population"],
+    "populations_served": [
+      "isolated seniors",
+      "homebound elderly",
+      "aging-in-place population"
+    ],
     "grant_experience": "Minimal. The org has received grants before but the previous development person left and Margaret inherited the role with no training.",
     "communication_style": "Apologetic, self-deprecating, keeps saying 'I'm not really a grant person.' Very warm. Tells stories about her seniors. Will talk for 10 minutes about 92-year-old Helen before getting to the grant question.",
-    "what_she_says_first": "I'm so sorry, I'm really new to this. Our last grants person retired and they just kind of handed it to me. We do meals and visits for seniors who live alone — like Helen, she's 92 and we're the only people she sees all week. I just need to figure out how to keep the lights on.",
+    "what_she_says_first": "I'm so sorry, I'm really new to this. Our last grants person retired and they just kind of handed it to me. We do meals and visits for seniors who live alone \u2014 like Helen, she's 92 and we're the only people she sees all week. I just need to figure out how to keep the lights on.",
     "hidden_context": "She doesn't realize her org is actually well-positioned for elderly services grants. She thinks she's bad at this when really she just hasn't been shown the right opportunities. The agent's job is to build her confidence, not just find grants.",
-    "dealbreakers": ["complex federal applications", "anything requiring financial matching", "youth-only grants"],
-    "preferences": ["elderly services", "aging in place", "food security", "local Illinois funders", "simple applications"],
+    "dealbreakers": [
+      "complex federal applications",
+      "anything requiring financial matching",
+      "youth-only grants"
+    ],
+    "preferences": [
+      "elderly services",
+      "aging in place",
+      "food security",
+      "local Illinois funders",
+      "simple applications"
+    ],
     "browsing_mode": "active_hunting",
-    "correct_grants": ["GW-151124", "SYN-008", "SYN-009"],
-    "trap_grants": ["GW-227240", "SYN-023"],
+    "correct_grants": [
+      "GW-151124",
+      "SYN-008",
+      "SYN-009"
+    ],
+    "trap_grants": [
+      "GW-227240",
+      "SYN-023"
+    ],
     "trap_reason": "GW-227240 is homelessness + federal matching. SYN-023 is federal senior nutrition with match requirement.",
-    "tests_eval_criteria": ["never_makes_client_feel_stupid", "builds_confidence", "follows_energy_in_stories", "protects_from_overwhelm"]
+    "tests_eval_criteria": [
+      "never_makes_client_feel_stupid",
+      "builds_confidence",
+      "follows_energy_in_stories",
+      "protects_from_overwhelm"
+    ],
+    "current_funding": "Org has received grants before but Margaret doesn't know the details",
+    "fund_use": "Meals, driver stipends, volunteer coordination, maybe a part-time staff member",
+    "renewability_preference": "not discussed \u2014 she's focused on getting the first one",
+    "spending_parameters": "needs simple \u2014 she doesn't know what indirect costs are"
   },
   {
     "id": "user-10",
@@ -248,18 +521,49 @@
     "annual_budget": 160000,
     "team_size": 1,
     "mission": "Adult literacy and GED preparation programs for underserved communities in Pensacola",
-    "populations_served": ["adults without high school diplomas", "immigrants", "low-income adults"],
+    "populations_served": [
+      "adults without high school diplomas",
+      "immigrants",
+      "low-income adults"
+    ],
     "grant_experience": "Some. Has won 2 small grants. Comfortable with basic applications but has never done an LOI.",
     "communication_style": "Skeptical. Has tried grant platforms before and been disappointed. Will say things like 'I've heard that before' and 'how is this different from just searching Google?' Needs to be convinced, not sold to.",
     "what_he_says_first": "Look, I've tried these platforms. They give you a hundred results and none of them are actually right. I need something that actually works for what we do, which is adult literacy. Not kids, not college prep. Adults who can't read.",
     "hidden_context": "He's the skeptical synthetic user who pushes back. If the agent shows him a K-12 education grant and says 'this could work for adult literacy too,' he'll lose all trust. He needs precise matching, not close-enough matching.",
-    "dealbreakers": ["K-12 only grants", "youth-only grants", "anything requiring a school partnership"],
-    "preferences": ["adult education", "literacy", "Pensacola/Florida funders", "workforce adjacent"],
+    "dealbreakers": [
+      "K-12 only grants",
+      "youth-only grants",
+      "anything requiring a school partnership"
+    ],
+    "preferences": [
+      "adult education",
+      "literacy",
+      "Pensacola/Florida funders",
+      "workforce adjacent"
+    ],
     "browsing_mode": "active_hunting",
-    "correct_grants": ["GW-136927", "SYN-010", "SYN-011"],
-    "trap_grants": ["GW-182495", "GW-211587", "SYN-019", "SYN-026"],
+    "correct_grants": [
+      "GW-136927",
+      "SYN-010",
+      "SYN-011"
+    ],
+    "trap_grants": [
+      "GW-182495",
+      "GW-211587",
+      "SYN-019",
+      "SYN-026"
+    ],
     "trap_reason": "GW-182495 is K-12 in Washington State. GW-211587 is K-5 STEM in Illinois. SYN-019 is federal adult ed with match and mandatory DC conference. SYN-026 is K-12 youth STEM requiring school partnership.",
-    "tests_eval_criteria": ["handles_skepticism", "precise_matching_not_close_enough", "earns_trust_through_accuracy", "doesnt_oversell"]
+    "tests_eval_criteria": [
+      "handles_skepticism",
+      "precise_matching_not_close_enough",
+      "earns_trust_through_accuracy",
+      "doesnt_oversell"
+    ],
+    "current_funding": "2 small grants (completed)",
+    "fund_use": "GED testing fees, textbooks, instructor hours, classroom supplies",
+    "renewability_preference": "would love renewable but doesn't expect it",
+    "spending_parameters": "needs to fund staffing \u2014 instructors are the main cost"
   },
   {
     "id": "user-11",
@@ -274,18 +578,50 @@
     "annual_budget": 75000,
     "team_size": 1,
     "mission": "Animal-assisted therapy programs for veterans and first responders experiencing PTSD, using rescued shelter animals",
-    "populations_served": ["veterans with PTSD", "first responders", "rescued animals"],
+    "populations_served": [
+      "veterans with PTSD",
+      "first responders",
+      "rescued animals"
+    ],
     "grant_experience": "Has applied twice, won once ($1,200 mini grant from San Marcos Community Foundation).",
     "communication_style": "Enthusiastic, talks about the animals as much as the humans. Will tell you about a specific dog named Biscuit who helped a firefighter. Jumps between topics. Hard to pin down to one focus area because her work genuinely spans animal welfare AND mental health AND veteran services.",
-    "what_she_says_first": "OK so this is going to sound like a lot of things but it's really one thing — we rescue shelter dogs and we train them for therapy work with veterans and first responders who have PTSD. So it's animals AND mental health AND veterans, and every time I try to search for grants I don't know which category to pick.",
+    "what_she_says_first": "OK so this is going to sound like a lot of things but it's really one thing \u2014 we rescue shelter dogs and we train them for therapy work with veterans and first responders who have PTSD. So it's animals AND mental health AND veterans, and every time I try to search for grants I don't know which category to pick.",
     "hidden_context": "Her work crosses three focus areas (animal welfare, mental health, veteran services) and no single category captures it. This is the 'focus areas are fuzzy' problem from the reflection. The agent needs to search across multiple categories and find grants that welcome interdisciplinary work.",
-    "dealbreakers": ["grants that only fund direct animal care without human services component", "grants requiring she choose one focus area"],
-    "preferences": ["San Diego/California funders", "mental health", "animal welfare", "veteran services", "small grants"],
+    "dealbreakers": [
+      "grants that only fund direct animal care without human services component",
+      "grants requiring she choose one focus area"
+    ],
+    "preferences": [
+      "San Diego/California funders",
+      "mental health",
+      "animal welfare",
+      "veteran services",
+      "small grants"
+    ],
     "browsing_mode": "active_hunting",
-    "correct_grants": ["GW-173832", "GW-174077", "GW-208315", "SYN-017"],
-    "trap_grants": ["GW-183911", "GW-188450", "SYN-034"],
+    "correct_grants": [
+      "GW-173832",
+      "GW-174077",
+      "GW-208315",
+      "SYN-017"
+    ],
+    "trap_grants": [
+      "GW-183911",
+      "GW-188450",
+      "SYN-034"
+    ],
     "trap_reason": "GW-183911 is Nevada school gardens. GW-188450 is Sunnyvale neighborhood associations only. SYN-034 is Arizona animal-assisted therapy (wrong state).",
-    "tests_eval_criteria": ["handles_cross_category_missions", "doesnt_force_single_category", "follows_enthusiasm", "maps_fuzzy_focus_areas", "same_state_wrong_city"]
+    "tests_eval_criteria": [
+      "handles_cross_category_missions",
+      "doesnt_force_single_category",
+      "follows_enthusiasm",
+      "maps_fuzzy_focus_areas",
+      "same_state_wrong_city"
+    ],
+    "current_funding": "$1,200 mini grant from San Marcos Community Foundation (completed)",
+    "fund_use": "Animal care, therapy certification training, veteran outreach, facility costs",
+    "renewability_preference": "renewable preferred \u2014 therapy animals need ongoing care",
+    "spending_parameters": "needs funds that cover both animal care AND human services \u2014 most grants only cover one"
   },
   {
     "id": "user-12",
@@ -300,17 +636,47 @@
     "annual_budget": 250000,
     "team_size": 2,
     "mission": "Preserving Ojibwe language, cultural traditions, and ecological knowledge through elder-youth programs and land stewardship",
-    "populations_served": ["Ojibwe community members", "tribal youth", "elders"],
+    "populations_served": [
+      "Ojibwe community members",
+      "tribal youth",
+      "elders"
+    ],
     "grant_experience": "Experienced with tribal-specific grants and some state grants. Has managed federal Indian Affairs funding.",
     "communication_style": "Thoughtful, measured. Takes long pauses before answering. Speaks about the work in terms of relationships and obligations, not outcomes and metrics. Will say 'we have a responsibility to the land' not 'we serve X beneficiaries.'",
-    "what_he_says_first": "We work with our elders and our young people to keep the language and the old ways alive. We also take care of the land — wild rice beds, sugar bush, the things our people have always tended. We're looking for support that understands this isn't a program with a start and end date. This is who we are.",
+    "what_he_says_first": "We work with our elders and our young people to keep the language and the old ways alive. We also take care of the land \u2014 wild rice beds, sugar bush, the things our people have always tended. We're looking for support that understands this isn't a program with a start and end date. This is who we are.",
     "hidden_context": "His work doesn't map cleanly to Western nonprofit categories. 'Environmental education' is too narrow. 'Cultural preservation' misses the ecological component. 'Youth development' misses the intergenerational and land-based elements. The agent must resist categorizing his work in conventional terms.",
-    "dealbreakers": ["grants requiring separation of 'cultural' from 'environmental' work", "grants with metrics that don't make sense for indigenous communities (e.g., 'new participants served')"],
-    "preferences": ["Minnesota funders", "tribal-eligible grants", "cultural preservation", "environmental stewardship", "intergenerational programs"],
+    "dealbreakers": [
+      "grants requiring separation of 'cultural' from 'environmental' work",
+      "grants with metrics that don't make sense for indigenous communities (e.g., 'new participants served')"
+    ],
+    "preferences": [
+      "Minnesota funders",
+      "tribal-eligible grants",
+      "cultural preservation",
+      "environmental stewardship",
+      "intergenerational programs"
+    ],
     "browsing_mode": "planning_ahead",
-    "correct_grants": ["GW-219236", "GW-216726", "GW-224770", "SYN-018"],
-    "trap_grants": ["GW-127639", "SYN-033"],
-    "trap_reason": "GW-127639 is Iowa historic preservation. SYN-033 is Hennepin County Indigenous Environmental (wrong county in MN — Hennepin, not Cass).",
-    "tests_eval_criteria": ["respects_non_western_frameworks", "doesnt_flatten_nuance", "handles_long_pauses", "resists_conventional_categorization"]
+    "correct_grants": [
+      "GW-219236",
+      "GW-216726",
+      "GW-224770",
+      "SYN-018"
+    ],
+    "trap_grants": [
+      "GW-127639",
+      "SYN-033"
+    ],
+    "trap_reason": "GW-127639 is Iowa historic preservation. SYN-033 is Hennepin County Indigenous Environmental (wrong county in MN \u2014 Hennepin, not Cass).",
+    "tests_eval_criteria": [
+      "respects_non_western_frameworks",
+      "doesnt_flatten_nuance",
+      "handles_long_pauses",
+      "resists_conventional_categorization"
+    ],
+    "current_funding": "Tribal-specific grants and some state grants for cultural preservation",
+    "fund_use": "Elder stipends, language instruction, land-based education, cultural materials",
+    "renewability_preference": "multi-year essential \u2014 cultural preservation is generational work, not a project",
+    "spending_parameters": "needs funders who allow indigenous-defined outcomes, not just western metrics. Elder compensation must be eligible."
   }
 ]
