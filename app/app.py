@@ -1245,12 +1245,12 @@ else:
         with page.container():
             st.write("")
             st.markdown(f'<p style="font-size: 18px; font-weight: 500; color: {TEXT_PRIMARY}; margin: 0;">Paste the call transcript or notes.</p>', unsafe_allow_html=True)
-            st.markdown(f'<p style="font-size: 14px; font-weight: 400; color: {TEXT_SUPPORTING}; margin: 6px 0 24px 0;">Messy is fine — Scout will pull out what matters.</p>', unsafe_allow_html=True)
+            st.markdown(f'<p style="font-size: 14px; font-weight: 400; color: {TEXT_SUPPORTING}; margin: 6px 0 24px 0;">Messy is fine, Scout will sort it out.</p>', unsafe_allow_html=True)
 
             notes = st.text_area(
                 "Call notes",
                 height=200,
-                placeholder='e.g. "We\'re Raices del Valle, a small after-school tutoring program in south Austin. We serve first-generation Latino students in Travis County. Our budget is around $180K. We\'ve gotten a few small grants before — one from the local Rotary club — but nothing federal. We need something in the $2K–$10K range, and we can\'t handle complex reporting because it\'s basically just me and one volunteer."',
+                placeholder='e.g. "We\'re Raices del Valle, a small after-school tutoring program in south Austin. We serve first-generation Latino students in Travis County. Our budget is around $180K. We\'ve gotten a few small grants before, one from the local Rotary club, but nothing federal. We need something in the $2K–$10K range, and we can\'t handle complex reporting because it\'s basically just me and one volunteer."',
                 label_visibility="collapsed",
                 key=f"notes_{st.session_state.widget_key}",
             )
